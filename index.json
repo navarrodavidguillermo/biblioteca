@@ -1,3 +1,12 @@
 [
-  { "nombre": "Ataxia", "archivo": "Ataxia.pdf" }
+  { 
+    "nombre": "trastorno de la marca ataxia ataxico alteracion de la conciencia", 
+    "archivo": "Ataxia.pdf",
+    "excluir": ["ingesta medicamentosa", "intoxicacion", "fiebre", "traumatismo", "politraumatismo"]
+  },
+  { 
+    "nombre": "alteracion de la conciencia y fiebre status convulsivo febril etatus convulsivo febril ", 
+    "archivo": "Meningitis_Encefalitis.pdf",
+    "excluir": ["ingesta medicamentosa", "intoxicacion", "fiebre", "traumatismo", "politraumatismo"] 
+  }
 ]
