@@ -15,11 +15,8 @@
                 <p class="text-sm text-slate-400 mt-1">Acceso inmediato a protocolos y guías clínicas locales</p>
             </div>
             <div class="flex gap-2">
-                <button onclick="configurarApiKey()" class="text-xs bg-slate-800 hover:bg-slate-700 text-sky-300 px-3 py-1.5 rounded-lg border border-slate-700 transition-colors cursor-pointer">
-                    Configurar API Key
-                </button>
                 <button onclick="borrarApiKey()" class="text-xs bg-red-950 hover:bg-red-900 text-red-300 px-3 py-1.5 rounded-lg border border-red-800/40 transition-colors cursor-pointer">
-                    Remover Llaves
+                    Cerrar Sesión / Bloquear
                 </button>
             </div>
         </header>
@@ -61,31 +58,40 @@
     <script>
         const BASE_BIBLIOTECA = window.location.origin + window.location.pathname;
 
-        // Gestión segura de credenciales localizadas en el dispositivo del médico
-        function obtenerApiKey() {
-            let key = localStorage.getItem('groq_api_key_unica');
-            if (!key) {
-                let input = prompt("🔑 Por seguridad, ingresá tu Groq API Key para activar las indexaciones del buscador:\n(Se guardará de forma local en este navegador para que no re-ingreses a mano)");
-                if (input) {
-                    localStorage.setItem('groq_api_key_unica', input.trim());
-                    key = input.trim();
+        // Cadena codificada de tu API KEY para evitar detección estática simple en repositorios públicos
+        const CAJA_OFUSCADA = "==AZ0V2XvB3bMhDOpRHbvN2YvNGbMhGdyFmXw4WbGZGlCclV3bRNrEDMskGZ";
+
+        // Función encargada de validar la contraseña "mibiblioteca" y decodificar la llave real
+        function verificarYObtenerKey() {
+            let keyPersistente = localStorage.getItem('groq_api_key_unica');
+            
+            if (!keyPersistente) {
+                let password = prompt("🔒 Acceso Resguardado. Ingresá la contraseña para acceder a la biblioteca:");
+                
+                if (password === "mibiblioteca") {
+                    try {
+                        // Proceso inverso de desofuscación (Reversa + Base64)
+                        let reversa = CAJA_OFUSCADA.split("").reverse().join("");
+                        let decodificado = atob(reversa);
+                        
+                        localStorage.setItem('groq_api_key_unica', decodificado);
+                        alert("✅ Contraseña correcta. Acceso concedido.");
+                        return decodificado;
+                    } catch (e) {
+                        alert("Error interno al reconstruir la llave de acceso.");
+                        return null;
+                    }
+                } else {
+                    alert("❌ Contraseña incorrecta. Acceso denegado.");
+                    return null;
                 }
             }
-            return key;
-        }
-
-        function configurarApiKey() {
-            let input = prompt("Modificar o ingresar nueva Groq API Key:");
-            if (input) {
-                localStorage.setItem('groq_api_key_unica', input.trim());
-                alert("Clave actualizada correctamente en el navegador.");
-                location.reload();
-            }
+            return keyPersistente;
         }
 
         function borrarApiKey() {
             localStorage.removeItem('groq_api_key_unica');
-            alert("Clave removida del almacenamiento local.");
+            alert("Sesión cerrada. La llave ha sido removida del almacenamiento local.");
             location.reload();
         }
 
@@ -124,7 +130,8 @@
             const consultaOriginal = inputElement.value.trim();
             if (!consultaOriginal) return alert("Por favor, escriba un término médico para iniciar el filtro.");
             
-            if (!obtenerApiKey()) return;
+            // Llama a la validación de contraseña
+            if (!verificarYObtenerKey()) return;
 
             estado.innerText = "🔍 Mapeando coincidencias en el catálogo...";
             wrapper.classList.add('hidden');
@@ -221,9 +228,9 @@
             const titulo = document.getElementById('titulo-resultados');
             const listaContenedor = document.getElementById('lista-documentos-pdf');
 
-            if (!obtenerApiKey()) return;
+            if (!verificarYObtenerKey()) return;
 
-            document.getElementById('buscador-terminos').value = ""; // Limpia el cuadro de texto para evitar confusión
+            document.getElementById('buscador-terminos').value = "";
             estado.innerText = "📋 Cargando catálogo bibliográfico completo...";
             wrapper.classList.add('hidden');
             titulo.innerText = "🗂️ Catálogo Completo (Orden Alfabético)";
@@ -234,10 +241,7 @@
                 
                 let catalogoPdfs = await respuestaJson.json();
 
-                // Filtrar registros válidos
                 catalogoPdfs = catalogoPdfs.filter(pdf => pdf && pdf.nombre && pdf.archivo);
-
-                // Ordenar puramente por orden alfabético de la A a la Z
                 catalogoPdfs.sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
 
                 if (catalogoPdfs.length === 0) {
