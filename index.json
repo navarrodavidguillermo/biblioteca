@@ -40,6 +40,50 @@
         ]
     },
     {
+        "nombre": "Meningitis, Encefalitis y Meningoencefalitis Pediátrica",
+        "archivo": "Meningitis_Encefalitis.pdf",
+        "palabras_clave": [
+            "alteracion de la conciencia",
+      "fiebre alta",
+      "convulsiones",
+      "focalidad neurologica",
+      "rigidez de nuca",
+      "kerning",
+      "brudzinski",
+      "irritabilidad extrema",
+      "llanto inconsolable",
+      "fontanela abombada",
+      "meningitis",
+      "encefalitis",
+      "meningoencefalitis",
+      "sensorio fluctuante",
+      "cefalea",
+      "vomitos en proyectil",
+      "fonofobia",
+      "fotofobia",
+      "alucinaciones",
+      "confusion",
+      "desorientacion",
+      "exantema petequial",
+      "lesiones purpuricas",
+      "triada de cushing",
+      "bradicardia",
+      "bradipnea",
+      "hipertension arterial"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "alergias",
+            "intolerancias",
+            "sensibilidades",
+            "enfermedades gastrointestinales",
+            "enfermedades respiratorias"
+        ]
+    },
+    {
         "nombre": "Salud bucal de los niños: caries dental y prevención",
         "archivo": "Salud_bucal_traumatismo_Infeccion_odontológica.pdf",
         "palabras_clave": [
