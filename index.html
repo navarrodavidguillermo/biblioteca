@@ -12,7 +12,7 @@
     <div class="max-w-4xl mx-auto p-4 md:p-6">
         <header class="mb-8 border-b border-slate-700 pb-4 flex flex-wrap justify-between items-center gap-4">
             <div>
-                <h1 class="text-2xl font-bold text-sky-400">🔍 Buscador Clínico Estricto (Anti-Saturación)</h1>
+                <h1 class="text-2xl font-bold text-sky-400">🔍 Buscador Clínico Estricto (Anti-Errores)</h1>
                 <p class="text-sm text-slate-400 mt-1">Biblioteca Personal de Protocolos Pediátricos</p>
             </div>
             <button onclick="borrarApiKey()" class="text-xs bg-red-950 hover:bg-red-900 text-red-300 px-3 py-1.5 rounded-lg border border-red-800/40 transition-colors cursor-pointer">
@@ -87,7 +87,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
 
 - Al final de toda la respuesta, añade una sección llamada "📚 DOCUMENTOS ASOCIADOS Y DESCARGAS" y coloca en orden las URL provistas en el campo "URL Original X:" para que el usuario pueda descargarlos directamente.`;
 
-        // Extractor quirúrgico estricto para proteger la cuota de tokens
+        // Extractor quirúrgico estricto con limpieza de caracteres ocultos (Previene Error 400)
         async function extraerTextoPDF(url, tokensMedico) {
             try {
                 const checkRes = await fetch(url, { method: 'HEAD' });
@@ -103,8 +103,11 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                     try {
                         const pagina = await documentoPdf.getPage(i);
                         const contenidoTexto = await pagina.getTextContent();
-                        const textoPagina = contenidoTexto.items.map(item => item.str).join(" ");
+                        let textoPagina = contenidoTexto.items.map(item => item.str).join(" ");
                         
+                        // Limpieza de caracteres bizarros de control ASCII que rompen los JSON
+                        textoPagina = textoPagina.replace(/[\x00-\x1F\x7F-\x9F]/g, " ");
+
                         const lineas = textoPagina.split(/[.:;]\s+/);
                         lineas.forEach(linea => {
                             const lineaMinuscula = linea.toLowerCase();
@@ -117,11 +120,12 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                     } catch (e) {}
                 }
                 
-                // Backup ultra-corto si el filtro quirúrgico quedó vacío para no consumir tokens por minuto
+                // Backup ultra-corto seguro libre de roturas
                 if (textoFiltrado.trim().length < 50) {
                     const primeraPagina = await documentoPdf.getPage(1);
                     const contenidoBkp = await primeraPagina.getTextContent();
-                    textoFiltrado = `[Pág 1 Fragmento]: ` + contenidoBkp.items.map(item => item.str).join(" ").substring(0, 400) + "...\n";
+                    let txtBkp = contenidoBkp.items.map(item => item.str).join(" ").replace(/[\x00-\x1F\x7F-\x9F]/g, " ");
+                    textoFiltrado = `[Pág 1 Fragmento]: ` + txtBkp.substring(0, 400) + "...\n";
                 }
                 
                 return textoFiltrado;
@@ -142,7 +146,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
             });
         }
 
-        // LLAMADA CON MODELO LLAMA 3 8B (Posee cuotas masivas de Tokens por Minuto)
+        // LLAMADA REVISADA Y ESCAPADA (Previene HTTP 400 y 429)
         async function llamarGroq(textoUsuario) {
             let listaKeys = obtenerApiKey();
             if (!listaKeys || listaKeys.length === 0) throw new Error("No hay API Keys cargadas.");
@@ -157,12 +161,12 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
-                            model: "llama3-8b-8192", // Modelo optimizado para manejar grandes volúmenes de contexto sin dar 429
+                            model: "llama3-8b-8192", 
                             messages: [
                                 { role: "system", content: SYSTEM_PROMPT_CONSULTA },
                                 { role: "user", content: textoUsuario }
                             ],
-                            temperature: 0.0
+                            temperature: 0 // Cambiado a entero absoluto para evitar rechazos de tipo en el parser
                         })
                     });
 
@@ -278,8 +282,14 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                     return;
                 }
 
-                bloqueContexto += `--------------------------------------------------\n[CONSULTA DEL CASO CLÍNICO ACTUAL]:\n${texto}`;
-                if (bloqueContexto.length > 20000) bloqueContexto = bloqueContexto.substring(0, 20000) + "\n... [Truncado] ...";
+                // Asegurar que el contenido agregado al final esté bien formateado y libre de saltos crudos sin escapar
+                const textoCasoSanitizado = texto.replace(/[\x00-\x1F\x7F-\x9F]/g, " ");
+                bloqueContexto += `--------------------------------------------------\n[CONSULTA DEL CASO CLÍNICO ACTUAL]:\n${textoCasoSanitizado}`;
+                
+                // Truncado seguro
+                if (bloqueContexto.length > 18000) {
+                    bloqueContexto = bloqueContexto.substring(0, 18000) + "\n... [Truncado seguro] ...";
+                }
 
                 status.innerText = `🧠 Analizando de forma aislada ${conteoPdfs} guías...`;
                 
@@ -295,7 +305,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                 
                 let msgError = err.message === "429" 
                     ? `⚠️ Límite de velocidad estricto de Groq alcanzado temporalmente.<br><br>💡 <strong>Solución:</strong> Esperá 30 segundos a que la plataforma reinicie tu cuota por minuto, o carga otra clave adicional de respaldo.`
-                    : `<strong>Error de ejecución:</strong> ${err.message || err}`;
+                    : `<strong>Error de ejecución (HTTP ${err.message}):</strong> Verificá el estado de la API Key en tu Dashboard de Groq.`;
 
                 textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 text-sm leading-relaxed">
                     ${msgError}
