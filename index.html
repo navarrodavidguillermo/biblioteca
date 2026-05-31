@@ -153,7 +153,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
             });
         }
 
-        // LLAMADA ATÓMICA REVISADA (Elimina error 400 y maneja rotación 429)
+        // LLAMADA ATÓMICA ROBUSTA CON CONTROL DE TOKENS (Previene Error 400)
         async function llamarGroq(textoUsuario) {
             let listaKeys = obtenerApiKey();
             if (!listaKeys || listaKeys.length === 0) throw new Error("No hay API Keys cargadas.");
@@ -166,7 +166,8 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                     messages: [
                         { role: "system", content: SYSTEM_PROMPT_CONSULTA },
                         { role: "user", content: textoUsuario }
-                    ]
+                    ],
+                    max_tokens: 2048
                 };
 
                 try {
@@ -190,7 +191,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
 
                     if (!res.ok) {
                         const errorData = await res.text();
-                        console.error("Respuesta cruda del servidor:", errorData);
+                        console.error("Respuesta detallada del servidor Groq:", errorData);
                         throw new Error(`status: ${res.status}`);
                     }
                     
@@ -296,8 +297,9 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
 
                 bloqueContexto += `--------------------------------------------------\n[CONSULTA DEL CASO CLÍNICO ACTUAL]:\n${textoCasoSanitizado}`;
                 
-                if (bloqueContexto.length > 18000) {
-                    bloqueContexto = bloqueContexto.substring(0, 18000) + "\n... [Truncado] ...";
+                // Truncado estricto a 12.000 caracteres para asegurar la ventana del modelo Llama 3 8B
+                if (bloqueContexto.length > 12000) {
+                    bloqueContexto = bloqueContexto.substring(0, 12000) + "\n... [Truncado por seguridad de volumen] ...";
                 }
 
                 status.innerText = `🧠 Analizando de forma aislada ${conteoPdfs} guías...`;
@@ -314,7 +316,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                 
                 let msgError = err.message === "429" 
                     ? `⚠️ Límite de velocidad estricto de Groq alcanzado temporalmente.<br><br>💡 <strong>Solución:</strong> Esperá 30 segundos a que la plataforma reinicie tu cuota por minuto.`
-                    : `<strong>Error de ejecución (${err.message || 'HTTP 400'}):</strong> Se detectó un rechazo formal en el payload JSON. Revisá los detalles del error en la consola de desarrollo (F12).`;
+                    : `<strong>Error de ejecución (${err.message || 'HTTP 400'}):</strong> Se detectó un rechazo formal en el payload JSON o límites excedidos. Revisá los detalles detallados en la consola (F12).`;
 
                 textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 text-sm leading-relaxed">
                     ${msgError}
