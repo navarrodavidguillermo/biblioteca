@@ -1,10 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador Inteligente - Biblioteca Médica</title>
+    <!-- Tailwind CSS para una interfaz médica limpia y responsiva -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- PDF.js de Mozilla para la extracción de texto en tiempo real -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen font-sans">
@@ -12,14 +15,15 @@
     <div class="max-w-4xl mx-auto p-4 md:p-6">
         <header class="mb-8 border-b border-slate-700 pb-4 flex flex-wrap justify-between items-center gap-4">
             <div>
-                <h1 class="text-2xl font-bold text-sky-400">🔍 Buscador Clínico Estricto</h1>
+                <h1 class="text-2xl font-bold text-sky-400">🔍 Buscador Clínico Estricto (Multi-Key)</h1>
                 <p class="text-sm text-slate-400 mt-1">Biblioteca Personal de Protocolos Pediátricos</p>
             </div>
             <button onclick="borrarApiKey()" class="text-xs bg-red-950 hover:bg-red-900 text-red-300 px-3 py-1.5 rounded-lg border border-red-800/40 transition-colors cursor-pointer">
-                Remover API Key
+                Remover API Keys
             </button>
         </header>
 
+        <!-- Cuadro de búsqueda -->
         <div class="bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-700 mb-6">
             <label for="consulta-clinica" class="block text-sm font-semibold text-slate-300 mb-2">
                 Ingresá la Enfermedad Actual, síntomas cardinales o parámetros de laboratorio del paciente:
@@ -37,43 +41,44 @@
             </div>
         </div>
 
+        <!-- Contenedor de Resultados del Análisis -->
         <div id="resultado-container" class="hidden bg-slate-800 rounded-xl shadow-lg border border-slate-700 overflow-hidden">
             <div class="bg-slate-750 px-4 py-3 border-b border-slate-700 flex justify-between items-center">
                 <h2 class="text-sm font-bold text-sky-400 uppercase tracking-wider">📋 Evidencia Clínica Extraída</h2>
                 <button onclick="limpiarPantalla()" class="text-xs text-slate-400 hover:text-slate-200 cursor-pointer">Limpiar</button>
             </div>
             <div id="texto-analisis-ia" class="p-5 text-sm leading-relaxed text-slate-200 space-y-4">
-                </div>
+                <!-- Aquí se inyectará la respuesta literal de la IA o el aviso de no encontrado -->
+            </div>
         </div>
     </div>
 
     <script>
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
         
-        // Detecta automáticamente el dominio de tu GitHub Pages actual
         const BASE_BIBLIOTECA = window.location.origin + window.location.pathname;
 
-        // MANEJO SEGURO DE LA API KEY (Almacenada localmente en tu navegador)
+        // MANEJO MULTI-KEY: Soporta múltiples llaves guardadas localmente separadas por comas
         function obtenerApiKey() {
-            let key = localStorage.getItem('groq_api_key');
-            if (!key) {
-                key = prompt("🔑 Por seguridad, ingresá tu Groq API Key para activar el buscador clínico:\n(Se guardará de forma local en este navegador y no se subirá a GitHub)");
-                if (key) {
-                    localStorage.setItem('groq_api_key', key.trim());
+            let keys = localStorage.getItem('groq_api_keys');
+            if (!keys) {
+                let input = prompt("🔑 Por seguridad, ingresá tus Groq API Keys.\n\nPodés poner varias separadas por comas para activar la rotación anti-bloqueo (Ejemplo: gsk_123..., gsk_456...):");
+                if (input) {
+                    localStorage.setItem('groq_api_keys', input.trim());
+                    keys = input.trim();
                 }
             }
-            return key;
+            return keys ? keys.split(',').map(k => k.trim()) : null;
         }
 
         function borrarApiKey() {
-            localStorage.removeItem('groq_api_key');
-            alert("Clave eliminada del navegador.");
+            localStorage.removeItem('groq_api_keys');
+            alert("Claves eliminadas del navegador.");
             location.reload();
         }
 
-        // SYSTEM PROMPT MULTI-DOCUMENTO ULTRA-ESTRICTO
         const SYSTEM_PROMPT_CONSULTA = `# ROL Y PERFIL PROFESIONAL
-Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisión. Tu comunicación es estrictamente médica, académica, directa y fragmentada por protocolo.
+Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisión. Tu comunicación es estrictamente médica, académica, directa y fragmentada por protocolo.
 
 # INSTRUCCIONES DE FLUJO ABSOLUTAS
 - Se te proporcionará el texto extraído de uno o varios archivos PDF bajo la etiqueta [TEXTO EXTRAÍDO DE LOS PDFS DE LA BIBLIOTECA PERSONAL].
@@ -89,34 +94,44 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
 
 - Al final de toda la respuesta, añade una sección llamada "📚 DOCUMENTOS ASOCIADOS Y DESCARGAS" y coloca en orden las URL provistas en el campo "URL Original X:" para que el usuario pueda descargarlos directamente.`;
 
-        // Extractor inteligente por relevancia clínica
-        async function extraerTextoPDF(url) {
+        // Extractor quirúrgico para ahorrar tokens y mitigar errores 429
+        async function extraerTextoPDF(url, tokensMedico) {
             try {
                 const checkRes = await fetch(url, { method: 'HEAD' });
                 if (!checkRes.ok) return null;
 
                 const documentoPdf = await pdfjsLib.getDocument(url).promise;
-                let textoCompleto = "";
-                let paginasAgregadas = 0;
+                let textoFiltrado = "";
+                const maxPaginas = Math.min(documentoPdf.numPages, 12);
                 
-                const palabrasFiltro = ["estudio", "laboratorio", "complementario", "tratamiento", "dosis", "conducta", "esquema", "punción", "lcr", "hemocultivo", "cultivo", "diagnóstico", "criterio", "mg/kg", "goteo", "vía", "antbiotico", "radiografia", "eco"];
-                const maxPaginasEscanear = Math.min(documentoPdf.numPages, 15);
-                
-                for (let i = 1; i <= maxPaginasEscanear; i++) {
-                    if (paginasAgregadas >= 4) break;
+                for (let i = 1; i <= maxPaginas; i++) {
                     try {
                         const pagina = await documentoPdf.getPage(i);
                         const contenidoTexto = await pagina.getTextContent();
                         const textoPagina = contenidoTexto.items.map(item => item.str).join(" ");
-                        const textoMinuscula = textoPagina.toLowerCase();
-
-                        if (i === 1 || palabrasFiltro.some(palabra => textoMinuscula.includes(palabra))) {
-                            textoCompleto += `[Pág ${i}]: ${textoPagina}\n`;
-                            paginasAgregadas++;
-                        }
+                        
+                        // Separamos el texto por oraciones para procesarlo quirúrgicamente
+                        const lineas = textoPagina.split(/(?<=[.!?])\s+/);
+                        lineas.forEach(linea => {
+                            const lineaMinuscula = linea.toLowerCase();
+                            // Guardamos la línea si coincide con los tokens que el médico está buscando
+                            if (tokensMedico.some(token => lineaMinuscula.includes(token))) {
+                                if (!textoFiltrado.includes(linea.substring(0, 30))) {
+                                    textoFiltrado += `[Pág ${i}]: ${linea.trim()}\n`;
+                                }
+                            }
+                        });
                     } catch (e) {}
                 }
-                return textoCompleto;
+                
+                // Backup: Si el filtro fue demasiado estricto, extraemos un fragmento de la pág 1
+                if (textoFiltrado.trim().length === 0) {
+                    const primeraPagina = await documentoPdf.getPage(1);
+                    const contenido = await primeraPagina.getTextContent();
+                    textoFiltrado = `[Pág 1]: ` + contenido.items.map(item => item.str).join(" ").substring(0, 1200);
+                }
+                
+                return textoFiltrado;
             } catch (error) {
                 return null;
             }
@@ -134,34 +149,52 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
             });
         }
 
+        // LLAMADA CON TOLERANCIA A ERRORES 429 Y ROTACIÓN ACTIVA
         async function llamarGroq(textoUsuario) {
-            const apiKey = obtenerApiKey();
-            if (!apiKey) throw new Error("API Key no provista.");
+            let listaKeys = obtenerApiKey();
+            if (!listaKeys || listaKeys.length === 0) throw new Error("No hay API Keys cargadas.");
 
-            const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${apiKey}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    model: "llama-3.3-70b-versatile",
-                    messages: [
-                        { role: "system", content: SYSTEM_PROMPT_CONSULTA },
-                        { role: "user", content: textoUsuario }
-                    ],
-                    temperature: 0.0 // Cero determinismo para evitar alucinaciones
-                })
-            });
-            if (!res.ok) {
-                if(res.status === 401) {
-                    borrarApiKey();
-                    throw new Error("API Key inválida.");
+            for (let i = 0; i < listaKeys.length; i++) {
+                let claveActual = listaKeys[i];
+                try {
+                    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+                        method: "POST",
+                        headers: {
+                            "Authorization": `Bearer ${claveActual}`,
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            model: "llama-3.3-70b-versatile",
+                            messages: [
+                                { role: "system", content: SYSTEM_PROMPT_CONSULTA },
+                                { role: "user", content: textoUsuario }
+                            ],
+                            temperature: 0.0
+                        })
+                    });
+
+                    if (res.status === 429) {
+                        console.warn(`⚠️ Clave ${i + 1} agotada (429). Rotando a la siguiente clave...`);
+                        continue; // Salta de inmediato a la siguiente clave del array
+                    }
+
+                    if (!res.ok) {
+                        if (res.status === 401 && listaKeys.length === 1) {
+                            borrarApiKey();
+                            throw new Error("API Key inválida.");
+                        }
+                        throw new Error(`HTTP error! status: ${res.status}`);
+                    }
+                    
+                    const data = await res.json();
+                    return data.choices[0].message.content.trim();
+
+                } catch (err) {
+                    // Si es la última clave disponible de tu lista y también falla, rompe el ciclo y muestra el error
+                    if (i === listaKeys.length - 1) throw err;
                 }
-                throw new Error(`HTTP error! status: ${res.status}`);
             }
-            const data = await res.json();
-            return data.choices[0].message.content.trim();
+            throw new Error("Todas las API Keys cargadas están saturadas actualmente.");
         }
 
         // MOTOR DE BÚSQUEDA MULTI-TOKEN CON CAPACIDAD MULTI-DOCUMENTO ORDENADA
@@ -189,27 +222,24 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
 
                 const listaPdfs = await respuestaJson.json();
 
-                // Normalización lingüística rigurosa
+                // Normalización lingüística
                 const limpiarTexto = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
                 
                 const consultaLimpia = limpiarTexto(texto);
                 const tokensMedico = consultaLimpia.split(/\s+/).filter(word => word.length > 3);
 
-                // 1. Filtrado inicial de coincidencia por palabras clave o nombre
+                // 1. Filtrado de coincidencia
                 let pdfsCoincidentes = listaPdfs.filter(pdf => {
                     if (!pdf || !pdf.archivo) return false;
 
-                    // Control estricto de Exclusiones
                     if (pdf.excluir && pdf.excluir.some(ex => consultaLimpia.includes(limpiarTexto(ex)))) {
                         return false;
                     }
 
-                    // Control de match directo en el Título del Protocolo
                     const nombreLimpio = limpiarTexto(pdf.nombre);
                     const matchPorNombre = tokensMedico.some(token => nombreLimpio.includes(token));
                     if (matchPorNombre) return true;
 
-                    // Control cruzado por coincidencia de tokens en el array de palabras clave
                     if (pdf.palabras_clave && Array.isArray(pdf.palabras_clave)) {
                         return pdf.palabras_clave.some(keyword => consultaLimpia.includes(limpiarTexto(keyword)));
                     }
@@ -217,10 +247,9 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                     return false;
                 });
 
-                // 2. ORDENAR ALFABÉTICAMENTE según el nombre descriptivo del protocolo
+                // 2. Ordenar alfabéticamente
                 pdfsCoincidentes.sort((a, b) => a.nombre.localeCompare(b.nombre));
 
-                // Si no coincide con las palabras clave locales, frena de inmediato sin llamar a Groq
                 if (pdfsCoincidentes.length === 0) {
                     status.innerText = "❌ Búsqueda finalizada";
                     textoHtml.innerHTML = `<div class="bg-amber-950/40 border border-amber-500/30 rounded-lg p-4 text-amber-300 font-medium flex items-center gap-2">
@@ -230,18 +259,18 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                     return;
                 }
                 
-                // 3. Encabezado dinámico con la cantidad de PDFs encontrados
+                // 3. Encabezado de control informando la cantidad de PDFs hallados
                 let encabezadoAviso = `<div class="bg-sky-950/50 border border-sky-500/30 text-sky-300 rounded-lg p-3 text-xs mb-4 font-medium flex items-center gap-2">
                     <span>ℹ️</span> Se encontraron <strong>${pdfsCoincidentes.length} documentos</strong> que coinciden con tu búsqueda en la biblioteca personal.
                 </div>`;
 
-                // Procesar secuencialmente la extracción de los PDFs que hicieron match
                 for (let index = 0; index < pdfsCoincidentes.length; index++) {
                     const pdf = pdfsCoincidentes[index];
                     const urlPdf = `${BASE_BIBLIOTECA}${pdf.archivo}`;
                     status.innerText = `⏳ Mapeando documento (${index + 1}/${pdfsCoincidentes.length}): ${pdf.nombre}...`;
                     
-                    const textoExtraido = await extraerTextoPDF(urlPdf);
+                    // Pasamos tokensMedico para hacer la extracción filtrada y quirúrgica
+                    const textoExtraido = await extraerTextoPDF(urlPdf, tokensMedico);
                     if (textoExtraido && textoExtraido.trim().length > 0) {
                         bloqueContexto += `=== INICIO DOCUMENTO: ${pdf.nombre} ===\nURL Original ${index + 1}: ${urlPdf}\n${textoExtraido}=== FIN DOCUMENTO ===\n\n`;
                         conteoPdfs++;
@@ -264,7 +293,6 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                 
                 const respuestaIA = await llamarGroq(bloqueContexto);
                 
-                // Inyectamos el aviso de cantidad encontrada + la respuesta formateada de la IA
                 textoHtml.innerHTML = encabezadoAviso + formatearMarkdownAHtml(respuestaIA);
                 container.classList.remove('hidden');
                 status.innerText = "✅ Análisis Finalizado";
@@ -272,6 +300,11 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
             } catch (err) {
                 status.innerText = "❌ Error general";
                 console.error(err);
+                textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 text-xs font-mono">
+                    <strong>Error del Servidor:</strong> ${err.message || err}<br>
+                    💡 Si el error es un código 429, se han agotado todas las llaves ingresadas por este minuto. Esperá 60 segundos o cargá más claves de respaldo.
+                </div>`;
+                container.classList.remove('hidden');
             } finally {
                 btn.disabled = false;
             }
