@@ -28,15 +28,22 @@
             <label for="buscador-terminos" class="block text-sm font-semibold text-slate-300 mb-2">
                 Ingresá los síntomas, patología, criterios o palabras clave a localizar:
             </label>
-            <div class="flex gap-3">
+            <div class="flex flex-col sm:flex-row gap-3">
                 <input type="text" id="buscador-terminos" 
                     class="w-full bg-slate-950 border border-slate-600 rounded-lg p-3 text-slate-200 focus:outline-none focus:border-sky-500 placeholder-slate-500 text-sm"
                     placeholder="Ej: meningitis fiebre lactante o asma"
                     onkeyup="if(event.key === 'Enter') ejecutarBusquedaMera()">
-                <button id="btn-buscar" onclick="ejecutarBusquedaMera()"
-                    class="bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm px-6 py-2.5 rounded-lg transition-colors cursor-pointer shadow-md shrink-0">
-                    Buscar PDF
-                </button>
+                
+                <div class="flex gap-2 shrink-0">
+                    <button id="btn-buscar" onclick="ejecutarBusquedaMera()"
+                        class="bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors cursor-pointer shadow-md flex items-center gap-1.5 justify-center flex-1 sm:flex-initial">
+                        🔍 <span>Buscar PDF</span>
+                    </button>
+                    <button id="btn-catalogo" onclick="mostrarCatalogoCompleto()"
+                        class="bg-slate-700 hover:bg-slate-600 text-slate-200 font-semibold text-sm px-4 py-2.5 rounded-lg transition-colors cursor-pointer shadow-md flex items-center gap-1.5 justify-center flex-1 sm:flex-initial border border-slate-600">
+                        📋 <span>Ver Catálogo</span>
+                    </button>
+                </div>
             </div>
             <div class="flex items-center justify-between mt-3">
                 <span id="contador-estado" class="text-xs text-slate-400 font-medium">Listo para escanear biblioteca local</span>
@@ -45,7 +52,7 @@
         </div>
 
         <div id="resultados-wrapper" class="hidden space-y-3">
-            <h2 class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-2 px-1">📋 Documentos Relacionados Encontrados</h2>
+            <h2 id="titulo-resultados" class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-2 px-1">📋 Documentos Relacionados Encontrados</h2>
             <div id="lista-documentos-pdf" class="grid gap-2 sm:grid-cols-1">
                 </div>
         </div>
@@ -82,12 +89,37 @@
             location.reload();
         }
 
-        // Función de búsqueda basada puramente en coincidencia semántica/tokenizada y ordenamiento estricto
+        // Función auxiliar para renderizar la lista simplificada
+        function renderizarListaPdfs(documentos) {
+            const listaContenedor = document.getElementById('lista-documentos-pdf');
+            listaContenedor.innerHTML = "";
+
+            documentos.forEach(pdf => {
+                const urlCompleta = `${BASE_BIBLIOTECA}${pdf.archivo}`;
+                const itemHtml = `
+                    <div class="bg-slate-800 border border-slate-700/80 rounded-xl p-3.5 flex items-center justify-between hover:border-sky-500/40 transition-all shadow-md group">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <span class="text-lg shrink-0">📄</span>
+                            <h3 class="text-sm font-bold text-slate-100 truncate group-hover:text-sky-400 transition-colors">${pdf.nombre}</h3>
+                        </div>
+                        <div class="shrink-0 pl-4">
+                            <a href="${urlCompleta}" target="_blank" 
+                               class="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-sky-900 border border-slate-700 hover:border-sky-500/40 text-xs text-sky-400 hover:text-white font-semibold px-4 py-2 rounded-lg transition-all cursor-pointer">
+                                <span>Descargar</span> ⬇️
+                            </a>
+                        </div>
+                    </div>`;
+                listaContenedor.insertAdjacentHTML('beforeend', itemHtml);
+            });
+        }
+
+        // 1. FUNCIÓN DE BÚSQUEDA POR FILTRO Y RELEVANCIA
         async function ejecutarBusquedaMera() {
             const inputElement = document.getElementById('buscador-terminos');
             const listaContenedor = document.getElementById('lista-documentos-pdf');
             const wrapper = document.getElementById('resultados-wrapper');
             const estado = document.getElementById('contador-estado');
+            const titulo = document.getElementById('titulo-resultados');
             
             const consultaOriginal = inputElement.value.trim();
             if (!consultaOriginal) return alert("Por favor, escriba un término médico para iniciar el filtro.");
@@ -95,8 +127,8 @@
             if (!obtenerApiKey()) return;
 
             estado.innerText = "🔍 Mapeando coincidencias en el catálogo...";
-            listaContenedor.innerHTML = "";
             wrapper.classList.add('hidden');
+            titulo.innerText = "📋 Documentos Relacionados Encontrados";
 
             try {
                 const respuestaJson = await fetch(`${BASE_BIBLIOTECA}index.json`);
@@ -104,7 +136,6 @@
                 
                 const catalogoPdfs = await respuestaJson.json();
 
-                // Normalizador para remover acentos, diéresis y signos de puntuación conflictivos
                 const limpiarCadena = (str) => 
                     String(str).normalize("NFD")
                                .replace(/[\u0300-\u036f]/g, "")
@@ -131,14 +162,12 @@
                     let puntosCoincidencia = 0;
                     const nombreLimpio = limpiarCadena(pdf.nombre);
 
-                    // Ponderación de ocurrencias directas en el título
                     tokensConsulta.forEach(token => {
                         if (nombreLimpio.includes(token)) {
                             puntosCoincidencia += 3;
                         }
                     });
 
-                    // Ponderación de ocurrencias en las palabras clave
                     if (pdf.palabras_clave && Array.isArray(pdf.palabras_clave)) {
                         pdf.palabras_clave.forEach(keyword => {
                             const keywordLimpia = limpiarCadena(keyword);
@@ -158,7 +187,6 @@
                     }
                 });
 
-                // Ordenamiento: Coincidencias (Descendente) -> Nombre Alfabético (Ascendente)
                 documentosProcesados.sort((a, b) => {
                     if (b.coincidencias !== a.coincidencias) {
                         return b.coincidencias - a.coincidencias;
@@ -176,36 +204,59 @@
                     return;
                 }
 
-                // Renderizado minimalista extremo: Nombre y Botón únicamente
-                documentosProcesados.forEach(pdf => {
-                    const urlCompleta = `${BASE_BIBLIOTECA}${pdf.archivo}`;
-                    const itemHtml = `
-                        <div class="bg-slate-800 border border-slate-700/80 rounded-xl p-3.5 flex items-center justify-between hover:border-sky-500/40 transition-all shadow-md group">
-                            <div class="flex items-center gap-2.5 min-w-0">
-                                <span class="text-lg shrink-0">📄</span>
-                                <h3 class="text-sm font-bold text-slate-100 truncate group-hover:text-sky-400 transition-colors">${pdf.nombre}</h3>
-                            </div>
-                            <div class="shrink-0 pl-4">
-                                <a href="${urlCompleta}" target="_blank" 
-                                   class="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-sky-900 border border-slate-700 hover:border-sky-500/40 text-xs text-sky-400 hover:text-white font-semibold px-4 py-2 rounded-lg transition-all cursor-pointer">
-                                    <span>Descargar</span> ⬇️
-                                </a>
-                            </div>
-                        </div>`;
-                    listaContenedor.insertAdjacentHTML('beforeend', itemHtml);
-                });
-
+                renderizarListaPdfs(documentosProcesados);
                 estado.innerText = `✅ Búsqueda exitosa: ${documentosProcesados.length} documento(s) listado(s).`;
                 wrapper.classList.remove('hidden');
 
             } catch (err) {
                 console.error(err);
                 estado.innerText = "❌ Error al leer catálogo.";
-                listaContenedor.innerHTML = `
-                    <div class="bg-red-950/30 border border-red-500/20 text-red-300 rounded-xl p-4 text-xs">
-                        Error crítico del motor local: ${err.message}. Verifique la existencia y formato del archivo index.json en la raíz del servidor.
-                    </div>`;
+            }
+        }
+
+        // 2. FUNCIÓN PARA MOSTRAR TODO EL CATÁLOGO EN ORDEN ALFABÉTICO
+        async function mostrarCatalogoCompleto() {
+            const wrapper = document.getElementById('resultados-wrapper');
+            const estado = document.getElementById('contador-estado');
+            const titulo = document.getElementById('titulo-resultados');
+            const listaContenedor = document.getElementById('lista-documentos-pdf');
+
+            if (!obtenerApiKey()) return;
+
+            document.getElementById('buscador-terminos').value = ""; // Limpia el cuadro de texto para evitar confusión
+            estado.innerText = "📋 Cargando catálogo bibliográfico completo...";
+            wrapper.classList.add('hidden');
+            titulo.innerText = "🗂️ Catálogo Completo (Orden Alfabético)";
+
+            try {
+                const respuestaJson = await fetch(`${BASE_BIBLIOTECA}index.json`);
+                if (!respuestaJson.ok) throw new Error("No se pudo leer el archivo index.json.");
+                
+                let catalogoPdfs = await respuestaJson.json();
+
+                // Filtrar registros válidos
+                catalogoPdfs = catalogoPdfs.filter(pdf => pdf && pdf.nombre && pdf.archivo);
+
+                // Ordenar puramente por orden alfabético de la A a la Z
+                catalogoPdfs.sort((a, b) => a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' }));
+
+                if (catalogoPdfs.length === 0) {
+                    estado.innerText = "⚠️ La biblioteca está vacía.";
+                    listaContenedor.innerHTML = `
+                        <div class="bg-slate-800/40 border border-slate-700/60 rounded-xl p-6 text-center text-slate-400 text-sm">
+                            No hay documentos registrados en el archivo index.json.
+                        </div>`;
+                    wrapper.classList.remove('hidden');
+                    return;
+                }
+
+                renderizarListaPdfs(catalogoPdfs);
+                estado.innerText = `📋 Mostrando total de la biblioteca: ${catalogoPdfs.length} documentos.`;
                 wrapper.classList.remove('hidden');
+
+            } catch (err) {
+                console.error(err);
+                estado.innerText = "❌ Error al mapear catálogo completo.";
             }
         }
 
