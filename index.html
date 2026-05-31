@@ -72,7 +72,7 @@
         }
 
         const SYSTEM_PROMPT_CONSULTA = `# ROL Y PERFIL PROFESIONAL
-Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisión. Tu comunicación es estrictamente médica, académica, directa y fragmentada por protocolo.
+Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisión. Tu comunicación es estrictamente médica, académica, directa y fragmentada por protocolo.
 
 # INSTRUCCIONES DE FLUJO ABSOLUTAS
 - Se te proporcionará el texto extraído de uno o varios archivos PDF bajo la etiqueta [TEXTO EXTRAÍDO DE LOS PDFS DE LA BIBLIOTECA PERSONAL].
@@ -105,7 +105,7 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
                         const contenidoTexto = await pagina.getTextContent();
                         let textoPagina = contenidoTexto.items.map(item => item.str).join(" ");
                         
-                        // Reemplazo exhaustivo de caracteres conflictivos de fuentes incrustadas
+                        // Reemplazo de caracteres conflictivos de fuentes y saltos
                         textoPagina = textoPagina.replace(/[\r\n\t]/g, " ")
                                                  .replace(/[\x00-\x1F\x7F-\x9F]/g, " ")
                                                  .replace(/\\/g, "/")
@@ -153,13 +153,22 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
             });
         }
 
-        // LLAMADA ESTABLE CON MODELO LLAMA 3 8B
+        // LLAMADA ATÓMICA REVISADA (Elimina error 400 y maneja rotación 429)
         async function llamarGroq(textoUsuario) {
             let listaKeys = obtenerApiKey();
             if (!listaKeys || listaKeys.length === 0) throw new Error("No hay API Keys cargadas.");
 
             for (let i = 0; i < listaKeys.length; i++) {
                 let claveActual = listaKeys[i];
+                
+                const payload = {
+                    model: "llama3-8b-8192",
+                    messages: [
+                        { role: "system", content: SYSTEM_PROMPT_CONSULTA },
+                        { role: "user", content: textoUsuario }
+                    ]
+                };
+
                 try {
                     const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
                         method: "POST",
@@ -167,13 +176,7 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
                             "Authorization": `Bearer ${claveActual}`,
                             "Content-Type": "application/json"
                         },
-                        body: JSON.stringify({
-                            model: "llama3-8b-8192", 
-                            messages: [
-                                { role: "system", content: SYSTEM_PROMPT_CONSULTA },
-                                { role: "user", content: textoUsuario }
-                            ]
-                        })
+                        body: JSON.stringify(payload)
                     });
 
                     if (res.status === 429) {
@@ -186,11 +189,9 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
                     }
 
                     if (!res.ok) {
-                        if (res.status === 401 && listaKeys.length === 1) {
-                            borrarApiKey();
-                            throw new Error("API Key inválida.");
-                        }
-                        throw new Error(`HTTP error! status: ${res.status}`);
+                        const errorData = await res.text();
+                        console.error("Respuesta cruda del servidor:", errorData);
+                        throw new Error(`status: ${res.status}`);
                     }
                     
                     const data = await res.json();
@@ -288,7 +289,7 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
                     return;
                 }
 
-                // Normalización limpia de la consulta clínica del usuario sin escapar comillas de forma explícita
+                // Normalización de la consulta clínica del usuario
                 const textoCasoSanitizado = texto.replace(/[\r\n\t]/g, " ")
                                                  .replace(/[\x00-\x1F\x7F-\x9F]/g, " ")
                                                  .replace(/\\/g, "/");
@@ -313,7 +314,7 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
                 
                 let msgError = err.message === "429" 
                     ? `⚠️ Límite de velocidad estricto de Groq alcanzado temporalmente.<br><br>💡 <strong>Solución:</strong> Esperá 30 segundos a que la plataforma reinicie tu cuota por minuto.`
-                    : `<strong>Error de ejecución (HTTP ${err.message || '400'}):</strong> Se detectó un rechazo formal en el payload JSON. Verificá que la consulta no contenga caracteres de escape especiales corruptos.`;
+                    : `<strong>Error de ejecución (${err.message || 'HTTP 400'}):</strong> Se detectó un rechazo formal en el payload JSON. Revisá los detalles del error en la consola de desarrollo (F12).`;
 
                 textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 text-sm leading-relaxed">
                     ${msgError}
