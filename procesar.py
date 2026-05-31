@@ -4,9 +4,9 @@ import glob
 from pypdf import PdfReader
 from groq import Groq
 
-# Obtener la API Key desde los secretos de GitHub Actions
+# Obtener la API Key desde los secretos configurados en tu GitHub
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-CARPETA_PDFS = "./"  # Busca en la raíz o subcarpetas si los guardas ahí
+CARPETA_PDFS = "./"  # Busca los PDFs en la raíz del repositorio
 ARCHIVO_INDEX = "./index.json"
 PROCESADOS_LOG = "./procesados.txt"
 
@@ -30,7 +30,7 @@ def extraer_texto_pdf(ruta_pdf):
     try:
         reader = PdfReader(ruta_pdf)
         texto = ""
-        # Extraemos las primeras 10 páginas para no saturar los tokens de Groq
+        # Extraemos un máximo de 10 páginas (suficiente para que la IA entienda el contexto)
         for i, page in enumerate(reader.pages):
             content = page.extract_text()
             if content:
@@ -82,7 +82,7 @@ def actualizar_index(nuevo_item):
     else:
         datos = []
 
-    # Ajuste automático según el formato actual de tu index.json
+    # Se adapta automáticamente tanto si tu index.json es una lista [] o un objeto con clave interna
     if isinstance(datos, list):
         datos.append(nuevo_item)
     elif isinstance(datos, dict) and "libros" in datos:
@@ -112,7 +112,7 @@ def main():
 
         info_json = consultar_groq(texto)
         if info_json:
-            # Esta URL será la ruta directa para que GitHub Pages pueda abrirlo
+            # Genera la URL directa compatible con tu GitHub Pages
             info_json["url_pdf"] = f"[https://navarrodavidguillermo.github.io/biblioteca/](https://navarrodavidguillermo.github.io/biblioteca/){nombre_archivo}"
             actualizar_index(info_json)
             guardar_procesado(nombre_archivo)
