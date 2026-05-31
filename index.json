@@ -38,5 +38,34 @@
             "enfermedades gastrointestinales",
             "enfermedades respiratorias"
         ]
+    },
+    {
+        "nombre": "Salud bucal de los niños: caries dental y prevención",
+        "archivo": "Salud_bucal_traumatismo_Infeccion_odontológica.pdf",
+        "palabras_clave": [
+            "caries dental",
+            "enfermedad bucal",
+            "niños",
+            "Streptococcus mutans",
+            "transmisión",
+            "colonización",
+            "erupción dental",
+            "dientes primarios",
+            "dientes permanentes",
+            "prevención",
+            "fluoruros",
+            "calcificación",
+            "esmalte dentario",
+            "atención odontológica",
+            "pediatria"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "cardiopatías congénitas",
+            "prematurez"
+        ]
     }
 ]
