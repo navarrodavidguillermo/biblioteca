@@ -46,7 +46,7 @@
 
         <div id="resultados-wrapper" class="hidden space-y-3">
             <h2 class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-2 px-1">📋 Documentos Relacionados Encontrados</h2>
-            <div id="lista-documentos-pdf" class="grid gap-3 sm:grid-cols-1">
+            <div id="lista-documentos-pdf" class="grid gap-2 sm:grid-cols-1">
                 </div>
         </div>
     </div>
@@ -92,7 +92,6 @@
             const consultaOriginal = inputElement.value.trim();
             if (!consultaOriginal) return alert("Por favor, escriba un término médico para iniciar el filtro.");
             
-            // Forzar verificación de clave local previo al procesamiento
             if (!obtenerApiKey()) return;
 
             estado.innerText = "🔍 Mapeando coincidencias en el catálogo...";
@@ -113,7 +112,6 @@
                                .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g," ");
 
                 const consultaLimpia = limpiarCadena(consultaOriginal);
-                // Separamos la consulta por palabras para evaluar coincidencias parciales (mínimo 3 letras)
                 const tokensConsulta = consultaLimpia.split(/\s+/).filter(token => token.length >= 3);
 
                 if (tokensConsulta.length === 0) {
@@ -126,7 +124,6 @@
                 catalogoPdfs.forEach(pdf => {
                     if (!pdf || !pdf.archivo) return;
 
-                    // Si el documento tiene reglas de exclusión explícitas que coincidan con la búsqueda, lo salteamos
                     if (pdf.excluir && pdf.excluir.some(ex => consultaLimpia.includes(limpiarCadena(ex)))) {
                         return;
                     }
@@ -134,26 +131,25 @@
                     let puntosCoincidencia = 0;
                     const nombreLimpio = limpiarCadena(pdf.nombre);
 
-                    // 1. Validar ocurrencias directas en el título del archivo o protocolo
+                    // Ponderación de ocurrencias directas en el título
                     tokensConsulta.forEach(token => {
                         if (nombreLimpio.includes(token)) {
-                            puntosCoincidencia += 3; // El título tiene prioridad alta de ponderación
+                            puntosCoincidencia += 3;
                         }
                     });
 
-                    // 2. Validar ocurrencias en el array de palabras clave asignadas en el index.json
+                    // Ponderación de ocurrencias en las palabras clave
                     if (pdf.palabras_clave && Array.isArray(pdf.palabras_clave)) {
                         pdf.palabras_clave.forEach(keyword => {
                             const keywordLimpia = limpiarCadena(keyword);
                             tokensConsulta.forEach(token => {
                                 if (keywordLimpia.includes(token)) {
-                                    puntosCoincidencia += 1; // Puntuación acumulativa por metadatos correlativos
+                                    puntosCoincidencia += 1;
                                 }
                             });
                         });
                     }
 
-                    // Guardamos solo los documentos que tengan al menos una coincidencia
                     if (puntosCoincidencia > 0) {
                         documentosProcesados.push({
                             ...pdf,
@@ -162,9 +158,7 @@
                     }
                 });
 
-                // REGLA DE ORDENAMIENTO ESTRICTA:
-                // Primero por cantidad de coincidencias descencente.
-                // Si empatan (coincidencias iguales), se desambigua por orden alfabético ascendente de nombre.
+                // Ordenamiento: Coincidencias (Descendente) -> Nombre Alfabético (Ascendente)
                 documentosProcesados.sort((a, b) => {
                     if (b.coincidencias !== a.coincidencias) {
                         return b.coincidencias - a.coincidencias;
@@ -182,25 +176,16 @@
                     return;
                 }
 
-                // Renderizado limpio de los PDFs encontrados
+                // Renderizado minimalista extremo: Nombre y Botón únicamente
                 documentosProcesados.forEach(pdf => {
                     const urlCompleta = `${BASE_BIBLIOTECA}${pdf.archivo}`;
                     const itemHtml = `
-                        <div class="bg-slate-800 border border-slate-700/80 rounded-xl p-4 flex items-center justify-between hover:border-sky-500/50 transition-all shadow-md group">
-                            <div class="space-y-1 pr-4">
-                                <div class="flex items-center gap-2">
-                                    <span class="text-xl">📄</span>
-                                    <h3 class="text-sm font-bold text-slate-100 group-hover:text-sky-400 transition-colors">${pdf.nombre}</h3>
-                                </div>
-                                <p class="text-xs text-slate-400 pl-7">
-                                    Archivo: <span class="font-mono text-slate-500">${pdf.archivo}</span>
-                                </p>
-                                ${pdf.palabras_clave ? `
-                                <div class="pl-7 pt-1 flex flex-wrap gap-1">
-                                    ${pdf.palabras_clave.map(kw => `<span class="bg-slate-900 border border-slate-700/60 text-[10px] text-slate-400 px-1.5 py-0.5 rounded">${kw}</span>`).join('')}
-                                </div>` : ''}
+                        <div class="bg-slate-800 border border-slate-700/80 rounded-xl p-3.5 flex items-center justify-between hover:border-sky-500/40 transition-all shadow-md group">
+                            <div class="flex items-center gap-2.5 min-w-0">
+                                <span class="text-lg shrink-0">📄</span>
+                                <h3 class="text-sm font-bold text-slate-100 truncate group-hover:text-sky-400 transition-colors">${pdf.nombre}</h3>
                             </div>
-                            <div class="text-right shrink-0">
+                            <div class="shrink-0 pl-4">
                                 <a href="${urlCompleta}" target="_blank" 
                                    class="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-sky-900 border border-slate-700 hover:border-sky-500/40 text-xs text-sky-400 hover:text-white font-semibold px-4 py-2 rounded-lg transition-all cursor-pointer">
                                     <span>Descargar</span> ⬇️
