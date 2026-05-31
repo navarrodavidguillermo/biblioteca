@@ -73,14 +73,23 @@
         ],
         "excluir": [
             "asma",
-            "meningitis",
-            "ataxia",
             "brue",
             "alergias",
             "intolerancias",
             "sensibilidades",
             "enfermedades gastrointestinales",
             "enfermedades respiratorias"
+             "resfriado",
+              "crup",
+              "laringitis",
+              "otitis",
+              "asma",
+              "bronquiolitis",
+              "bql",
+              "nac",
+              "neumonia",
+              "traumatismo encefalocraneano",
+              "tec"
         ]
     },
     {
