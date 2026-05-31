@@ -1,11 +1,18 @@
-# 📚 Biblioteca Digital de Pediatría
+# 📚 Biblioteca Médica Digital - Protocolos de Guardia
 
-Índice de consensos, guías clínicas y módulos de actualización profesional.
+Bienvenido al sistema centralizado de guías clínicas y protocolos pediátricos.
+
+> 🚀 **ACCESO AL BUSCADOR INTELIGENTE (IA):**
+> Podés realizar búsquedas clínicas por síntomas, signos o estudios complementarios y recibir una respuesta analizada por IA ingresando al siguiente enlace:
+>
+> 👉 **[[ABRIR BUSCADOR DE LA BIBLIOTECA]](https://navarrodavidguillermo.github.io/biblioteca/)**
 
 ---
 
-## 📌 Módulos PRONAP
+## 📂 Contenido de la Biblioteca
 
-* <a href="https://navarrodavidguillermo.github.io/pronap/2025%20modulo%201.pdf" target="_blank">📄 PRONAP 2025 - Módulo 1</a>
-* <a href="https://navarrodavidguillermo.github.io/pronap/2025%20modulo%202.pdf" target="_blank">📄 PRONAP 2025 - Módulo 2</a>
+Actualmente, el sistema indexa y analiza de forma inteligente los siguientes documentos:
 
+* **Meningitis, Encefalitis y Meningoencefalitis Pediátrica** (`Meningitis_Encefalitis.pdf`)
+    * *Síntomas:* Rigidez de nuca, fontanela abombada, irritabilidad, fiebre alta, convulsiones, tríada de Cushing.
+    * *Estudios:* Punción lumbar, Citoquímico de LCR, TAC, RNM, EEG.
