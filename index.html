@@ -153,7 +153,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
             });
         }
 
-        // LLAMADA ATÓMICA ROBUSTA CON CONTROL DE TOKENS (Previene Error 400)
+        // LLAMADA ATÓMICA ROBUSTA CON MODELO ACTUALIZADO (llama-3.1-8b-instant)
         async function llamarGroq(textoUsuario) {
             let listaKeys = obtenerApiKey();
             if (!listaKeys || listaKeys.length === 0) throw new Error("No hay API Keys cargadas.");
@@ -162,7 +162,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                 let claveActual = listaKeys[i];
                 
                 const payload = {
-                    model: "llama3-8b-8192",
+                    model: "llama-3.1-8b-instant", // Modelo actualizado y soportado oficialmente por Groq
                     messages: [
                         { role: "system", content: SYSTEM_PROMPT_CONSULTA },
                         { role: "user", content: textoUsuario }
@@ -316,7 +316,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                 
                 let msgError = err.message === "429" 
                     ? `⚠️ Límite de velocidad estricto de Groq alcanzado temporalmente.<br><br>💡 <strong>Solución:</strong> Esperá 30 segundos a que la plataforma reinicie tu cuota por minuto.`
-                    : `<strong>Error de ejecución (${err.message || 'HTTP 400'}):</strong> Se detectó un rechazo formal en el payload JSON o límites excedidos. Revisá los detalles detallados en la consola (F12).`;
+                    : `<strong>Error de ejecución (${err.message || 'HTTP 400'}):</strong> Error en la petición con los servidores de Groq. Revisá la consola (F12) para ver la respuesta detallada del endpoint.`;
 
                 textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 text-sm leading-relaxed">
                     ${msgError}
