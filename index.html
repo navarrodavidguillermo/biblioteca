@@ -66,28 +66,20 @@
             location.reload();
         }
 
+        // SYSTEM PROMPT ULTRA-ESTRICTO: Prohibido usar conocimientos externos
         const SYSTEM_PROMPT_CONSULTA = `# ROL Y PERFIL PROFESIONAL
-Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisión. Tu comunicación es strictly médica, académica y directa.
+Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisión. Tu comunicación es estrictamente médica, académica y directa.
 
-# INSTRUCCIONES DE FLUJO
-Analiza con rigor el contexto provisto. Te enfrentarás a dos situaciones exclusivas controladas por las etiquetas que recibas:
-
-## CASO 1: SI RECIBES LA ETIQUETA [TEXTO EXTRAÍDO DE LOS PDFS DE LA BIBLIOTECA PERSONAL]
-- Te daremos el texto extraído selectivamente de tus archivos PDF. Debes responder desglosando exhaustivamente la información de esos documentos adjuntos.
-- Explota al máximo los datos de laboratorios, parámetros de laboratorio, imágenes, criterios de internación, dosis y algoritmos provistos. No resumas de forma extrema; sé preciso, detallado y minucioso.
-- Está terminantemente prohibido inventar o deducir pautas que no estén escritas en los bloques provistos.
+# INSTRUCCIONES DE FLUJO ABSOLUTAS
+- Se te proporcionará obligatoriamente el texto extraído selectivamente de los archivos PDF de la biblioteca personal del usuario bajo la etiqueta [TEXTO EXTRAÍDO DE LOS PDFS DE LA BIBLIOTECA PERSONAL].
+- Tu única tarea es responder desglosando de forma exhaustiva, minuciosa y detallada la información contenida en esos documentos adjuntos.
+- Explota al máximo los datos de laboratorios, parámetros, imágenes, criterios de internación, dosis y algoritmos provistos en el texto adjunto.
+- RESTRICCIÓN CRÍTICA: Está terminantemente prohibido inventar, deducir pautas, o utilizar conocimientos médicos externos que no estén explícitamente escritos en los bloques de texto provistos. Si el documento no menciona un dato, no lo agregues.
 - Estructura tu respuesta de forma directa, sin títulos generales de apertura ni saludos. Entrega rigurosamente los siguientes puntos estructurados en texto plano/viñetas para cada patología analizada:
   * Análisis clínico detallado y criterios evolutivos según el o los documentos correspondientes.
   * Estudios complementarios indicados de forma específica (laboratorios, imágenes, cultivos, etc.) detallados en el o los documentos.
   * Esquema terapéutico, dosis exactas, vías de administración y conductas dictadas en el o los documentos.
-  * Al final de la respuesta, añade una línea en blanco por cada documento utilizado y coloca exactamente la URL provista en el campo "URL Original X:" para que el usuario pueda descargarlos de forma directa.
-- CORTA LA RESPUESTA AHÍ.
-
-## CASO 2: SI NO RECIBES TEXTOS DE PDFS
-- No hables de la biblioteca personal ni inventes enlaces. Procesa utilizando fuentes institucionales de respaldo (SAP/AEP) organizando bajo títulos limpios la información con Criterio Técnico, Estudios Solicitados, Tratamiento Recomendado y URL Directa Real.
-
-# RESTRICCIONES DE ESTILO ABSOLUTAS
-- Prohibido incluir introducciones, saludos, comentarios amigables o cierres de cortesía. Ve directamente a la información médica.`;
+  * Al final de la respuesta, añade una línea en blanco por cada documento utilizado y coloca exactamente la URL provista en el campo "URL Original X:" para que el usuario pueda descargarlos de forma directa.`;
 
         // Extractor inteligente por relevancia clínica
         async function extraerTextoPDF(url) {
@@ -149,7 +141,7 @@ Analiza con rigor el contexto provisto. Te enfrentarás a dos situaciones exclus
                         { role: "system", content: SYSTEM_PROMPT_CONSULTA },
                         { role: "user", content: textoUsuario }
                     ],
-                    temperature: 0.15
+                    temperature: 0.0 // Bajamos la temperatura a 0 para eliminar cualquier rastro de creatividad/alucinación
                 })
             });
             if (!res.ok) {
@@ -168,6 +160,7 @@ Analiza con rigor el contexto provisto. Te enfrentarás a dos situaciones exclus
             const status = document.getElementById('status-motor');
             const container = document.getElementById('resultado-container');
             const btn = document.getElementById('btn-buscar');
+            const textoHtml = document.getElementById('texto-analisis-ia');
             const texto = input.value.trim();
 
             if (!texto) return alert("Por favor, describa los signos o parámetros del caso.");
@@ -178,62 +171,80 @@ Analiza con rigor el contexto provisto. Te enfrentarás a dos situaciones exclus
             container.classList.add('hidden');
 
             try {
-                let payloadInyectado = `[OMITIR BIBLIOTECA - BUSCAR EN FUENTES GENERALES]\n\n[CONSULTA DEL CASO CLÍNICO ACTUAL]:\n${texto}`;
+                let bloqueContexto = `[TEXTO EXTRAÍDO DE LOS PDFS DE LA BIBLIOTECA PERSONAL]\n`;
                 let conteoPdfs = 0;
 
                 const respuestaJson = await fetch(`${BASE_BIBLIOTECA}index.json`);
                 
-                if (respuestaJson.ok) {
-                    const listaPdfs = await respuestaJson.json();
+                if (!respuestaJson.ok) {
+                    throw new Error("No se pudo cargar el archivo index.json");
+                }
 
-                    const pdfsCoincidentes = listaPdfs.filter(pdf => {
-                        if (!pdf || !pdf.archivo) return false;
-                        const limpiar = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-                        const consultaLimpia = limpiar(texto);
+                const listaPdfs = await respuestaJson.json();
 
-                        if (pdf.excluir && pdf.excluir.some(palabra => consultaLimpia.includes(limpiar(palabra)))) {
-                            return false;
-                        }
+                // Filtrado por coincidencia de síntomas, estudios o nombres
+                const pdfsCoincidentes = listaPdfs.filter(pdf => {
+                    if (!pdf || !pdf.archivo) return false;
+                    const limpiar = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+                    const consultaLimpia = limpiar(texto);
 
-                        const matchNombre = limpiar(pdf.nombre).split(" ").some(p => p.length > 3 && consultaLimpia.includes(p));
-                        const matchSintomas = pdf.sintomas_y_signos && pdf.sintomas_y_signos.some(s => consultaLimpia.includes(limpiar(s)));
-                        const matchEstudios = pdf.estudios_complementarios && pdf.estudios_complementarios.some(e => consultaLimpia.includes(limpiar(e)));
+                    if (pdf.excluir && pdf.excluir.some(palabra => consultaLimpia.includes(limpiar(palabra)))) {
+                        return false;
+                    }
 
-                        return matchNombre || matchSintomas || matchEstudios;
-                    });
+                    const matchNombre = limpiar(pdf.nombre).split(" ").some(p => p.length > 3 && consultaLimpia.includes(p));
+                    const matchSintomas = pdf.sintomas_y_signos && pdf.sintomas_y_signos.some(s => consultaLimpia.includes(limpiar(s)));
+                    const matchEstudios = pdf.estudios_complementarios && pdf.estudios_complementarios.some(e => consultaLimpia.includes(limpiar(e)));
 
-                    if (pdfsCoincidentes.length > 0) {
-                        let bloqueContexto = `[TEXTO EXTRAÍDO DE LOS PDFS DE LA BIBLIOTECA PERSONAL]\n`;
-                        
-                        for (let index = 0; index < pdfsCoincidentes.length; index++) {
-                            const pdf = pdfsCoincidentes[index];
-                            const urlPdf = `${BASE_BIBLIOTECA}${pdf.archivo}`;
-                            status.innerText = `⏳ Analizando fragmentos de: ${pdf.nombre}...`;
-                            
-                            const textoExtraido = await extraerTextoPDF(urlPdf);
-                            if (textoExtraido && textoExtraido.trim().length > 0) {
-                                bloqueContexto += `=== INICIO DOCUMENTO: ${pdf.nombre} ===\nURL Original ${index + 1}: ${urlPdf}\n${textoExtraido}=== FIN DOCUMENTO ===\n\n`;
-                                conteoPdfs++;
-                            }
-                        }
+                    return matchNombre || matchSintomas || matchEstudios;
+                });
 
-                        if (conteoPdfs > 0) {
-                            bloqueContexto += `--------------------------------------------------\n[CONSULTA DEL CASO CLÍNICO ACTUAL]:\n${texto}`;
-                            if (bloqueContexto.length > 38000) bloqueContexto = bloqueContexto.substring(0, 38000) + "\n... [Truncado] ...";
-                            payloadInyectado = bloqueContexto;
-                        }
+                // BLOQUE DE CONTROL ESTRICTO: Si no hay PDFs coincidentes locales, frena aquí
+                if (pdfsCoincidentes.length === 0) {
+                    status.innerText = "❌ Búsqueda finalizada";
+                    textoHtml.innerHTML = `<div class="bg-amber-950/40 border border-amber-500/30 rounded-lg p-4 text-amber-300 font-medium flex items-center gap-2">
+                        <span>⚠️</span> Información no encontrada en la biblioteca digital local.
+                    </div>`;
+                    container.classList.remove('hidden');
+                    return;
+                }
+                
+                // Si encontramos PDFs, extraemos su texto
+                for (let index = 0; index < pdfsCoincidentes.length; index++) {
+                    const pdf = pdfsCoincidentes[index];
+                    const urlPdf = `${BASE_BIBLIOTECA}${pdf.archivo`;
+                    status.innerText = `⏳ Analizando fragmentos de: ${pdf.nombre}...`;
+                    
+                    const textoExtraido = await extraerTextoPDF(urlPdf);
+                    if (textoExtraido && textoExtraido.trim().length > 0) {
+                        bloqueContexto += `=== INICIO DOCUMENTO: ${pdf.nombre} ===\nURL Original ${index + 1}: ${urlPdf}\n${textoExtraido}=== FIN DOCUMENTO ===\n\n`;
+                        conteoPdfs++;
                     }
                 }
 
-                status.innerText = conteoPdfs > 0 ? `🧠 IA diagnosticando con ${conteoPdfs} guía(s)...` : "🧠 Consultando repositorios generales...";
+                // Control secundario: Se encontraron los PDFs en el JSON pero falló la lectura física del archivo
+                if (conteoPdfs === 0) {
+                    status.innerText = "❌ Archivo inaccesible";
+                    textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 font-medium">
+                        ⚠️ Los documentos indexados relacionados no están accesibles o legibles en el servidor de GitHub.
+                    </div>`;
+                    container.classList.remove('hidden');
+                    return;
+                }
+
+                // Armamos el payload final encapsulado y bajamos la temperatura a 0 en la llamada de Groq
+                bloqueContexto += `--------------------------------------------------\n[CONSULTA DEL CASO CLÍNICO ACTUAL]:\n${texto}`;
+                if (bloqueContexto.length > 38000) bloqueContexto = bloqueContexto.substring(0, 38000) + "\n... [Truncado] ...";
+
+                status.innerText = `🧠 Analizando estrictamente con ${conteoPdfs} guía(s) local(es)...`;
                 
-                const respuestaIA = await llamarGroq(payloadInyectado);
-                document.getElementById('texto-analisis-ia').innerHTML = formatearMarkdownAHtml(respuestaIA);
+                const respuestaIA = await llamarGroq(bloqueContexto);
+                textoHtml.innerHTML = formatearMarkdownAHtml(respuestaIA);
                 container.classList.remove('hidden');
                 status.innerText = "✅ Análisis Finalizado";
 
             } catch (err) {
-                status.innerText = "❌ Error en el proceso o API Key inválida";
+                status.innerText = "❌ Error en el proceso";
                 console.error(err);
             } finally {
                 btn.disabled = false;
