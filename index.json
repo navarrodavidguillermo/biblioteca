@@ -19,7 +19,7 @@
     "nombre": "Bronquitis y ASMA Pediátrica",
     "archivo": "Bronquiti_ ASMA.pdf",
     "palabras_clave": [
-      "asma", "bronquitis", "bronquiolitis", "bql", "obstructiva", "sibilancias", "sibilante", "dificultad", "respiratoria", "vrs", "sincitial", "tal", "score", "salbutamol", "aerocámara", "puffs", "corticoides", "meprednisona", "prednisona", "hidrocortisona", "oxigeno", "saturacion", "hipoxemia", "adrenal", "estres"
+      "asma", "bronquitis", "bronquiolitis", "bql", "obstructiva", "sibilancias", "sibilante", "dificultad", "respiratoria", "vsr", "sincitial", "tal", "score", "salbutamol", "aerocámara", "puffs", "corticoides", "meprednisona", "prednisona", "hidrocortisona", "oxigeno", "saturacion", "hipoxemia", "adrenal", "estres"
     ],
     "excluir": ["meningitis", "lcr", "ataxia", "brue", "puncion", "fontanela"]
   },
