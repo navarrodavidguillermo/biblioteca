@@ -2,14 +2,15 @@ name: Auto Indexar Biblioteca
 
 on:
   push:
-    paths:
-      - '*.pdf' # Se activa automáticamente solo cuando subes un archivo PDF
+    branches:
+      - main # Se ejecuta con cualquier cambio en la rama principal (incluyendo actualizar scripts o subir PDFs)
+  workflow_dispatch: # Esto añade un botón en GitHub para ejecutarlo manualmente cuando quieras
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Permiso crucial para que el bot pueda guardar los cambios en tu index.json
+      contents: write # Permiso para que el bot guarde index.json
 
     steps:
     - name: Clonar repositorio
@@ -34,13 +35,13 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
-        # Añadimos index.json (siempre existe)
+        # Intentamos añadir index.json (siempre se genera o modifica)
         git add index.json
         
-        # Verificación condicional para evitar el error 'did not match any files'
+        # Añadimos procesados.txt solo si existe
         if [ -f "procesados.txt" ]; then
           git add procesados.txt
         fi
         
-        # Guardar y subir cambios solo si index.json o procesados.txt cambiaron
-        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-index: Nueva bibliografía añadida" && git push)
+        # Subimos los cambios solo si hay diferencias reales en el repositorio
+        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-index: Base de datos actualizada" && git push)
