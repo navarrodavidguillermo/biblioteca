@@ -1,238 +1,42 @@
 [
     {
-        "nombre": "Meningitis, Encefalitis y Meningoencefalitis Pediátrica",
-        "archivo": "Meningitis_Encefalitis.pdf",
+        "nombre": "Alimentación complementaria en niños desde los 6 meses",
+        "archivo": "Alimentación_complementaria.pdf",
         "palabras_clave": [
-            "meningitis",
-            "encefalitis",
-            "meningoencefalitis",
-            "lcr",
-            "cefalorraquideo",
-            "lumbar",
-            "puncion",
-            "pleocitosis",
-            "glucorraquia",
-            "proteinorraquia",
-            "gram",
-            "latex",
-            "fontanela",
-            "abombada",
-            "cushing",
-            "brudzinski",
-            "kernig",
-            "nuca",
-            "meningeo",
-            "rigidez",
-            "irritabilidad",
-            "inconsolable",
-            "sensorio",
-            "conciencia",
-            "confusion",
-            "obnubilacion",
-            "focalidad",
-            "petequias",
-            "purpura",
-            "aciclovir",
-            "ceftriaxona",
-            "dexametasona"
+            "alimentación complementaria",
+            "niños",
+            "6 meses",
+            "lactancia materna",
+            "comidas",
+            "pausas",
+            "hábitos",
+            "rutinas",
+            "apetito",
+            "porciones pequeñas",
+            "masticación",
+            "autonomía",
+            "textura",
+            "verduras",
+            "nitritos",
+            "aceite",
+            "carne",
+            "pescado",
+            "huevo",
+            "frutas",
+            "postre",
+            "salud infantil",
+            "nutrición infantil"
         ],
         "excluir": [
-            "bql",
-            "bronquiolitis",
             "asma",
-            "crup",
-            "laringitis",
-            "ataxia",
-            "brue",
-            "tec",
-            "neumonia"
-        ]
-    },
-    {
-        "nombre": "Ataxia Aguda en Pediatría",
-        "archivo": "Ataxia.pdf",
-        "palabras_clave": [
-            "ataxia",
-            "coordinacion",
-            "postural",
-            "marcha",
-            "cerebelitis",
-            "inestabilidad",
-            "nistagmo",
-            "vertigo",
-            "dismetria",
-            "romberg",
-            "intoxicacion",
-            "benzodiacepinas",
-            "alcohol",
-            "antitusivos",
-            "delirio",
-            "agitacion",
-            "letargia",
-            "cerebelo",
-            "cerebelosa",
-            "marcha"
-        ],
-        "excluir": [
             "meningitis",
-            "bronquiolitis",
-            "bql",
-            "brue",
-            "asma",
-            "laringitis"
-        ]
-    },
-    {
-        "nombre": "Bronquitis y ASMA Pediátrica",
-        "archivo": "Bronquiti_ ASMA.pdf",
-        "palabras_clave": [
-            "asma",
-            "bronquitis",
-            "bronquiolitis",
-            "bql",
-            "obstructiva",
-            "sibilancias",
-            "sibilante",
-            "dificultad",
-            "respiratoria",
-            "vsr",
-            "sincitial",
-            "tal",
-            "score",
-            "salbutamol",
-            "aerocámara",
-            "puffs",
-            "corticoides",
-            "meprednisona",
-            "prednisona",
-            "hidrocortisona",
-            "oxigeno",
-            "saturacion",
-            "hipoxemia",
-            "adrenal",
-            "estres"
-        ],
-        "excluir": [
-            "meningitis",
-            "lcr",
             "ataxia",
             "brue",
-            "puncion",
-            "fontanela"
+            "alergias",
+            "intolerancias",
+            "sensibilidades",
+            "enfermedades gastrointestinales",
+            "enfermedades respiratorias"
         ]
-    },
-    {
-        "nombre": "Evento Breve Resuelto e Inexplicable (BRUE)",
-        "archivo": "BRUE.pdf",
-        "palabras_clave": [
-            "brue",
-            "alte",
-            "apnea",
-            "pausa",
-            "respiratoria",
-            "cianosis",
-            "palidez",
-            "hipotonia",
-            "bradicardia",
-            "duracion",
-            "breve",
-            "resuelto",
-            "inexplicable",
-            "lactante",
-            "sueño",
-            "oximetria",
-            "rcp",
-            "reanimacion",
-            "estimulacion",
-            "pausa"
-        ],
-        "excluir": [
-            "meningitis",
-            "lcr",
-            "ataxia",
-            "bronquiolitis",
-            "asma",
-            "salbutamol"
-        ]
-    },
-    {
-        "titulo": "Meningoencefalitis",
-        "autor": "Dr. Navarro David",
-        "año": "2019",
-        "resumen": "El texto describe la inflamación de las meninges y el encéfalo, causada por bacterias, virus o otros agentes. Se presentan los síntomas, la fisiopatología, los factores de riesgo y la clínica de la enfermedad.",
-        "palabras_clave": [
-            "meningoencefalitis",
-            "inflamación",
-            "meninges",
-            "encéfalo",
-            "bacterias",
-            "virus",
-            "síntomas",
-            "fisiopatología",
-            "factores de riesgo",
-            "clínica"
-        ],
-        "categorias": [
-            "infectología",
-            "neurología",
-            "pediatría"
-        ],
-        "url_pdf": "https://navarrodavidguillermo.github.io/biblioteca/Meningitis_Encefalitis.pdf"
-    },
-    {
-        "titulo": "Definiciones y características de ALTE y BRUE",
-        "autor": "Desconocido",
-        "año": "2020",
-        "resumen": "Este documento describe las definiciones y características de los eventos de aparente amenaza a la vida (ALTE) y los eventos breves resueltos e inexplicables (BRUE) en niños menores de 1 año de edad. Se presentan las diferencias entre ALTE y BRUE, así como los factores que definen bajo riesgo y alto riesgo para BRUE.",
-        "palabras_clave": [
-            "ALTE",
-            "BRUE",
-            "eventos de aparente amenaza a la vida",
-            "eventos breves resueltos e inexplicables"
-        ],
-        "categorias": [
-            "pediatría",
-            "neonatología",
-            "urgencias"
-        ],
-        "url_pdf": "https://navarrodavidguillermo.github.io/biblioteca/BRUE.pdf"
-    },
-    {
-        "titulo": "Ataxia Aguda",
-        "autor": "Dr. Navarro David",
-        "año": "2019",
-        "resumen": "La ataxia aguda es un trastorno del movimiento que se caracteriza por una alteración de la coordinación motora voluntaria y del control postural. Puede ser causado por diversas etiologías, incluyendo infecciones, intoxicaciones y lesiones cerebrales.",
-        "palabras_clave": [
-            "ataxia",
-            "ataxia aguda",
-            "cerebelo",
-            "movimiento",
-            "coordinación",
-            "control postural"
-        ],
-        "categorias": [
-            "neurología",
-            "pediatría",
-            "medicina"
-        ],
-        "url_pdf": "https://navarrodavidguillermo.github.io/biblioteca/Ataxia.pdf"
-    },
-    {
-        "titulo": "Bronquitis y ASMA",
-        "autor": "Dr. Navarro David",
-        "año": "2022",
-        "resumen": "Este documento proporciona recomendaciones para el manejo de las infecciones respiratorias agudas bajas en menores de 2 años, incluyendo la bronquiolitis y el ASMA. Se presentan factores de riesgo, fisiopatología y recomendaciones para el diagnóstico y tratamiento.",
-        "palabras_clave": [
-            "bronquiolitis",
-            "asma",
-            "infecciones respiratorias agudas bajas",
-            "menores de 2 años"
-        ],
-        "categorias": [
-            "medicina",
-            "pediatria",
-            "neumología"
-        ],
-        "url_pdf": "https://navarrodavidguillermo.github.io/biblioteca/Bronquiti_ ASMA.pdf"
-    },
+    }
 ]
