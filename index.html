@@ -12,7 +12,7 @@
     <div class="max-w-4xl mx-auto p-4 md:p-6">
         <header class="mb-8 border-b border-slate-700 pb-4 flex flex-wrap justify-between items-center gap-4">
             <div>
-                <h1 class="text-2xl font-bold text-sky-400">🔍 Buscador Clínico Estricto (Anti-Errores)</h1>
+                <h1 class="text-2xl font-bold text-sky-400">🔍 Buscador Clínico Estricto</h1>
                 <p class="text-sm text-slate-400 mt-1">Biblioteca Personal de Protocolos Pediátricos</p>
             </div>
             <button onclick="borrarApiKey()" class="text-xs bg-red-950 hover:bg-red-900 text-red-300 px-3 py-1.5 rounded-lg border border-red-800/40 transition-colors cursor-pointer">
@@ -87,7 +87,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
 
 - Al final de toda la respuesta, añade una sección llamada "📚 DOCUMENTOS ASOCIADOS Y DESCARGAS" y coloca en orden las URL provistas en el campo "URL Original X:" para que el usuario pueda descargarlos directamente.`;
 
-        // Extractor quirúrgico estricto con limpieza de caracteres ocultos (Previene Error 400)
+        // Extractor quirúrgico robusto con sanitización exhaustiva ante roturas de fuentes en PDFs
         async function extraerTextoPDF(url, tokensMedico) {
             try {
                 const checkRes = await fetch(url, { method: 'HEAD' });
@@ -105,8 +105,10 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                         const contenidoTexto = await pagina.getTextContent();
                         let textoPagina = contenidoTexto.items.map(item => item.str).join(" ");
                         
-                        // Limpieza de caracteres bizarros de control ASCII que rompen los JSON
-                        textoPagina = textoPagina.replace(/[\x00-\x1F\x7F-\x9F]/g, " ");
+                        // Limpieza profunda: remueve caracteres de control, caracteres especiales de fuentes rotas y normaliza espacios
+                        textoPagina = textoPagina.replace(/[\x00-\x1F\x7F-\x9F]/g, " ")
+                                                 .replace(/[\u2018\u2019]/g, "'")
+                                                 .replace(/[\u201C\u201D]/g, '"');
 
                         const lineas = textoPagina.split(/[.:;]\s+/);
                         lineas.forEach(linea => {
@@ -120,11 +122,13 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                     } catch (e) {}
                 }
                 
-                // Backup ultra-corto seguro libre de roturas
+                // Backup ultra-corto ultra-limpio si el filtro quirúrgico quedó vacío
                 if (textoFiltrado.trim().length < 50) {
                     const primeraPagina = await documentoPdf.getPage(1);
                     const contenidoBkp = await primeraPagina.getTextContent();
-                    let txtBkp = contenidoBkp.items.map(item => item.str).join(" ").replace(/[\x00-\x1F\x7F-\x9F]/g, " ");
+                    let txtBkp = contenidoBkp.items.map(item => item.str).join(" ")
+                                                   .replace(/[\x00-\x1F\x7F-\x9F]/g, " ")
+                                                   .replace(/[\u201C\u201D\u2018\u2019]/g, " ");
                     textoFiltrado = `[Pág 1 Fragmento]: ` + txtBkp.substring(0, 400) + "...\n";
                 }
                 
@@ -146,7 +150,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
             });
         }
 
-        // LLAMADA REVISADA Y ESCAPADA (Previene HTTP 400 y 429)
+        // FUNCIÓN LLAMAR GROQ BLINDADA (Parámetros estrictos eliminados para compatibilidad total)
         async function llamarGroq(textoUsuario) {
             let listaKeys = obtenerApiKey();
             if (!listaKeys || listaKeys.length === 0) throw new Error("No hay API Keys cargadas.");
@@ -165,8 +169,8 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                             messages: [
                                 { role: "system", content: SYSTEM_PROMPT_CONSULTA },
                                 { role: "user", content: textoUsuario }
-                            ],
-                            temperature: 0 // Cambiado a entero absoluto para evitar rechazos de tipo en el parser
+                            ]
+                            // Se eliminó el parámetro temperature para forzar el esquema por defecto sin fallos de conversión de tipos
                         })
                     });
 
@@ -282,13 +286,13 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                     return;
                 }
 
-                // Asegurar que el contenido agregado al final esté bien formateado y libre de saltos crudos sin escapar
-                const textoCasoSanitizado = texto.replace(/[\x00-\x1F\x7F-\x9F]/g, " ");
+                // Sanitización estricta de la entrada de usuario para el cuerpo del mensaje
+                const textoCasoSanitizado = texto.replace(/[\x00-\x1F\x7F-\x9F]/g, " ").replace(/"/g, '\\"');
                 bloqueContexto += `--------------------------------------------------\n[CONSULTA DEL CASO CLÍNICO ACTUAL]:\n${textoCasoSanitizado}`;
                 
-                // Truncado seguro
+                // Truncado de seguridad adaptado al modelo 8B
                 if (bloqueContexto.length > 18000) {
-                    bloqueContexto = bloqueContexto.substring(0, 18000) + "\n... [Truncado seguro] ...";
+                    bloqueContexto = bloqueContexto.substring(0, 18000) + "\n... [Truncado] ...";
                 }
 
                 status.innerText = `🧠 Analizando de forma aislada ${conteoPdfs} guías...`;
@@ -304,16 +308,15 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                 console.error(err);
                 
                 let msgError = err.message === "429" 
-                    ? `⚠️ Límite de velocidad estricto de Groq alcanzado temporalmente.<br><br>💡 <strong>Solución:</strong> Esperá 30 segundos a que la plataforma reinicie tu cuota por minuto, o carga otra clave adicional de respaldo.`
-                    : `<strong>Error de ejecución (HTTP ${err.message}):</strong> Verificá el estado de la API Key en tu Dashboard de Groq.`;
+                    ? `⚠️ Límite de velocidad estricto de Groq alcanzado temporalmente.<br><br>💡 <strong>Solución:</strong> Esperá 30 segundos a que la plataforma reinicie tu cuota por minuto.`
+                    : `<strong>Error de ejecución (HTTP ${err.message || '400'}):</strong> Se detectó una inconsistencia en el formato de datos enviado. Si el error persiste, limpiá las comillas o saltos de línea de la consulta.`;
 
                 textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 text-sm leading-relaxed">
                     ${msgError}
                 </div>`;
                 container.classList.remove('hidden');
-            } finally {
-                btn.disabled = false;
-            }
+            } sidebar_container = false;
+            btn.disabled = false;
         }
 
         function limpiarPantalla() {
