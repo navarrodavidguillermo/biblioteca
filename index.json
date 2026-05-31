@@ -1,12 +1,68 @@
 [
-  { 
-    "nombre": "trastorno de la marca ataxia ataxico alteracion de la conciencia", 
-    "archivo": "Ataxia.pdf",
-    "excluir": ["ingesta medicamentosa", "intoxicacion", "fiebre", "traumatismo", "politraumatismo"]
-  },
-  { 
-    "nombre": "alteracion de la conciencia y fiebre status convulsivo febril etatus convulsivo febril ", 
+  {
+    "nombre": "Meningitis, Encefalitis y Meningoencefalitis Pediátrica",
     "archivo": "Meningitis_Encefalitis.pdf",
-    "excluir": ["ingesta medicamentosa", "intoxicacion", "traumatismo", "politraumatismo"] 
+    "sintomas_y_signos": [
+      "alteracion de la conciencia",
+      "fiebre alta",
+      "convulsiones",
+      "focalidad neurologica",
+      "rigidez de nuca",
+      "kerning",
+      "brudzinski",
+      "irritabilidad extrema",
+      "llanto inconsolable",
+      "fontanela abombada",
+      "fontanela llena",
+      "sensorio fluctuante",
+      "cefalea",
+      "vomitos en proyectil",
+      "foto/fonofobia",
+      "alucinaciones",
+      "confusion",
+      "desorientacion",
+      "exantema petequial",
+      "lesiones purpuricas",
+      "triada de cushing",
+      "bradicardia",
+      "bradipnea",
+      "hipertension arterial"
+    ],
+    "estudios_complementarios": [
+      "puncion lumbar",
+      "lcr",
+      "liquido cefalorraquideo",
+      "citoquimico",
+      "pleocitosis",
+      "glucorraquia",
+      "proteinorraquia",
+      "tincion de gram",
+      "prueba de latex",
+      "hemocultivo",
+      "urocultivo",
+      "procalcitonina",
+      "pcr",
+      "ecografia transfontanelar",
+      "tomografia",
+      "tac",
+      "resonancia magnetica",
+      "rnm",
+      "electroencefalograma",
+      "eeg"
+    ],
+    "excluir": [
+      "resfriado",
+      "crup",
+      "laringitis",
+      "otitis",
+      "asma",
+      "bronquiolitis",
+      "bql",
+      "nac",
+      "neumonia",
+      "convulsion febril simple",
+      "traumatismo encefalocraneano",
+      "tec"
+    ]
   }
 ]
