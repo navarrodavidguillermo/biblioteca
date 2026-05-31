@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador Inteligente - Biblioteca Médica</title>
-    <!-- Tailwind CSS para una interfaz médica limpia y responsiva -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- PDF.js de Mozilla para la extracción de texto en tiempo real -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen font-sans">
@@ -23,7 +21,6 @@
             </button>
         </header>
 
-        <!-- Cuadro de búsqueda -->
         <div class="bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-700 mb-6">
             <label for="consulta-clinica" class="block text-sm font-semibold text-slate-300 mb-2">
                 Ingresá la Enfermedad Actual, síntomas cardinales o parámetros de laboratorio del paciente:
@@ -41,15 +38,13 @@
             </div>
         </div>
 
-        <!-- Contenedor de Resultados del Análisis -->
         <div id="resultado-container" class="hidden bg-slate-800 rounded-xl shadow-lg border border-slate-700 overflow-hidden">
             <div class="bg-slate-750 px-4 py-3 border-b border-slate-700 flex justify-between items-center">
                 <h2 class="text-sm font-bold text-sky-400 uppercase tracking-wider">📋 Evidencia Clínica Extraída</h2>
                 <button onclick="limpiarPantalla()" class="text-xs text-slate-400 hover:text-slate-200 cursor-pointer">Limpiar</button>
             </div>
             <div id="texto-analisis-ia" class="p-5 text-sm leading-relaxed text-slate-200 space-y-4">
-                <!-- Aquí se inyectará la respuesta literal de la IA o el aviso de no encontrado -->
-            </div>
+                </div>
         </div>
     </div>
 
@@ -78,7 +73,7 @@
         }
 
         const SYSTEM_PROMPT_CONSULTA = `# ROL Y PERFIL PROFESIONAL
-Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisión. Tu comunicación es estrictamente médica, académica, directa y fragmentada por protocolo.
+Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisión. Tu comunicación es estrictamente médica, académica, directa y fragmentada por protocolo.
 
 # INSTRUCCIONES DE FLUJO ABSOLUTAS
 - Se te proporcionará el texto extraído de uno o varios archivos PDF bajo la etiqueta [TEXTO EXTRAÍDO DE LOS PDFS DE LA BIBLIOTECA PERSONAL].
@@ -94,7 +89,7 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
 
 - Al final de toda la respuesta, añade una sección llamada "📚 DOCUMENTOS ASOCIADOS Y DESCARGAS" y coloca en orden las URL provistas en el campo "URL Original X:" para que el usuario pueda descargarlos directamente.`;
 
-        // Extractor quirúrgico para ahorrar tokens y mitigar errores 429
+        // Extractor quirúrgico corregido para proteger la cuota de tokens (Evita error 429)
         async function extraerTextoPDF(url, tokensMedico) {
             try {
                 const checkRes = await fetch(url, { method: 'HEAD' });
@@ -104,31 +99,36 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
                 let textoFiltrado = "";
                 const maxPaginas = Math.min(documentoPdf.numPages, 12);
                 
+                // Si por algún motivo no hay tokens válidos, creamos una lista de contención básica
+                const palabrasControl = (tokensMedico && tokensMedico.length > 0) ? tokensMedico : ["tratamiento", "dosis", "criterio", "esquema", "laboratorio"];
+
                 for (let i = 1; i <= maxPaginas; i++) {
                     try {
                         const pagina = await documentoPdf.getPage(i);
                         const contenidoTexto = await pagina.getTextContent();
                         const textoPagina = contenidoTexto.items.map(item => item.str).join(" ");
                         
-                        // Separamos el texto por oraciones para procesarlo quirúrgicamente
-                        const lineas = textoPagina.split(/(?<=[.!?])\s+/);
+                        // Separamos el texto por puntos para analizar oraciones individuales
+                        const lineas = textoPagina.split(/[.:;]\s+/);
                         lineas.forEach(linea => {
                             const lineaMinuscula = linea.toLowerCase();
-                            // Guardamos la línea si coincide con los tokens que el médico está buscando
-                            if (tokensMedico.some(token => lineaMinuscula.includes(token))) {
-                                if (!textoFiltrado.includes(linea.substring(0, 30))) {
-                                    textoFiltrado += `[Pág ${i}]: ${linea.trim()}\n`;
+                            // Guardamos la línea si coincide con los tokens clínicos de búsqueda
+                            if (palabrasControl.some(token => lineaMinuscula.includes(token))) {
+                                if (linea.trim().length > 10 && !textoFiltrado.includes(linea.substring(0, 25))) {
+                                    textoFiltrado += `[Pág ${i}]: ${linea.trim()}.\n`;
                                 }
                             }
                         });
                     } catch (e) {}
                 }
                 
-                // Backup: Si el filtro fue demasiado estricto, extraemos un fragmento de la pág 1
-                if (textoFiltrado.trim().length === 0) {
-                    const primeraPagina = await documentoPdf.getPage(1);
-                    const contenido = await primeraPagina.getTextContent();
-                    textoFiltrado = `[Pág 1]: ` + contenido.items.map(item => item.str).join(" ").substring(0, 1200);
+                // Backup seguro: Si el filtro fue demasiado estricto, extraemos un fragmento de la pág 1 y pág 2
+                if (textoFiltrado.trim().length < 100) {
+                    for (let i = 1; i <= Math.min(documentoPdf.numPages, 2); i++) {
+                        const paginaBackup = await documentoPdf.getPage(i);
+                        const contenidoBkp = await paginaBackup.getTextContent();
+                        textoFiltrado += `[Pág ${i}]: ` + contenidoBkp.items.map(item => item.str).join(" ").substring(0, 1000) + "\n";
+                    }
                 }
                 
                 return textoFiltrado;
@@ -175,7 +175,11 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
 
                     if (res.status === 429) {
                         console.warn(`⚠️ Clave ${i + 1} agotada (429). Rotando a la siguiente clave...`);
-                        continue; // Salta de inmediato a la siguiente clave del array
+                        if (i < listaKeys.length - 1) {
+                            continue; // Pasa inmediatamente al siguiente ciclo del bucle (próxima llave)
+                        } else {
+                            throw new Error("429");
+                        }
                     }
 
                     if (!res.ok) {
@@ -190,7 +194,6 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
                     return data.choices[0].message.content.trim();
 
                 } catch (err) {
-                    // Si es la última clave disponible de tu lista y también falla, rompe el ciclo y muestra el error
                     if (i === listaKeys.length - 1) throw err;
                 }
             }
@@ -222,7 +225,7 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
 
                 const listaPdfs = await respuestaJson.json();
 
-                // Normalización lingüística
+                // Normalización lingüística rigurosa para la tokenización
                 const limpiarTexto = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
                 
                 const consultaLimpia = limpiarTexto(texto);
@@ -269,7 +272,7 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
                     const urlPdf = `${BASE_BIBLIOTECA}${pdf.archivo}`;
                     status.innerText = `⏳ Mapeando documento (${index + 1}/${pdfsCoincidentes.length}): ${pdf.nombre}...`;
                     
-                    // Pasamos tokensMedico para hacer la extracción filtrada y quirúrgica
+                    // Pasamos tokensMedico correctamente posicionados para asegurar el recorte quirúrgico
                     const textoExtraido = await extraerTextoPDF(urlPdf, tokensMedico);
                     if (textoExtraido && textoExtraido.trim().length > 0) {
                         bloqueContexto += `=== INICIO DOCUMENTO: ${pdf.nombre} ===\nURL Original ${index + 1}: ${urlPdf}\n${textoExtraido}=== FIN DOCUMENTO ===\n\n`;
@@ -280,14 +283,14 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
                 if (conteoPdfs === 0) {
                     status.innerText = "❌ Error de lectura";
                     textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 font-medium">
-                        ⚠️ No se pudo procesar la lectura física de los documentos seleccionados en el servidor.
+                        ⚠️ No se pudo procesar la lectura física de los documentos seleccionados en el repositorio.
                     </div>`;
                     container.classList.remove('hidden');
                     return;
                 }
 
                 bloqueContexto += `--------------------------------------------------\n[CONSULTA DEL CASO CLÍNICO ACTUAL]:\n${texto}`;
-                if (bloqueContexto.length > 38000) bloqueContexto = bloqueContexto.substring(0, 38000) + "\n... [Truncado] ...";
+                if (bloqueContexto.length > 30000) bloqueContexto = bloqueContexto.substring(0, 30000) + "\n... [Truncado por volumen] ...";
 
                 status.innerText = `🧠 Analizando de forma aislada ${conteoPdfs} guías...`;
                 
@@ -300,9 +303,13 @@ Actúas como un Asistente de Investigación Clinical Pediátrica de Alta Precisi
             } catch (err) {
                 status.innerText = "❌ Error general";
                 console.error(err);
-                textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 text-xs font-mono">
-                    <strong>Error del Servidor:</strong> ${err.message || err}<br>
-                    💡 Si el error es un código 429, se han agotado todas las llaves ingresadas por este minuto. Esperá 60 segundos o cargá más claves de respaldo.
+                
+                let msgError = err.message === "429" 
+                    ? `⚠️ Todas las API Keys cargadas están saturadas por límite de velocidad de Groq (Rate Limit).<br><br>💡 <strong>Solución:</strong> Esperá 60 segundos a que la plataforma libere tu cuota por minuto, o cargá otra clave adicional separada por comas usando el botón superior.`
+                    : `<strong>Error de ejecución:</strong> ${err.message || err}`;
+
+                textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 text-sm leading-relaxed">
+                    ${msgError}
                 </div>`;
                 container.classList.remove('hidden');
             } finally {
