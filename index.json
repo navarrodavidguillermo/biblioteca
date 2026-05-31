@@ -5,14 +5,30 @@
     "palabras_clave": [
       "meningitis", "encefalitis", "meningoencefalitis", "lcr", "cefalorraquideo", "lumbar", "puncion", "pleocitosis", "glucorraquia", "proteinorraquia", "gram", "latex", "fontanela", "abombada", "cushing", "brudzinski", "kernig", "nuca", "meningeo", "rigidez", "irritabilidad", "inconsolable", "sensorio", "conciencia", "confusion", "obnubilacion", "focalidad", "petequias", "purpura", "aciclovir", "ceftriaxona", "dexametasona"
     ],
-    "excluir": ["bql", "bronquiolitis", "asma", "crup", "laringitis", "ataxia", "brue", "tec"]
+    "excluir": ["bql", "bronquiolitis", "asma", "crup", "laringitis", "ataxia", "brue", "tec", "neumonia"]
   },
   {
     "nombre": "Ataxia Aguda en Pediatría",
     "archivo": "Ataxia.pdf",
     "palabras_clave": [
-      "ataxia", "coordinacion", "postural", "marcha", "cerebelitis", "inestabilidad", "nistagmo", "vertigo", "dismetria", "romberg", "intoxicacion", "benzodiacepinas"
+      "ataxia", "coordinacion", "postural", "marcha", "cerebelitis", "inestabilidad", "nistagmo", "vertigo", "dismetria", "romberg", "intoxicacion", "benzodiacepinas", "alcohol", "antitusivos", "delirio", "agitacion", "letargia", "cerebelo", "cerebelosa", "marcha"
     ],
-    "excluir": ["meningitis", "bronquiolitis", "bql", "brue"]
+    "excluir": ["meningitis", "bronquiolitis", "bql", "brue", "asma", "laringitis"]
+  },
+  {
+    "nombre": "Bronquitis y ASMA Pediátrica",
+    "archivo": "Bronquiti_ ASMA.pdf",
+    "palabras_clave": [
+      "asma", "bronquitis", "bronquiolitis", "bql", "obstructiva", "sibilancias", "sibilante", "dificultad", "respiratoria", "vrs", "sincitial", "tal", "score", "salbutamol", "aerocámara", "puffs", "corticoides", "meprednisona", "prednisona", "hidrocortisona", "oxigeno", "saturacion", "hipoxemia", "adrenal", "estres"
+    ],
+    "excluir": ["meningitis", "lcr", "ataxia", "brue", "puncion", "fontanela"]
+  },
+  {
+    "nombre": "Evento Breve Resuelto e Inexplicable (BRUE)",
+    "archivo": "BRUE.pdf",
+    "palabras_clave": [
+      "brue", "alte", "apnea", "pausa", "respiratoria", "cianosis", "palidez", "hipotonia", "bradicardia", "duracion", "breve", "resuelto", "inexplicable", "lactante", "sueño", "oximetria", "rcp", "reanimacion", "estimulacion", "pausa"
+    ],
+    "excluir": ["meningitis", "lcr", "ataxia", "bronquiolitis", "asma", "salbutamol"]
   }
 ]
