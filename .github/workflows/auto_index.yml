@@ -35,13 +35,15 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
-        # Intentamos añadir index.json (siempre se genera o modifica)
-        git add index.json
+        # Agregamos los archivos si existen. Si no existen, el operador '|| true' evita que falle la acción.
+        git add index.json 2>/dev/null || true
+        git add procesados.txt 2>/dev/null || true
         
-        # Añadimos procesados.txt solo si existe
-        if [ -f "procesados.txt" ]; then
-          git add procesados.txt
+        # Comprobamos si hay cambios reales preparados en el commit.
+        # Si los hay, se hace commit y push automáticamente.
+        if ! git diff --cached --quiet; then
+          git commit -m "🤖 Auto-index: Base de datos actualizada"
+          git push
+        else
+          echo "No se detectaron cambios en index.json o procesados.txt. Nada que actualizar."
         fi
-        
-        # Subimos los cambios solo si hay diferencias reales en el repositorio
-        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-index: Base de datos actualizada" && git push)
