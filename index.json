@@ -234,5 +234,21 @@
             "neumología"
         ],
         "url_pdf": "https://navarrodavidguillermo.github.io/biblioteca/Bronquiti_ ASMA.pdf"
+    },
+    {
+        "titulo": "Enfoque sistemático inicial en emergencias",
+        "autor": "Dr. Navarro David",
+        "año": "2023",
+        "resumen": "Este documento describe un enfoque sistemático inicial en emergencias pediátricas, incluyendo el uso del Triángulo de Evaluación Pediátrica (TEP) y el Algoritmo SVAP/PALS. Se enfoca en la valoración y tratamiento de pacientes pediátricos en situaciones de emergencia.",
+        "palabras_clave": [
+            "emergencias pediátricas",
+            "triángulo de evaluación pediátrica",
+            "algoritmo svap/pals"
+        ],
+        "categorias": [
+            "medicina pediátrica",
+            "urgencias médicas"
+        ],
+        "url_pdf": "https://navarrodavidguillermo.github.io/biblioteca/Enfoque_sistemático_inicial_en_emergencias.pdf"
     }
 ]
