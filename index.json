@@ -293,5 +293,32 @@
             "masticacion",
             "dentario"
         ]
+    },
+    {
+        "nombre": "Valores Normales en Pediatría",
+        "archivo": "Analitica_normal.pdf",
+        "palabras_clave": [
+            "pediatría",
+            "valores normales",
+            "hemoglobina",
+            "hematocrito",
+            "leucocitos",
+            "recién nacido",
+            "infancia",
+            "niños",
+            "adolescentes",
+            "adultos",
+            "medición de sangre",
+            "análisis de sangre",
+            "valores de referencia",
+            "pediatría hospital Perrupato"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
     }
 ]
