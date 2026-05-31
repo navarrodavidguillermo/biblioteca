@@ -49,15 +49,32 @@ def extraer_texto_pdf(ruta_pdf):
         return None
 
 def limpiar_respuesta_json(texto_respuesta):
-    """Limpia los bloques de código ```json ... ``` que la IA suele añadir"""
-    lineas = texto_respuesta.strip().split('\n')
-    lineas_limpias = []
-    for linea in lineas:
-        linea_strip = linea.strip()
-        if linea_strip.startswith("```"):
-            continue
-        lineas_limpias.append(linea)
-    return "\n".join(lineas_limpias).strip()
+    """
+    Extrae de forma robusta únicamente el bloque JSON, omitiendo cualquier texto
+    conversacional que la IA haya agregado antes o después.
+    """
+    texto = texto_respuesta.strip()
+    
+    # 1. Intentamos buscar por bloques markdown explícitos
+    if "```json" in texto:
+        partes = texto.split("```json")
+        if len(partes) > 1:
+            return partes[1].split("```")[0].strip()
+    elif "```" in texto:
+        partes = texto.split("```")
+        if len(partes) > 1:
+            sub_texto = partes[1].strip()
+            if sub_texto.lower().startswith("json"):
+                sub_texto = sub_texto[4:].strip()
+            return sub_texto
+
+    # 2. Si no hay bloques formales, recortamos desde la primera llave { hasta la última }
+    inicio = texto.find('{')
+    fin = texto.rfind('}')
+    if inicio != -1 and fin != -1 and fin > inicio:
+        return texto[inicio:fin+1].strip()
+        
+    return texto
 
 def consultar_groq(texto_pdf):
     prompt = f"""
@@ -81,7 +98,7 @@ def consultar_groq(texto_pdf):
         print("   Enviando fragmento de texto a la API de Groq...")
         chat_completion = client.chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
-            model="llama-3.1-8b-instant",  # Actualizado al modelo activo de Groq
+            model="llama-3.1-8b-instant",  # Modelo activo de Groq
             temperature=0.1,
         )
         respuesta_bruta = chat_completion.choices[0].message.content
@@ -147,8 +164,8 @@ def main():
         info_json = consultar_groq(texto)
         
         if info_json:
-            # Construir URL directa de descarga
-            info_json["url_pdf"] = f"[https://navarrodavidguillermo.github.io/biblioteca/](https://navarrodavidguillermo.github.io/biblioteca/){nombre_archivo}"
+            # Construir URL directa de descarga limpia
+            info_json["url_pdf"] = f"https://navarrodavidguillermo.github.io/biblioteca/{nombre_archivo}"
             actualizar_index(info_json)
             guardar_procesado(nombre_archivo)
             hubo_cambios = True
