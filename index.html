@@ -11,12 +11,8 @@
     <div class="max-w-4xl mx-auto p-4 md:p-6">
         <header class="mb-8 border-b border-slate-700 pb-4 flex flex-wrap justify-between items-center gap-4">
             <div>
-                <h1 class="text-2xl font-bold text-sky-400">📚 Buscador de Bibliografía Pediátrica</h1>
-            </div>
-            <div class="flex gap-2">
-                <button onclick="borrarApiKey()" class="text-xs bg-red-950 hover:bg-red-900 text-red-300 px-3 py-1.5 rounded-lg border border-red-800/40 transition-colors cursor-pointer">
-                    Cerrar Sesión
-                </button>
+                <h1 class="text-2xl font-bold text-sky-400">📚 Buscador de Bibliografía Médica</h1>
+                <p class="text-sm text-slate-400 mt-1">Acceso inmediato a protocolos y guías clínicas locales</p>
             </div>
         </header>
 
@@ -57,43 +53,6 @@
     <script>
         const BASE_BIBLIOTECA = window.location.origin + window.location.pathname;
 
-        // Cadena codificada de tu API KEY para evitar detección estática simple en repositorios públicos
-        const CAJA_OFUSCADA = "==AZ0V2XvB3bMhDOpRHbvN2YvNGbMhGdyFmXw4WbGZGlCclV3bRNrEDMskGZ";
-
-        // Función encargada de validar la contraseña "mibiblioteca" y decodificar la llave real
-        function verificarYObtenerKey() {
-            let keyPersistente = localStorage.getItem('groq_api_key_unica');
-            
-            if (!keyPersistente) {
-                let password = prompt("🔒 Acceso Resguardado. Ingresá la contraseña para acceder a la biblioteca:");
-                
-                if (password === "mibiblioteca") {
-                    try {
-                        // Proceso inverso de desofuscación (Reversa + Base64)
-                        let reversa = CAJA_OFUSCADA.split("").reverse().join("");
-                        let decodificado = atob(reversa);
-                        
-                        localStorage.setItem('groq_api_key_unica', decodificado);
-                        alert("✅ Contraseña correcta. Acceso concedido.");
-                        return decodificado;
-                    } catch (e) {
-                        alert("Error interno al reconstruir la llave de acceso.");
-                        return null;
-                    }
-                } else {
-                    alert("❌ Contraseña incorrecta. Acceso denegado.");
-                    return null;
-                }
-            }
-            return keyPersistente;
-        }
-
-        function borrarApiKey() {
-            localStorage.removeItem('groq_api_key_unica');
-            alert("Sesión cerrada. La llave ha sido removida del almacenamiento local.");
-            location.reload();
-        }
-
         // Función auxiliar para renderizar la lista simplificada
         function renderizarListaPdfs(documentos) {
             const listaContenedor = document.getElementById('lista-documentos-pdf');
@@ -128,9 +87,6 @@
             
             const consultaOriginal = inputElement.value.trim();
             if (!consultaOriginal) return alert("Por favor, escriba un término médico para iniciar el filtro.");
-            
-            // Llama a la validación de contraseña
-            if (!verificarYObtenerKey()) return;
 
             estado.innerText = "🔍 Mapeando coincidencias en el catálogo...";
             wrapper.classList.add('hidden');
@@ -226,8 +182,6 @@
             const estado = document.getElementById('contador-estado');
             const titulo = document.getElementById('titulo-resultados');
             const listaContenedor = document.getElementById('lista-documentos-pdf');
-
-            if (!verificarYObtenerKey()) return;
 
             document.getElementById('buscador-terminos').value = "";
             estado.innerText = "📋 Cargando catálogo bibliográfico completo...";
