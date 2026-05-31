@@ -45,7 +45,7 @@
     <script>
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
         
-        // Detecta automáticamente el dominio dinámico de tu GitHub Pages actual
+        // Detecta automáticamente el dominio de tu GitHub Pages actual
         const BASE_BIBLIOTECA = window.location.origin + window.location.pathname;
 
         // MANEJO SEGURO DE LA API KEY (Almacenada localmente en tu navegador)
@@ -66,7 +66,7 @@
             location.reload();
         }
 
-        // SYSTEM PROMPT ULTRA-ESTRICTO: Prohibido usar conocimientos externos
+        // SYSTEM PROMPT ULTRA-ESTRICTO: Forzado clínico basado solo en la evidencia provista
         const SYSTEM_PROMPT_CONSULTA = `# ROL Y PERFIL PROFESIONAL
 Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisión. Tu comunicación es estrictamente médica, académica y directa.
 
@@ -127,7 +127,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
 
         async function llamarGroq(textoUsuario) {
             const apiKey = obtenerApiKey();
-            if (!apiKey) throw new Error("API Key no provista por el usuario.");
+            if (!apiKey) throw new Error("API Key no provista.");
 
             const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
                 method: "POST",
@@ -141,13 +141,13 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                         { role: "system", content: SYSTEM_PROMPT_CONSULTA },
                         { role: "user", content: textoUsuario }
                     ],
-                    temperature: 0.0 // Bajamos la temperatura a 0 para eliminar cualquier rastro de creatividad/alucinación
+                    temperature: 0.0
                 })
             });
             if (!res.ok) {
                 if(res.status === 401) {
                     borrarApiKey();
-                    throw new Error("API Key inválida. Se ha removido el acceso.");
+                    throw new Error("API Key inválida.");
                 }
                 throw new Error(`HTTP error! status: ${res.status}`);
             }
@@ -155,6 +155,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
             return data.choices[0].message.content.trim();
         }
 
+        // MOTOR DE BÚSQUEDA MULTI-TOKEN Y GENÉRICO
         async function consultarBibliotecaIA() {
             const input = document.getElementById('consulta-clinica');
             const status = document.getElementById('status-motor');
@@ -167,7 +168,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
             if (!obtenerApiKey()) return;
 
             btn.disabled = true;
-            status.innerText = "⏳ Buscando coincidencias en index.json...";
+            status.innerText = "⏳ Analizando términos clínicos...";
             container.classList.add('hidden');
 
             try {
@@ -175,45 +176,57 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                 let conteoPdfs = 0;
 
                 const respuestaJson = await fetch(`${BASE_BIBLIOTECA}index.json`);
-                
-                if (!respuestaJson.ok) {
-                    throw new Error("No se pudo cargar el archivo index.json");
-                }
+                if (!respuestaJson.ok) throw new Error("Error cargando index.json");
 
                 const listaPdfs = await respuestaJson.json();
 
-                // Filtrado por coincidencia de síntomas, estudios o nombres
+                // Normalización de texto (Remueve acentos, puntuación y pasa a minúsculas)
+                const limpiarTexto = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+                
+                const consultaLimpia = limpiarTexto(texto);
+                // Dividimos lo que ingresó el médico en palabras sueltas, filtrando las de menos de 3 letras (como "con", "del", "una")
+                const tokensMedico = consultaLimpia.split(/\s+/).filter(word => word.length > 3);
+
                 const pdfsCoincidentes = listaPdfs.filter(pdf => {
                     if (!pdf || !pdf.archivo) return false;
-                    const limpiar = (t) => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-                    const consultaLimpia = limpiar(texto);
 
-                    if (pdf.excluir && pdf.excluir.some(palabra => consultaLimpia.includes(limpiar(palabra)))) {
+                    // 1. Validar Exclusiones estrictas primero
+                    if (pdf.excluir && pdf.excluir.some(ex => consultaLimpia.includes(limpiarTexto(ex)))) {
                         return false;
                     }
 
-                    const matchNombre = limpiar(pdf.nombre).split(" ").some(p => p.length > 3 && consultaLimpia.includes(p));
-                    const matchSintomas = pdf.sintomas_y_signos && pdf.sintomas_y_signos.some(s => consultaLimpia.includes(limpiar(s)));
-                    const matchEstudios = pdf.estudios_complementarios && pdf.estudios_complementarios.some(e => consultaLimpia.includes(limpiar(e)));
+                    // 2. Coincidencia por Nombre del Archivo o del Protocolo
+                    const nombreLimpio = limpiarTexto(pdf.nombre);
+                    const matchPorNombre = tokensMedico.some(token => nombreLimpio.includes(token));
+                    if (matchPorNombre) return true;
 
-                    return matchNombre || matchSintomas || matchEstudios;
+                    // 3. Coincidencia Cruzada de palabras clave sueltas
+                    if (pdf.palabras_clave && Array.isArray(pdf.palabras_clave)) {
+                        // Si al menos una palabra clave del JSON está incluida en el texto libre del médico, hay match
+                        return pdf.palabras_clave.some(keyword => {
+                            const kwLimpia = limpiarTexto(keyword);
+                            return consultaLimpia.includes(kwLimpia);
+                        });
+                    }
+
+                    return false;
                 });
 
-                // BLOQUE DE CONTROL ESTRICTO: Si no hay PDFs coincidentes locales, frena aquí
+                // Si no hay documentos relacionados en tu index.json, frena de inmediato sin llamar a Groq
                 if (pdfsCoincidentes.length === 0) {
                     status.innerText = "❌ Búsqueda finalizada";
                     textoHtml.innerHTML = `<div class="bg-amber-950/40 border border-amber-500/30 rounded-lg p-4 text-amber-300 font-medium flex items-center gap-2">
-                        <span>⚠️</span> Información no encontrada en la biblioteca digital local.
+                        <span>⚠️</span> Información no encontrada en la biblioteca digital local para los criterios ingresados.
                     </div>`;
                     container.classList.remove('hidden');
                     return;
                 }
                 
-                // Si encontramos PDFs, extraemos su texto
+                // Procesar la extracción selectiva de páginas de los PDFs que hicieron match
                 for (let index = 0; index < pdfsCoincidentes.length; index++) {
                     const pdf = pdfsCoincidentes[index];
-                    const urlPdf = `${BASE_BIBLIOTECA}${pdf.archivo`;
-                    status.innerText = `⏳ Analizando fragmentos de: ${pdf.nombre}...`;
+                    const urlPdf = `${BASE_BIBLIOTECA}${pdf.archivo}`;
+                    status.innerText = `⏳ Extrayendo datos de: ${pdf.nombre}...`;
                     
                     const textoExtraido = await extraerTextoPDF(urlPdf);
                     if (textoExtraido && textoExtraido.trim().length > 0) {
@@ -222,21 +235,19 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                     }
                 }
 
-                // Control secundario: Se encontraron los PDFs en el JSON pero falló la lectura física del archivo
                 if (conteoPdfs === 0) {
-                    status.innerText = "❌ Archivo inaccesible";
+                    status.innerText = "❌ Archivo no legible";
                     textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 font-medium">
-                        ⚠️ Los documentos indexados relacionados no están accesibles o legibles en el servidor de GitHub.
+                        ⚠️ No se pudo procesar la lectura de los documentos seleccionados en el servidor.
                     </div>`;
                     container.classList.remove('hidden');
                     return;
                 }
 
-                // Armamos el payload final encapsulado y bajamos la temperatura a 0 en la llamada de Groq
                 bloqueContexto += `--------------------------------------------------\n[CONSULTA DEL CASO CLÍNICO ACTUAL]:\n${texto}`;
                 if (bloqueContexto.length > 38000) bloqueContexto = bloqueContexto.substring(0, 38000) + "\n... [Truncado] ...";
 
-                status.innerText = `🧠 Analizando estrictamente con ${conteoPdfs} guía(s) local(es)...`;
+                status.innerText = `🧠 IA procesando con tu protocolo: ${pdfsCoincidentes[0].nombre}...`;
                 
                 const respuestaIA = await llamarGroq(bloqueContexto);
                 textoHtml.innerHTML = formatearMarkdownAHtml(respuestaIA);
@@ -244,7 +255,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                 status.innerText = "✅ Análisis Finalizado";
 
             } catch (err) {
-                status.innerText = "❌ Error en el proceso";
+                status.innerText = "❌ Error general";
                 console.error(err);
             } finally {
                 btn.disabled = false;
