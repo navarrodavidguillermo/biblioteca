@@ -7,6 +7,6 @@
   { 
     "nombre": "alteracion de la conciencia y fiebre status convulsivo febril etatus convulsivo febril ", 
     "archivo": "Meningitis_Encefalitis.pdf",
-    "excluir": ["ingesta medicamentosa", "intoxicacion", "fiebre", "traumatismo", "politraumatismo"] 
+    "excluir": ["ingesta medicamentosa", "intoxicacion", "traumatismo", "politraumatismo"] 
   }
 ]
