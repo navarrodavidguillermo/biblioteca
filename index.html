@@ -87,7 +87,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
 
 - Al final de toda la respuesta, añade una sección llamada "📚 DOCUMENTOS ASOCIADOS Y DESCARGAS" y coloca en orden las URL provistas en el campo "URL Original X:" para que el usuario pueda descargarlos directamente.`;
 
-        // Extractor quirúrgico optimizado para ahorrar tokens drásticamente
+        // Extractor quirúrgico estricto para proteger la cuota de tokens
         async function extraerTextoPDF(url, tokensMedico) {
             try {
                 const checkRes = await fetch(url, { method: 'HEAD' });
@@ -117,7 +117,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                     } catch (e) {}
                 }
                 
-                // Backup ultra-ligero si el filtro falló por completo para evitar saturación de la API
+                // Backup ultra-corto si el filtro quirúrgico quedó vacío para no consumir tokens por minuto
                 if (textoFiltrado.trim().length < 50) {
                     const primeraPagina = await documentoPdf.getPage(1);
                     const contenidoBkp = await primeraPagina.getTextContent();
@@ -142,7 +142,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
             });
         }
 
-        // LLAMADA AUTOMÁTICA CON CAMBIO DE MODELO ANTI-429 (Llama 3 8B de alta capacidad de procesamiento)
+        // LLAMADA CON MODELO LLAMA 3 8B (Posee cuotas masivas de Tokens por Minuto)
         async function llamarGroq(textoUsuario) {
             let listaKeys = obtenerApiKey();
             if (!listaKeys || listaKeys.length === 0) throw new Error("No hay API Keys cargadas.");
@@ -157,7 +157,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
-                            model: "llama3-8b-8192", // Cambiado a 8B: Límites de tokens por minuto masivos, ideal para múltiples PDFs
+                            model: "llama3-8b-8192", // Modelo optimizado para manejar grandes volúmenes de contexto sin dar 429
                             messages: [
                                 { role: "system", content: SYSTEM_PROMPT_CONSULTA },
                                 { role: "user", content: textoUsuario }
@@ -248,6 +248,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                         <span>⚠️</span> Información no encontrada en la biblioteca digital local para los criterios ingresados.
                     </div>`;
                     container.classList.remove('hidden');
+                    btn.disabled = false;
                     return;
                 }
                 
@@ -273,6 +274,7 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                         ⚠️ No se pudo procesar la lectura física de los documentos seleccionados.
                     </div>`;
                     container.classList.remove('hidden');
+                    btn.disabled = false;
                     return;
                 }
 
@@ -292,15 +294,16 @@ Actúas como un Asistente de Investigación Clínica Pediátrica de Alta Precisi
                 console.error(err);
                 
                 let msgError = err.message === "429" 
-                    ? `⚠️ Límite de velocidad estricto de Groq alcanzado temporalmente.<br><br>💡 <strong>Solución:</strong> Esperá 30-45 segundos a que la plataforma reinicie tu cuota por minuto, o cargá otra clave adicional de respaldo.`
+                    ? `⚠️ Límite de velocidad estricto de Groq alcanzado temporalmente.<br><br>💡 <strong>Solución:</strong> Esperá 30 segundos a que la plataforma reinicie tu cuota por minuto, o carga otra clave adicional de respaldo.`
                     : `<strong>Error de ejecución:</strong> ${err.message || err}`;
 
                 textoHtml.innerHTML = `<div class="bg-red-950/40 border border-red-500/30 rounded-lg p-4 text-red-300 text-sm leading-relaxed">
                     ${msgError}
                 </div>`;
                 container.classList.remove('hidden');
-            } sidebar_container = false;
-            btn.disabled = false;
+            } finally {
+                btn.disabled = false;
+            }
         }
 
         function limpiarPantalla() {
