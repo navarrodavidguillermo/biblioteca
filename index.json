@@ -320,5 +320,55 @@
             "brue",
             "otras patologías pediátricas comunes"
         ]
+    },
+    {
+        "nombre": "Adenopatías en pediatría",
+        "archivo": "Adenopatías en pediatría.pdf",
+        "palabras_clave": [
+            "adenopatías",
+            "pediatría",
+            "adenitis",
+            "ganglios linfáticos",
+            "infecciones",
+            "cáncer",
+            "patologías",
+            "adenopatía aguda",
+            "adenopatía subaguda",
+            "adenopatía crónica",
+            "adenitis cervical",
+            "adenitis axilar",
+            "adenitis inguinal",
+            "adenitis epitroclear",
+            "adenitis supraclavicular",
+            "adenitis retroauricular",
+            "adenitis poplítea",
+            "adenitis ilíaca",
+            "adenitis mediastínica",
+            "adenitis abdominal",
+            "adenitis generalizada",
+            "adenitis localizada",
+            "adenitis regional",
+            "adenitis bilateral",
+            "adenitis unilateral",
+            "infecciones respiratorias",
+            "virus respiratorios",
+            "VEB",
+            "CMV",
+            "adenovirus",
+            "VHS",
+            "rubéola",
+            "exantema súbito",
+            "herpes 6",
+            "Coxsackie",
+            "S. aureus",
+            "S. pyogenes"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
     }
 ]
