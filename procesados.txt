@@ -29,3 +29,7 @@ Enfermedad celiaca.pdf
 ECNE.pdf
 Diarrea crónica y persistente.pdf
 Dolor abdominal crónico.pdf
+Enuresis.pdf
+Eosinofilia.pdf
+EPOC posviral o Bronquiolitis obliterante.pdf
+Enfermedades inflamatorias intestinales.pdf
