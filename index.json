@@ -610,5 +610,81 @@
             "brue",
             "otras cardiopatías congénitas"
         ]
+    },
+    {
+        "nombre": "Celulitis Preseptal y Septal en la edad pediátrica",
+        "archivo": "Celulitis preseptal y orbitaria.pdf",
+        "palabras_clave": [
+            "celulitis preseptal",
+            "celulitis septal",
+            "edad pediátrica",
+            "infección orbitaria",
+            "absceso subperióstico",
+            "absceso orbitario",
+            "sinusitis etmoidal",
+            "Staphylococcus aureus",
+            "Streptococcus pneumoniae",
+            "Haemophilus influenzae tipo b",
+            "neumococo",
+            "inmunodepresión",
+            "mucormicosis",
+            "proptosis",
+            "diplopía",
+            "disminución de la agudeza visual",
+            "fiebre",
+            "edema palpebral",
+            "eritema palpebral",
+            "alteración de los movimientos oculares"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
+    },
+    {
+        "nombre": "Enfermedad de Chagas en niños",
+        "archivo": "Chagas.pdf",
+        "palabras_clave": [
+            "enfermedad de chagas",
+            "trypanosoma cruzi",
+            "transmisión vectorial",
+            "transmisión no vectorial",
+            "fase aguda",
+            "fase crónica",
+            "parasitemia",
+            "hepatosplenomegalia",
+            "adenomegalias",
+            "anemia",
+            "edemas",
+            "irritabilidad",
+            "somnolencia",
+            "convulsiones",
+            "meningoencefalitis",
+            "miocarditis",
+            "taquicardia",
+            "arritmias",
+            "insuficiencia cardíaca",
+            "cardiomegalia",
+            "chagoma de inoculación",
+            "complexo oftalmoganglionar",
+            "chagoma hematógeno",
+            "lipochagoma geniano",
+            "hepatomegalia",
+            "esplenomegalia",
+            "prematurez",
+            "bajo peso",
+            "anemia",
+            "taquicardia persistente"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras enfermedades pediátricas comunes"
+        ]
     }
 ]
