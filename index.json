@@ -686,5 +686,73 @@
             "brue",
             "otras enfermedades pediátricas comunes"
         ]
+    },
+    {
+        "nombre": "Constipación en pediatría: diagnóstico y tratamiento",
+        "archivo": "Constipación.pdf",
+        "palabras_clave": [
+            "constipación",
+            "estreñimiento",
+            "pediatría",
+            "diagnóstico",
+            "tratamiento",
+            "funcional",
+            "orgánico",
+            "criterios de Roma IV",
+            "frecuencia normal de deposiciones",
+            "fisiopatología",
+            "etiológia",
+            "retención intencional",
+            "dieta baja en fibras",
+            "psicógena",
+            "inmovilización",
+            "confusión del lactante",
+            "síndrome de colon irritable"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras afecciones pediátricas comunes"
+        ]
+    },
+    {
+        "nombre": "Conjuntivitis Neonatal",
+        "archivo": "Conjuntivitis.pdf",
+        "palabras_clave": [
+            "conjuntivitis",
+            "neonatal",
+            "infectología",
+            "pediátrica",
+            "Chlamydia",
+            "Staphylococcus aureus",
+            "Streptococcus pneumoniae",
+            "Haemophylus spp",
+            "Streptococcus viridans",
+            "Herpes simplex",
+            "oftalmía",
+            "neumonía",
+            "infección ocular",
+            "inmaduro",
+            "sistema inmune",
+            "lisozima",
+            "inmunoglobulina A",
+            "profilaxis",
+            "gonococo",
+            "oftalmía neonatal",
+            "cicatrices conjuntivales",
+            "bacteriemia",
+            "colonización faríngea",
+            "articular",
+            "ruptura prolongada de membranas"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
     }
 ]
