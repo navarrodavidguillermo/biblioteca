@@ -41,3 +41,6 @@ Genetica generalidades.pdf
 Fiebre.pdf
 Fiebre reumática.pdf
 Fibrosis Quística.pdf
+Hipertensión arterial.pdf
+Hipoacusias neurosensoriales en pediatría.pdf
+Hiperglucemia.pdf
