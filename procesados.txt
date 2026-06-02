@@ -37,3 +37,7 @@ Espasmo sollozo.pdf
 Eritema nodoso.pdf
 Faringitis.pdf
 Exantemas.pdf
+Genetica generalidades.pdf
+Fiebre.pdf
+Fiebre reumática.pdf
+Fibrosis Quística.pdf

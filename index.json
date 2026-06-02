@@ -1725,5 +1725,143 @@
             "brue",
             "otras enfermedades pediátricas comunes"
         ]
+    },
+    {
+        "nombre": "Sospecha de patología genética en pediatría",
+        "archivo": "Genetica generalidades.pdf",
+        "palabras_clave": [
+            "sospecha de patología genética",
+            "malformaciones congénitas",
+            "anomalías menores",
+            "desarrollo o diferenciación genital anormal",
+            "retraso madurativo",
+            "retardo mental",
+            "hipotónico",
+            "deprimido",
+            "vómitos",
+            "convulsiones",
+            "acidosis metabólica",
+            "síntomas respiratorios crónicos",
+            "diarrea crónica",
+            "desnutrición",
+            "patrón anormal de crecimiento",
+            "deficiencias sensoriales congénitas",
+            "inmunodeficiencias congénitas",
+            "anomalías de piel y faneras",
+            "historia familiar",
+            "antecedentes gestacionales",
+            "examen físico completo",
+            "estudios complementarios",
+            "genetista clínico",
+            "asesoramiento genético"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
+    },
+    {
+        "nombre": "Tratamiento de la fiebre en niños",
+        "archivo": "Fiebre.pdf",
+        "palabras_clave": [
+            "fiebre",
+            "hipertermia",
+            "temperatura corporal",
+            "autorregulación",
+            "hipotálamo",
+            "pirógenos",
+            "vasoconstricción",
+            "glándulas sudoríparas",
+            "taquicardia",
+            "sepsis",
+            "golpe de calor",
+            "hipertermia maligna",
+            "síndrome neuroléptico maligno",
+            "shock hemorrágico encefalopático",
+            "fiebre central",
+            "hipertermia",
+            "tormenta tiroidea",
+            "reducción de la capacidad para disipar calor",
+            "combinación de los dos mecanismos"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
+    },
+    {
+        "nombre": "Fiebre Reumática",
+        "archivo": "Fiebre reumática.pdf",
+        "palabras_clave": [
+            "fiebre reumática",
+            "enfermedad sistémica inflamatoria",
+            "articulaciones",
+            "corazón",
+            "sistema nervioso central",
+            "autoinmune",
+            "estreptococo beta hemolítico grupo A",
+            "infección faríngea",
+            "anginas",
+            "IRA (Infec. Resp. Aguda Alta)",
+            "escarlatina",
+            "artritis",
+            "corea",
+            "rash",
+            "nódulos",
+            "tratamiento",
+            "medicamentoso",
+            "reposo",
+            "exámenes complementarios",
+            "laboratorio",
+            "Rx",
+            "ECG",
+            "ecocardiogramas",
+            "diagnóstico",
+            "criterios de Jones",
+            "carditis",
+            "poliartritis",
+            "corea"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras enfermedades pediátricas comunes"
+        ]
+    },
+    {
+        "nombre": "Fibrosis Quística: Diagnóstico, Fisiopatología y Tratamiento",
+        "archivo": "Fibrosis Quística.pdf",
+        "palabras_clave": [
+            "fibrosis quística",
+            "diagnóstico",
+            "fisiopatología",
+            "tratamiento",
+            "prueba del sudor",
+            "análisis genético",
+            "mutaciones del gen CFTR",
+            "sudoración",
+            "cloruro",
+            "bronquiectasias",
+            "insuficiencia respiratoria",
+            "enfermedad de herencia autosómica recesiva",
+            "pregnancia",
+            "neonatal",
+            "adultez"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras enfermedades pediátricas comunes"
+        ]
     }
 ]
