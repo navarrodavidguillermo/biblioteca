@@ -295,7 +295,7 @@
         ]
     },
     {
-        "nombre": "Valores Normales en Pediatría",
+        "nombre": "Laboratorio pediátrico",
         "archivo": "Analitica_normal.pdf",
         "palabras_clave": [
             "pediatría",
@@ -543,7 +543,7 @@
         ]
     },
     {
-        "nombre": "Diagnóstico y evaluación de cardiopatías congénitas en neonatos",
+        "nombre": "Cardiopatías congénitas",
         "archivo": "Cardiopatías congénitas.pdf",
         "palabras_clave": [
             "cardiopatías congénitas",
