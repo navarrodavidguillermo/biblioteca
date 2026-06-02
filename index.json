@@ -298,20 +298,13 @@
         "nombre": "Laboratorio pediátrico",
         "archivo": "Analitica_normal.pdf",
         "palabras_clave": [
-            "pediatría",
+            "laboratorio",
             "valores normales",
             "hemoglobina",
             "hematocrito",
             "leucocitos",
-            "recién nacido",
-            "infancia",
-            "niños",
-            "adolescentes",
-            "adultos",
-            "medición de sangre",
             "análisis de sangre",
-            "valores de referencia",
-            "pediatría hospital Perrupato"
+            "valores de referencia"
         ],
         "excluir": [
             "asma",
