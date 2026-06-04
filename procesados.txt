@@ -69,3 +69,7 @@ Miasis.pdf
 Lupus eritematoso sistémico.pdf
 Macrocefalia, hidrocefalia, DVP, microcefalia y variaciones de la forma de la cabeza.pdf
 Maltrato infantil.pdf
+Mordedura por arañas.pdf
+Mordedura de CAN.pdf
+Mielomeningocele.pdf
+Mononucleosis.pdf
