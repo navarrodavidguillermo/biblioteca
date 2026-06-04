@@ -115,3 +115,7 @@ Trastornos del espectro autista (TEA).pdf
 Trastornos paroxisticos no epileptico.pdf
 Trastornos por déficit de atención e hiperactividad.pdf
 Traumatismo ocular.pdf
+Tuberculosis.pdf
+Urticaria.pdf
+Trombocitopenias.pdf
+Tumores en Pediatría.pdf
