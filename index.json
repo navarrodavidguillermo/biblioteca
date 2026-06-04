@@ -5740,5 +5740,31 @@
             "brue",
             "otras patologías pediátricas comunes"
         ]
+    },
+    {
+        "nombre": "Triage hospitalario en la emergencia pediátrica",
+        "archivo": "Triage hospitalario PRONAP 2019 modulo 1.pdf",
+        "palabras_clave": [
+            "triage hospitalario",
+            "emergencia pediátrica",
+            "valoración clínica",
+            "urgencia/gravedad",
+            "atención adecuada",
+            "seguridad del paciente",
+            "flujo de pacientes",
+            "eficacia y eficiencia de los recursos",
+            "sala de espera",
+            "herramientas de gestión",
+            "priorización de la atención",
+            "catástrofes y accidentes de múltiples víctimas",
+            "triage extrahospitalario"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
     }
 ]
