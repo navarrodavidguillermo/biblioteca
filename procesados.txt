@@ -53,3 +53,7 @@ Insuficiencia cardiaca.pdf
 Insuficiencia renal aguda.pdf
 Insuficiencia renal crónica.pdf
 Inmunodeficiencias secundarias.pdf
+Ingestión de cuerpo extraño.pdf
+Infeccion urinaria.pdf
+Infecciones de piel y partes blandas.pdf
+Inmunodeficiencias primarias.pdf
