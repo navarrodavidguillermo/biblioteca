@@ -49,3 +49,7 @@ Hipotiroidismo.pdf
 ictericia.pdf
 Hipoglucemia.pdf
 Hipertrofia adenoamigdalina.pdf
+Insuficiencia cardiaca.pdf
+Insuficiencia renal aguda.pdf
+Insuficiencia renal crónica.pdf
+Inmunodeficiencias secundarias.pdf
