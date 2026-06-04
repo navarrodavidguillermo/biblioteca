@@ -57,3 +57,7 @@ Ingestión de cuerpo extraño.pdf
 Infeccion urinaria.pdf
 Infecciones de piel y partes blandas.pdf
 Inmunodeficiencias primarias.pdf
+Lactante hipotónico.pdf
+Intoxicaciones.pdf
+Laringitis.pdf
+Lactante febril sin foco.pdf
