@@ -3510,5 +3510,104 @@
             "brue",
             "Síndrome de fatiga crónica"
         ]
+    },
+    {
+        "nombre": "Movimientos anormales en lactantes",
+        "archivo": "Movimientos anormales en lactantes.pdf",
+        "palabras_clave": [
+            "movimientos anormales",
+            "lactantes",
+            "temblor",
+            "distonía",
+            "spasmus mutans",
+            "tortícolis paroxística benigna",
+            "elevación tónica paroxística de la mirada",
+            "mioclonías benignas neonatales del sueño",
+            "mioclonías benignas de la infancia temprana",
+            "jitterines",
+            "shuddeesing",
+            "estremecimiento",
+            "nistagmus",
+            "inclinación cefálica",
+            "pronóstico reservado",
+            "diferenciar con enfermedades retinianas",
+            "episodios recurrentes de inclinación lateral de la cabeza",
+            "irritabilidad",
+            "vómitos",
+            "ataxia",
+            "postura anormal del tronco",
+            "palidez",
+            "intercurrencía de infecciones"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras enfermedades sistémicas"
+        ]
+    },
+    {
+        "nombre": "Recomendaciones para el manejo de las infecciones respiratorias agudas bajas en menores de 2 años",
+        "archivo": "Neumonía Aguda de la Comunidad.pdf",
+        "palabras_clave": [
+            "neumonía aguda",
+            "infecciones respiratorias",
+            "menores de 2 años",
+            "virus respiratorios",
+            "bacterias",
+            "neumococo",
+            "Mycoplasma pneumoniae",
+            "influenza",
+            "adenovirus",
+            "parainfluenza",
+            "metapneumovirus",
+            "SARS-CoV2",
+            "COVID-19",
+            "hemocultivos",
+            "virológicos de secreciones nasofaríngeas",
+            "PCR COVID-19",
+            "serología",
+            "IgM",
+            "infección aguda"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras infecciones respiratorias comunes"
+        ]
+    },
+    {
+        "nombre": "Neutropenias en Pediatría",
+        "archivo": "Neutropenias.pdf",
+        "palabras_clave": [
+            "neutropenia",
+            "pediatría",
+            "infecciones",
+            "fármacos",
+            "inmunitaria",
+            "idiopática crónica",
+            "neutropenia adquirida",
+            "neutropenia hereditaria",
+            "recuento absoluto de neutrófilos",
+            "riesgo de infección",
+            "clásificación según etiología",
+            "neutropenia neonatal aloinmunitaria",
+            "transferencia pasiva de anticuerpos maternos",
+            "neutropenia primaria autoinmunitaria de la lactancia y la niñez",
+            "factor estimulante de colonias de granulocitos",
+            "G-CSF",
+            "prednisona",
+            "tratamiento de la neutropenia"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras enfermedades pediátricas comunes"
+        ]
     }
 ]
