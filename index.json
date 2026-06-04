@@ -5369,5 +5369,101 @@
             "brue",
             "otras patologías pediátricas comunes"
         ]
+    },
+    {
+        "nombre": "Trastornos paroxísticos no epilépticos y epilepsias generalizadas",
+        "archivo": "Trastornos paroxisticos no epileptico.pdf",
+        "palabras_clave": [
+            "trastornos paroxísticos no epilépticos",
+            "epilepsias generalizadas",
+            "crisis pseudo epilépticas",
+            "pseudo-crisis",
+            "status epiléptico",
+            "mioclonus neonatal benigno del sueño",
+            "mioclonías benignas de la infancia temprana",
+            "síncope",
+            "crisis psicogénicas",
+            "sindrome de hiperventilación",
+            "narcolepsia",
+            "hipotensión ortostática",
+            "episodios de aparente amenaza a la vida",
+            "hiperecplexia",
+            "espasmos de sollozo cianóticos y pálidos",
+            "trastornos metabólicos",
+            "episodios de mirada fija o perdida",
+            "mioclonías hipnagógicas"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "epilepsia mioclónica benigna de la infancia",
+            "epilepsia con crisis mioclónico-astáticas",
+            "epilepsia ausencia de la niñez",
+            "epilepsia con ausencias mioclónicas",
+            "epilepsia ausencia juvenil",
+            "epilepsia mioclónica juvenil",
+            "epilepsias generalizadas con convulsiones febriles",
+            "síndrome de West idiopático"
+        ]
+    },
+    {
+        "nombre": "Trastornos por déficit de atención e hiperactividad (TDAH)",
+        "archivo": "Trastornos por déficit de atención e hiperactividad.pdf",
+        "palabras_clave": [
+            "trastornos por déficit de atención e hiperactividad",
+            "TDAH",
+            "síntomas de déficit de atención",
+            "impulsividad",
+            "hiperactividad",
+            "etología del TDAH",
+            "genética del TDAH",
+            "adquisición del TDAH",
+            "criterios del DSM-IV",
+            "diagnóstico del TDAH",
+            "tratamiento del TDAH",
+            "síntomas del TDAH en niños",
+            "síntomas del TDAH en adolescentes",
+            "síntomas del TDAH en adultos",
+            "dificultades de aprendizaje en el TDAH",
+            "dificultades de comportamiento en el TDAH",
+            "dificultades de atención en el TDAH",
+            "dificultades de impulsividad en el TDAH",
+            "dificultades de hiperactividad en el TDAH"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
+    },
+    {
+        "nombre": "Traumatismo Ocular en Pediatria",
+        "archivo": "Traumatismo ocular.pdf",
+        "palabras_clave": [
+            "traumatismo ocular",
+            "lesiones palpebrales",
+            "lesiones orbitarias",
+            "erosiones corneales",
+            "lesiones conjuntivales",
+            "heridas penetrantes del globo ocular",
+            "cuerpos extraños intraoculares",
+            "colirio anestésico",
+            "profilaxis antibiótica",
+            "vacunas",
+            "oftalmología",
+            "infectología",
+            "pediatría"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
     }
 ]
