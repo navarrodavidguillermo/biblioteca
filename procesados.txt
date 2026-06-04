@@ -119,3 +119,5 @@ Tuberculosis.pdf
 Urticaria.pdf
 Trombocitopenias.pdf
 Tumores en Pediatría.pdf
+Varicela.pdf
+Vulvovaginitis.pdf
