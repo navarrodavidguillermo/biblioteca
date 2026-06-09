@@ -5977,5 +5977,116 @@
             "brue",
             "otras enfermedades pediátricas comunes"
         ]
+    },
+    {
+        "nombre": "Osteomielitis en el niño",
+        "archivo": "Osteomielitis PRONAP 2020 M1.pdf",
+        "palabras_clave": [
+            "osteomielitis",
+            "infecciones osteoarticulares",
+            "infancia",
+            "niños",
+            "hueso",
+            "inflamación",
+            "bacteriana",
+            "fúngica",
+            "parásitos",
+            "micobacterias",
+            "clínica",
+            "diagnóstico",
+            "tratamiento",
+            "pruebas de laboratorio",
+            "pruebas de imagen",
+            "epidemiología",
+            "microbiología",
+            "glosario",
+            "OM",
+            "OMCR",
+            "PCR",
+            "Rx",
+            "RMN",
+            "S. Aureus",
+            "SAMR-C",
+            "SAMS",
+            "TC",
+            "T1",
+            "T2",
+            "VSG"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
+    },
+    {
+        "nombre": "Enfermedades inflamatorias intestinales crónicas PROAP 2020 M1",
+        "archivo": "Enfermedades inflamatorias intestinales crónicas PROAP 2020 M1.pdf",
+        "palabras_clave": [
+            "enfermedades inflamatorias intestinales crónicas",
+            "pediatria",
+            "gastroenterología",
+            "hepatología",
+            "nutrición",
+            "colitis ulcerosa",
+            "enfermedad de Crohn",
+            "enfermedad intestinal inflamatoria no clasificada",
+            "epidemiología",
+            "genética",
+            "tratamiento",
+            "diagnóstico",
+            "manifestaciones extraintestinales",
+            "scores de riesgo clínico",
+            "PUCAI",
+            "PCDAI"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras enfermedades pediátricas comunes"
+        ]
+    },
+    {
+        "nombre": "Eventos súbitos e inexplicables en lactantes",
+        "archivo": "Eventos súbitos e inexplicables 2020 modulo 1.pdf",
+        "palabras_clave": [
+            "evento de aparente amenaza a la vida",
+            "ALTE",
+            "BRUE",
+            "colapso súbito inesperado postnatal",
+            "CSIP",
+            "lactantes",
+            "apnea",
+            "cambio de color",
+            "cambio en el tono muscular",
+            "ahogo o asfixia",
+            "pruebas diagnósticas",
+            "hospitalización",
+            "riesgo innecesario",
+            "incertidumbre",
+            "cuidador",
+            "equipo médico",
+            "American Academy of Pediatrics",
+            "AAP",
+            "evento paroxístico",
+            "autolimitado",
+            "cambios en la piel",
+            "color",
+            "respiración",
+            "tono",
+            "nivel de respuesta"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "síndrome de casi-muerte súbita del lactante",
+            "muerte abortada del lactante"
+        ]
     }
 ]
