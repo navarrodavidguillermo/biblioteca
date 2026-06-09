@@ -6267,5 +6267,87 @@
             "brue",
             "otras patologías pediátricas comunes"
         ]
+    },
+    {
+        "nombre": "Artritis en Pediatría: Diagnóstico y Tratamiento",
+        "archivo": "Artritis PRONAP 2021 M2.pdf",
+        "palabras_clave": [
+            "artritis",
+            "pediatría",
+            "diagnóstico",
+            "tratamiento",
+            "inflamación articular",
+            "anamnesis",
+            "examen físico",
+            "examen articular",
+            "artritis séptica",
+            "sinovitis transitoria de cadera",
+            "poliartritis aguda",
+            "artritis virales",
+            "artritis reactivas",
+            "enfermedades reumáticas",
+            "fiebre reumática",
+            "lupus eritematoso sistémico",
+            "dermatomiositis juvenil",
+            "espondiloartropatías seronegativas",
+            "infecciones osteoarticulares",
+            "enfermedades del tejido conectivo",
+            "función aspirativa de médula ósea",
+            "púrpura de Schönlein Henoch",
+            "Staphylococcus aureus meticilino resistente"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras patologías pediátricas comunes"
+        ]
+    },
+    {
+        "nombre": "Infecciones recurrentes en el consultorio del pediatra",
+        "archivo": "Infecciones recurrentes PRONAP 2021 M1.pdf",
+        "palabras_clave": [
+            "infecciones recurrentes",
+            "errores innatos de la inmunidad",
+            "inmunodeficiencias primarias",
+            "inmunoglobulinas",
+            "anticuerpos",
+            "infecciones virales",
+            "infecciones bacterianas",
+            "infecciones fúngicas",
+            "inmunodeficiencia combinada severa",
+            "inmunodeficiencia común variable",
+            "enfermedad granulomatosa crónica",
+            "agamaglobulinemia de Bruton",
+            "alteraciones del complemento",
+            "hipogamaglobulinemia transitoria de la infancia",
+            "déficit selectivo de IgA",
+            "infecciones recurrentes en pediatría",
+            "motivos de consulta en pediatría",
+            "supervivencia de niños con patologías crónicas",
+            "riesgo de infecciones",
+            "inmunidad innata",
+            "inmunidad adquirida",
+            "inmunoglobulinas",
+            "anticuerpos",
+            "infecciones",
+            "inmunodeficiencias",
+            "errores innatos de la inmunidad",
+            "inmunodeficiencias primarias",
+            "inmunodeficiencias secundarias",
+            "infecciones recurrentes en niños",
+            "infecciones recurrentes en adultos",
+            "inmunodeficiencias en pediatría",
+            "inmunodeficiencias en adultos"
+        ],
+        "excluir": [
+            "asma",
+            "reflujo gastroesofágico",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "otras infecciones comunes en pediatría"
+        ]
     }
 ]
