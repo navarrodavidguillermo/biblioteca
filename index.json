@@ -6583,5 +6583,50 @@
             "brue",
             "otras enfermedades pediátricas comunes"
         ]
+    },
+    {
+        "nombre": "Alimentación a partir de los 6 meses",
+        "archivo": "Alimentación_complementaria (Perrupato).pdf",
+        "palabras_clave": [
+            "alimentación pediátrica",
+            "complementaria",
+            "6 meses",
+            "horarios de comidas",
+            "hábitos y rutinas",
+            "apetito del niño",
+            "lactancia materna",
+            "porciones pequeñas",
+            "comida independiente",
+            "actitud neutral",
+            "juegos y interrupciones durante la comida",
+            "preparaciones líquidas",
+            "alergias",
+            "sabores",
+            "aceite",
+            "carne sin grasa",
+            "pescado",
+            "huevo entero cocido",
+            "frutas maduras",
+            "trituradas o jugos"
+        ],
+        "excluir": [
+            "asma",
+            "meningitis",
+            "ataxia",
+            "brue",
+            "nitritos",
+            "flatulencia",
+            "sustancias sulfuradas",
+            "ajo",
+            "cebolla",
+            "espárragos",
+            "vísceras",
+            "hígado",
+            "sesos",
+            "corazón",
+            "riñón",
+            "parásitos",
+            "sustancias tóxicas"
+        ]
     }
 ]
