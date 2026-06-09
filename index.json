@@ -1,6 +1,6 @@
 [
     {
-        "nombre": "Alimentación complementaria en niños desde los 6 meses",
+        "nombre": "Alimentación complementaria",
         "archivo": "Alimentación_complementaria.pdf",
         "palabras_clave": [
             "alimentación complementaria",
@@ -40,7 +40,7 @@
         ]
     },
     {
-        "nombre": "Meningitis, Encefalitis y Meningoencefalitis Pediátrica",
+        "nombre": "Meningoencefalitis",
         "archivo": "Meningitis_Encefalitis.pdf",
         "palabras_clave": [
             "alteracion de la conciencia",
@@ -105,7 +105,7 @@
         ]
     },
     {
-        "nombre": "Salud bucal de los niños: caries dental y prevención",
+        "nombre": "Salud bucal, traumatismo, caries y celulitis facial",
         "archivo": "Salud_bucal_traumatismo_Infeccion_odontológica.pdf",
         "palabras_clave": [
             "caries dental",
@@ -134,7 +134,7 @@
         ]
     },
     {
-        "nombre": "Ataxia Aguda en Pediatría",
+        "nombre": "Ataxia Aguda",
         "archivo": "Ataxia.pdf",
         "palabras_clave": [
             "ataxia",
@@ -173,7 +173,7 @@
         ]
     },
     {
-        "nombre": "Bronquitis, Bronquiolitis y ASMA Pediátrica",
+        "nombre": "Bronquitis, Bronquiolitis y ASMA",
         "archivo": "Bronquiti_ ASMA.pdf",
         "palabras_clave": [
             "asma",
@@ -255,7 +255,7 @@
         ]
     },
     {
-        "nombre": "Enfoque Sistemático Inicial en Emergencias Pediátricas",
+        "nombre": "Enfoque Sistemático Inicial en Emergencias",
         "archivo": "Enfoque_sistemático_inicial_en_emergencias.pdf",
         "palabras_clave": [
             "emergencias",
@@ -315,7 +315,7 @@
         ]
     },
     {
-        "nombre": "Adenopatías en pediatría",
+        "nombre": "Adenopatías",
         "archivo": "Adenopatías en pediatría.pdf",
         "palabras_clave": [
             "adenopatías",
@@ -365,7 +365,7 @@
         ]
     },
     {
-        "nombre": "Alergias alimentarias en pediatría",
+        "nombre": "Alergias alimentarias",
         "archivo": "Alergias alimentarias.pdf",
         "palabras_clave": [
             "alergias alimentarias",
@@ -413,7 +413,7 @@
         ]
     },
     {
-        "nombre": "Ahogamiento en pediatría",
+        "nombre": "Ahogamiento",
         "archivo": "Ahogamiento.pdf",
         "palabras_clave": [
             "ahogamiento",
@@ -456,7 +456,7 @@
         ]
     },
     {
-        "nombre": "Anemias y transfusiones en pediatría",
+        "nombre": "Anemias y transfusiones",
         "archivo": "Anemias y transfusiones.pdf",
         "palabras_clave": [
             "anemia",
@@ -499,7 +499,7 @@
         ]
     },
     {
-        "nombre": "Aritmias Cardiacas en Pediatría",
+        "nombre": "Aritmias Cardiacas",
         "archivo": "Arritmias cardiacas.pdf",
         "palabras_clave": [
             "arritmias cardiacas",
@@ -612,7 +612,7 @@
         ]
     },
     {
-        "nombre": "Celulitis Preseptal y Septal en la edad pediátrica",
+        "nombre": "Celulitis Preseptal y Septal",
         "archivo": "Celulitis preseptal y orbitaria.pdf",
         "palabras_clave": [
             "celulitis preseptal",
@@ -645,7 +645,7 @@
         ]
     },
     {
-        "nombre": "Enfermedad de Chagas en niños",
+        "nombre": "Enfermedad de Chagas",
         "archivo": "Chagas.pdf",
         "palabras_clave": [
             "enfermedad de chagas",
@@ -688,7 +688,7 @@
         ]
     },
     {
-        "nombre": "Constipación en pediatría: diagnóstico y tratamiento",
+        "nombre": "Constipación",
         "archivo": "Constipación.pdf",
         "palabras_clave": [
             "constipación",
@@ -718,7 +718,7 @@
         ]
     },
     {
-        "nombre": "Conjuntivitis Neonatal",
+        "nombre": "Conjuntivitis",
         "archivo": "Conjuntivitis.pdf",
         "palabras_clave": [
             "conjuntivitis",
@@ -756,7 +756,7 @@
         ]
     },
     {
-        "nombre": "Crisis convulsiva en la infancia",
+        "nombre": "Convulsiones",
         "archivo": "Crisis convulsiva en la infancia.pdf",
         "palabras_clave": [
             "crisis convulsiva",
@@ -790,7 +790,7 @@
         ]
     },
     {
-        "nombre": "Dermatopatías del área del pañal en pediatria",
+        "nombre": "Dermatopatías",
         "archivo": "Dermatopatías.pdf",
         "palabras_clave": [
             "dermatitis del área del pañal",
@@ -825,7 +825,7 @@
         ]
     },
     {
-        "nombre": "Dermatitis Atópica: Clasificación, Criterios Clínicos y Diagnóstico",
+        "nombre": "Dermatitis Atópica",
         "archivo": "Dermatitis Atópica.pdf",
         "palabras_clave": [
             "dermatitis atópica",
@@ -874,7 +874,7 @@
         ]
     },
     {
-        "nombre": "Dengue: Guía del Ministerio de Salud",
+        "nombre": "Dengue",
         "archivo": "Dengue.pdf",
         "palabras_clave": [
             "dengue",
@@ -918,7 +918,7 @@
         ]
     },
     {
-        "nombre": "Cefaleas en Pediatría",
+        "nombre": "Cefaleas",
         "archivo": "Cefaleas.pdf",
         "palabras_clave": [
             "cefaleas",
@@ -970,7 +970,7 @@
         ]
     },
     {
-        "nombre": "Desnutrición en niños: Evaluación y clasificación",
+        "nombre": "Desnutrición",
         "archivo": "Desnutrición.pdf",
         "palabras_clave": [
             "desnutrición",
@@ -1000,7 +1000,7 @@
         ]
     },
     {
-        "nombre": "Deshidratación en niños",
+        "nombre": "Deshidratación y medio interno",
         "archivo": "Deshidratación y medio interno.pdf",
         "palabras_clave": [
             "deshidratación",
@@ -1118,7 +1118,7 @@
         ]
     },
     {
-        "nombre": "ECG Pediátrico: Guía de Medicina Interna",
+        "nombre": "ECG Pediátrico",
         "archivo": "ECG pediátrico.pdf",
         "palabras_clave": [
             "ecg pediátrico",
@@ -1249,7 +1249,7 @@
         ]
     },
     {
-        "nombre": "Diarrea crónica y persistente en niños",
+        "nombre": "Diarrea crónica y persistente",
         "archivo": "Diarrea crónica y persistente.pdf",
         "palabras_clave": [
             "diarrea crónica",
@@ -1290,7 +1290,7 @@
         ]
     },
     {
-        "nombre": "Dolor abdominal crónico en niños y adolescentes",
+        "nombre": "Dolor abdominal crónico",
         "archivo": "Dolor abdominal crónico.pdf",
         "palabras_clave": [
             "dolor abdominal crónico",
@@ -1330,7 +1330,7 @@
         ]
     },
     {
-        "nombre": "Enuresis nocturna en niños: definición, diagnóstico y tratamiento",
+        "nombre": "Enuresis",
         "archivo": "Enuresis.pdf",
         "palabras_clave": [
             "enuresis nocturna",
@@ -1376,7 +1376,7 @@
         ]
     },
     {
-        "nombre": "Eosinofilia en niños: causas, síntomas y tratamiento",
+        "nombre": "Eosinofilia",
         "archivo": "Eosinofilia.pdf",
         "palabras_clave": [
             "eosinofilia",
@@ -1458,7 +1458,7 @@
         ]
     },
     {
-        "nombre": "Enfermedades inflamatorias intestinales en pediatría",
+        "nombre": "Enfermedades inflamatorias intestinales",
         "archivo": "Enfermedades inflamatorias intestinales.pdf",
         "palabras_clave": [
             "enfermedades inflamatorias intestinales",
@@ -1625,7 +1625,7 @@
         ]
     },
     {
-        "nombre": "Faringoamigdalitis en pediatria",
+        "nombre": "Faringoamigdalitis",
         "archivo": "Faringitis.pdf",
         "palabras_clave": [
             "faringoamigdalitis",
@@ -1727,7 +1727,7 @@
         ]
     },
     {
-        "nombre": "Sospecha de patología genética en pediatría",
+        "nombre": "Sospecha de patología genética",
         "archivo": "Genetica generalidades.pdf",
         "palabras_clave": [
             "sospecha de patología genética",
@@ -1764,7 +1764,7 @@
         ]
     },
     {
-        "nombre": "Tratamiento de la fiebre en niños",
+        "nombre": "Fiebre",
         "archivo": "Fiebre.pdf",
         "palabras_clave": [
             "fiebre",
@@ -1837,7 +1837,7 @@
         ]
     },
     {
-        "nombre": "Fibrosis Quística: Diagnóstico, Fisiopatología y Tratamiento",
+        "nombre": "Fibrosis Quística",
         "archivo": "Fibrosis Quística.pdf",
         "palabras_clave": [
             "fibrosis quística",
@@ -1890,7 +1890,7 @@
         ]
     },
     {
-        "nombre": "Hipoacusias neurosensoriales en pediatría",
+        "nombre": "Hipoacusias neurosensoriales",
         "archivo": "Hipoacusias neurosensoriales en pediatría.pdf",
         "palabras_clave": [
             "hipoacusia neurosensorial",
@@ -1979,7 +1979,7 @@
         ]
     },
     {
-        "nombre": "Hiperglucemia en niños y adolescentes",
+        "nombre": "Hiperglucemia",
         "archivo": "Hiperglucemia.pdf",
         "palabras_clave": [
             "hiperglucemia",
@@ -2014,7 +2014,7 @@
         ]
     },
     {
-        "nombre": "VIH en pediatría: características, ciclo del virus, curso de la infección y métodos de diagnóstico",
+        "nombre": "HIV",
         "archivo": "HIV.pdf",
         "palabras_clave": [
             "VIH",
@@ -2047,7 +2047,7 @@
         ]
     },
     {
-        "nombre": "Hipotiroidismo en los niños",
+        "nombre": "Hipotiroidismo",
         "archivo": "Hipotiroidismo.pdf",
         "palabras_clave": [
             "hipotiroidismo",
@@ -2083,7 +2083,7 @@
         ]
     },
     {
-        "nombre": "Ictericia en Pediatría: Conceptos y Etiopatogenia",
+        "nombre": "Ictericia",
         "archivo": "ictericia.pdf",
         "palabras_clave": [
             "ictericia",
@@ -2123,7 +2123,7 @@
         ]
     },
     {
-        "nombre": "Hipoglucemia en pediatría",
+        "nombre": "Hipoglucemia",
         "archivo": "Hipoglucemia.pdf",
         "palabras_clave": [
             "hipoglucemia",
