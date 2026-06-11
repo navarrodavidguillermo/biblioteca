@@ -7206,5 +7206,136 @@
             "falta de autonomía",
             "alteraciones comportamentales"
         ]
+    },
+    {
+        "nombre": "VAPEO CIGARRILLO ELECTRÓNICO PRONAP 2024 M3.pdf",
+        "archivo": "VAPEO CIGARRILLO ELECTRÓNICO PRONAP 2024 M3.pdf",
+        "palabras_clave": [
+            "tabaquismo",
+            "cigarrillo electrónico",
+            "nicotina",
+            "fumar",
+            "salud pública",
+            "OMS",
+            "MPOWER",
+            "prohibición de venta de productos para fumar",
+            "protección de los jóvenes",
+            "vapeo",
+            "tabaco",
+            "salud ambiental"
+        ],
+        "excluir": [
+            "parches de nicotina",
+            "chicles de nicotina",
+            "bupropión",
+            "vareniclina",
+            "dispositivos para el abandono del hábito de fumar",
+            "productos de tabaco calentado",
+            "tabaco sin combustión"
+        ]
+    },
+    {
+        "nombre": "Supuración pleuropulmonar PRONAP 2025 M1.pdf",
+        "archivo": "Supuración pleuropulmonar PRONAP 2025 M1.pdf",
+        "palabras_clave": [
+            "neumonía",
+            "pleuritis",
+            "empiema",
+            "supuración",
+            "pleuropulmonar",
+            "neumonía adquirida en la comunidad",
+            "infecciones respiratorias agudas bajas",
+            "derrame pleural",
+            "toracocentesis",
+            "drenaje pleural",
+            "fibrinolíticos",
+            "videotoracoscopía",
+            "SPP",
+            "DPN",
+            "DP",
+            "EP",
+            "IRAB",
+            "NAC",
+            "PCR",
+            "SAMRco",
+            "VT"
+        ],
+        "excluir": [
+            "conflicto de intereses",
+            "leche materna",
+            "IgA secretora",
+            "anticuerpo específico",
+            "evolución fisiopatológica",
+            "exudativa",
+            "fibrinopurulenta",
+            "organizativa",
+            "radiografía simple de tórax",
+            "ecografía torácica",
+            "tomografía",
+            "resonancia",
+            "interconsulta",
+            "especialista",
+            "drenaje pleural con uroquinasa",
+            "esqueema de contenidos",
+            "glosario"
+        ]
+    },
+    {
+        "nombre": "Alergias alimentarias PRONAP 2024 M3.pdf",
+        "archivo": "Alergias alimentarias PRONAP 2024 M3.pdf",
+        "palabras_clave": [
+            "alergias alimentarias",
+            "reacciones adversas a alimentos",
+            "envenenamiento por hongos",
+            "gastroenteritis por contaminación bacteriana",
+            "escombroidosis",
+            "alergias no tóxicas",
+            "reacciones alérgicas",
+            "intolerancia a la lactosa",
+            "intolerancia a la fructuosa",
+            "FODMAPS",
+            "intolerancia secundaria a la ingesta de aminas vasoactivas o aditivos alimentarios",
+            "factores de riesgo",
+            "diagnóstico y tratamiento",
+            "sistema inmunológico",
+            "mecanismos inmunológicos",
+            "gravedad de la reacción"
+        ],
+        "excluir": [
+            "envenenamiento por hongos",
+            "gastroenteritis por contaminación bacteriana",
+            "escombroidosis",
+            "alergias no tóxicas",
+            "reacciones alérgicas",
+            "intolerancia a la lactosa",
+            "intolerancia a la fructuosa",
+            "FODMAPS",
+            "intolerancia secundaria a la ingesta de aminas vasoactivas o aditivos alimentarios"
+        ]
+    },
+    {
+        "nombre": "INTELIGENCIA ARTIFICIAL PRONAP 2024 M3.pdf",
+        "archivo": "INTELIGENCIA ARTIFICIAL PRONAP 2024 M3.pdf",
+        "palabras_clave": [
+            "inteligencia artificial",
+            "aplicada a la pediatría",
+            "módulo 3",
+            "capítulo 2",
+            "objetivos",
+            "algoritmo",
+            "big data",
+            "aprendizaje automático",
+            "aprendizaje profundo",
+            "desbalance de clases",
+            "e-ICU",
+            "e-Salud",
+            "M-Salud",
+            "HCE",
+            "IA"
+        ],
+        "excluir": [
+            "conflicto de intereses",
+            "ninguno que declarar"
+        ]
     }
 ]
