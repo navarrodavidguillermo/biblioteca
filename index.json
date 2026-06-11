@@ -7337,5 +7337,83 @@
             "conflicto de intereses",
             "ninguno que declarar"
         ]
+    },
+    {
+        "nombre": "ICTERICIA EN EL PRIMER MES DE VIDA PRONAP 2025 M1.pdf",
+        "archivo": "ICTERICIA EN EL PRIMER MES DE VIDA PRONAP 2025 M1.pdf",
+        "palabras_clave": [
+            "ictericia",
+            "hiperbilirrubinemia",
+            "neonatología",
+            "fototerapia",
+            "exanguinotransfusión",
+            "bilirrubina",
+            "transcutánea",
+            "sérica",
+            "ictericia en el primer mes de vida",
+            "pronap 2025"
+        ],
+        "excluir": [
+            "atresia de vías biliares",
+            "enterocolitis necrotizante",
+            "enfermedad hepática aloinmune gestacional",
+            "inmunoglobulina intravenosa",
+            "prueba de antiglobulina directa",
+            "peso adecuado para la edad gestacional",
+            "recién nacido pretérmino",
+            "recién nacido de término",
+            "sistema reticuloendotelial",
+            "uridina difosfato-glucuronosiltransferasa"
+        ]
+    },
+    {
+        "nombre": "ABUSO SEXUAL EN ADOLESCENTES PRONAP 2025 M1.pdf",
+        "archivo": "ABUSO SEXUAL EN ADOLESCENTES PRONAP 2025 M1.pdf",
+        "palabras_clave": [
+            "abuso sexual",
+            "adolescentes",
+            "pronap",
+            "violencia sexual",
+            "niños",
+            "niñas",
+            "adolescentes",
+            "tratamiento de emergencia",
+            "prevención",
+            "detección",
+            "atención",
+            "víctimas de abuso sexual"
+        ],
+        "excluir": [
+            "conflicto de intereses",
+            "estadísticas oficiales",
+            "registros unificados",
+            "encuesta nacional",
+            "programa las víctimas contra las violencias"
+        ]
+    },
+    {
+        "nombre": "INGESTA DE CUERPOS EXTRAÑOS PRONAP 2025 M1.pdf",
+        "archivo": "INGESTA DE CUERPOS EXTRAÑOS PRONAP 2025 M1.pdf",
+        "palabras_clave": [
+            "ingesta de cuerpos extraños",
+            "pediatría",
+            "gastroenterología",
+            "endoscopía",
+            "urgencia médica",
+            "emergencia",
+            "cuerpos extraños",
+            "diagnóstico",
+            "tratamiento",
+            "prevención"
+        ],
+        "excluir": [
+            "conflicto de intereses",
+            "riesgo inmediato de vida",
+            "urgencia endoscópica",
+            "emergencia endoscópica",
+            "complicaciones",
+            "guías específicas",
+            "entorno pediátrico"
+        ]
     }
 ]
