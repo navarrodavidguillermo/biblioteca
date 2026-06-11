@@ -7080,5 +7080,131 @@
             "dieta equilibrada",
             "prevención de enfermedades crónicas no transmisibles"
         ]
+    },
+    {
+        "nombre": "URGENCIAS PSIQUIÁTRICAS E INTOXICACIÓN POR DROGAS DE USO RECREATIVO PRONAP 2024 M2.pdf",
+        "archivo": "URGENCIAS PSIQUIÁTRICAS E INTOXICACIÓN POR DROGAS DE USO RECREATIVO PRONAP 2024 M2.pdf",
+        "palabras_clave": [
+            "urgencias psiquiátricas",
+            "intoxicación por drogas",
+            "consumo de sustancias",
+            "salud mental",
+            "trastornos mentales",
+            "descompensación",
+            "contención en momentos de crisis",
+            "contexto social y/o familiar",
+            "consumo parental",
+            "adicciones conductuales",
+            "juegos online",
+            "redes sociales",
+            "apuestas",
+            "intoxicaciones secundarias",
+            "intentos autolíticos",
+            "vulnerabilidad social",
+            "derechos",
+            "pobreza",
+            "trabajo",
+            "búsqueda de trabajo",
+            "consultas médicas",
+            "medicamentos",
+            "preocupaciones de los más jóvenes"
+        ],
+        "excluir": [
+            "PREGUNTAS A ESPECIALISTAS",
+            "MÓDULO 2 / CAPÍTULO 3",
+            "DRA. MARTA BRASCHI",
+            "DRA. YEMINA MARZETTI",
+            "OBJETIVOS",
+            "INTRODUCCIÓN",
+            "Agradecimientos",
+            "Dra. Beatriz Cáceres",
+            "Dra. Sabrina Davenia",
+            "Dr. Juan Carlos Castellanos"
+        ]
+    },
+    {
+        "nombre": "DIFICULTADES ESPECÍFICAS DEL APRENDIZAJE PRONAP 2024 M2.pdf",
+        "archivo": "DIFICULTADES ESPECÍFICAS DEL APRENDIZAJE PRONAP 2024 M2.pdf",
+        "palabras_clave": [
+            "dificultades del aprendizaje",
+            "dislexia",
+            "discalculia",
+            "trastornos del aprendizaje",
+            "neuropsicología",
+            "psicopedagogía",
+            "educación",
+            "salud",
+            "diagnóstico",
+            "tratamiento"
+        ],
+        "excluir": [
+            "conflicto de intereses",
+            "motivo de consulta",
+            "antecedentes",
+            "retrospectivamente",
+            "fortalezas",
+            "hipótesis diagnóstica inicial",
+            "descenso del aprendizaje secundario a descenso cognitivo",
+            "dislexia asociada a trastorno por déficit de atención"
+        ]
+    },
+    {
+        "nombre": "Cardiopatías congénitas PRONAP 2024 M2.pdf",
+        "archivo": "Cardiopatías congénitas PRONAP 2024 M2.pdf",
+        "palabras_clave": [
+            "cardiopatías congénitas",
+            "abordaje pediátrico",
+            "prevención de factores de riesgo",
+            "enfermedad cardiovascular",
+            "nutrición",
+            "prevención de infecciones respiratorias",
+            "profilaxis de endocarditis infecciosa",
+            "prescripción de actividad física",
+            "neurodesarrollo-discapacidad",
+            "componente psicológico y emocional"
+        ],
+        "excluir": [
+            "conflicto de intereses",
+            "certificado de salud",
+            "jardín de infantes",
+            "colegio",
+            "clínica y fisioterapia",
+            "grado de complejidad",
+            "métodos de tamizaje",
+            "evaluación clínica",
+            "intervención oportuna"
+        ]
+    },
+    {
+        "nombre": "SÍNDROME DE DOWN PRONAP 2024 M2.pdf",
+        "archivo": "SÍNDROME DE DOWN PRONAP 2024 M2.pdf",
+        "palabras_clave": [
+            "Síndrome de Down",
+            "trisomía del cromosoma 21",
+            "discapacidad intelectual",
+            "genética",
+            "cromosoma 21",
+            "diagnóstico",
+            "pruebas prenatales",
+            "examen físico",
+            "recién nacido",
+            "comorbilidades",
+            "seguimiento interdisciplinario",
+            "estimulación",
+            "terapias integradoras",
+            "escolaridad"
+        ],
+        "excluir": [
+            "COVID",
+            "neumonía",
+            "pandemia",
+            "irritabilidad",
+            "berrinches",
+            "insomnio",
+            "movimientos estereotipados",
+            "repetitivos",
+            "falta de autonomía",
+            "alteraciones comportamentales"
+        ]
     }
 ]
