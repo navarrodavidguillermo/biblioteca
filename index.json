@@ -6950,5 +6950,135 @@
             "estrategias diagnósticas",
             "manejo y seguimiento"
         ]
+    },
+    {
+        "nombre": "Dermatitis Atópica PRONAP 2024 M1.pdf",
+        "archivo": "Dermatitis Atópica PRONAP 2024 M1.pdf",
+        "palabras_clave": [
+            "dermatitis atópica",
+            "enfermedad crónica",
+            "prurito",
+            "piel seca",
+            "eccemas",
+            "asma",
+            "conjuntivitis",
+            "rinitis alérgica",
+            "alergias alimentarias",
+            "patología sistémica",
+            "enfermedad no transmisible",
+            "incidencia",
+            "causa",
+            "patogénesis",
+            "respuesta inmunológica",
+            "función de barrera de la piel",
+            "transpiración",
+            "permeabilidad",
+            "infecciones cutáneas",
+            "modelo inmunopatogénico",
+            "Th2",
+            "Th1",
+            "fisiopatogenia"
+        ],
+        "excluir": [
+            "impétigo recidivante",
+            "tratamiento específico",
+            "cuidados diarios de la piel",
+            "manejo interdisciplinario",
+            "derivación oportuna al especialista"
+        ]
+    },
+    {
+        "nombre": "Alteraciones del sueño durante los primeros 2 años PRONAP 2024 M1.pdf",
+        "archivo": "Alteraciones del sueño durante los primeros 2 años PRONAP 2024 M1.pdf",
+        "palabras_clave": [
+            "trastornos del sueño",
+            "infancia",
+            "adolescencia",
+            "desarrollo físico",
+            "psicológico",
+            "social",
+            "aprendizaje",
+            "insomnio",
+            "parasomnias",
+            "trastornos respiratorios",
+            "sueño",
+            "cerebro",
+            "maduración",
+            "plasticidad",
+            "ritmo circadiano"
+        ],
+        "excluir": [
+            "síndrome de apneas hipopneas obstructivas del sueño",
+            "síndrome de resistencia aumentada de la vía aérea superior",
+            "terrores nocturnos",
+            "despertares confusionales",
+            "sonambulismo",
+            "trastornos del movimiento asociados al sueño"
+        ]
+    },
+    {
+        "nombre": "Picadura de insectos y arácnidos PRONAP 2024 M1.pdf",
+        "archivo": "Picadura de insectos y arácnidos PRONAP 2024 M1.pdf",
+        "palabras_clave": [
+            "picadura de insectos",
+            "aránidos",
+            "pronap",
+            "2024",
+            "m1",
+            "prevención",
+            "diagnóstico",
+            "tratamiento",
+            "insectos",
+            "arácnidos",
+            "escorpiones",
+            "arañas",
+            "abejas",
+            "mosquitos",
+            "jejenes",
+            "garrapatas",
+            "piojos",
+            "chinches",
+            "ácaros",
+            "escarabajos",
+            "orugas",
+            "dermatitis",
+            "prurigo",
+            "celulitis",
+            "infecciones",
+            "herpes",
+            "miasis",
+            "tumoral",
+            "cutánea",
+            "forunculosa"
+        ],
+        "excluir": [
+            "Dengue",
+            "Chagas",
+            "Paludismo",
+            "Leishmaniasis",
+            "Encefalitis equina"
+        ]
+    },
+    {
+        "nombre": "Alimentación complementaria PRONAP 2024 M1.pdf",
+        "archivo": "Alimentación complementaria PRONAP 2024 M1.pdf",
+        "palabras_clave": [
+            "alimentación complementaria",
+            "niños",
+            "lactantes",
+            "nutrición",
+            "salud",
+            "prevención de enfermedades crónicas no transmisibles",
+            "hábitos alimentarios",
+            "alimentación saludable",
+            "identidad gastronómica local"
+        ],
+        "excluir": [
+            "conflicto de intereses",
+            "temores de la mamá",
+            "incorporación de alimentos regionales y de proximidad",
+            "dieta equilibrada",
+            "prevención de enfermedades crónicas no transmisibles"
+        ]
     }
 ]
