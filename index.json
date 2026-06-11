@@ -6893,5 +6893,62 @@
             "terapia",
             "ocupacional"
         ]
+    },
+    {
+        "nombre": "Cardiopatías congénitas PRONAP 2024 M1.pdf",
+        "archivo": "Cardiopatías congénitas PRONAP 2024 M1.pdf",
+        "palabras_clave": [
+            "cardiopatías congénitas",
+            "tratamiento",
+            "seguimiento",
+            "cardiología pediátrica",
+            "comunicación interventricular",
+            "comunicación auriculoventricular",
+            "comunicación interauricular",
+            "ductus aórtico permeable",
+            "estenosis pulmonar",
+            "coartación de aorta",
+            "estenosis aórtica",
+            "válvula aórtica bicúspide",
+            "tetralogía de Fallot",
+            "transposición de grandes arterias",
+            "ventrículo único"
+        ],
+        "excluir": [
+            "trisomía 21",
+            "trisomía 13",
+            "trisomía 18",
+            "sindrome de Turner",
+            "microdeleción 22q11",
+            "exposición a tóxicos",
+            "diabetes",
+            "infecciones en el primer trimestre"
+        ]
+    },
+    {
+        "nombre": "Genética PRONAP 2023 M3.pdf",
+        "archivo": "Genética PRONAP 2023 M3.pdf",
+        "palabras_clave": [
+            "genética",
+            "pediatría",
+            "trastornos genéticos",
+            "evaluación genética",
+            "derivación genética",
+            "criterios de sospecha",
+            "enfermedades genéticas",
+            "genética humana",
+            "genética médica"
+        ],
+        "excluir": [
+            "bibliografía",
+            "bases de datos",
+            "link para datos complementarios",
+            "prevención primaria",
+            "terapéuticas",
+            "deteción precoz",
+            "patologías genéticas",
+            "estrategias diagnósticas",
+            "manejo y seguimiento"
+        ]
     }
 ]
