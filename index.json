@@ -8236,5 +8236,133 @@
             "heces duras",
             "círculo vicioso"
         ]
+    },
+    {
+        "nombre": "Infección urinaria SAP 2022.pdf",
+        "archivo": "Infección urinaria SAP 2022.pdf",
+        "palabras_clave": [
+            "infecciones urinarias",
+            "guías clínicas",
+            "pediatría",
+            "diagnóstico",
+            "tratamiento",
+            "urinary tract infections",
+            "clinical guidelines",
+            "pediatrics",
+            "diagnosis",
+            "treatment"
+        ],
+        "excluir": [
+            "disfunción vesicointestinal",
+            "recién nacido",
+            "portadores de vejiga neurogénica",
+            "receptores de trasplante renal",
+            "infecciones urinarias micóticas",
+            "bladder bowel dysfunction",
+            "newborn",
+            "children with neurogenic bladder",
+            "kidney transplant patients",
+            "fungal urinary tract infections"
+        ]
+    },
+    {
+        "nombre": "Ingestión de cáusticos SAP 2026.pdf",
+        "archivo": "Ingestión de cáusticos SAP 2026.pdf",
+        "palabras_clave": [
+            "ingestión de cáusticos",
+            "sustancias cáusticas",
+            "ácidos",
+            "álcalis",
+            "toxicidad",
+            "lesiones",
+            "tracto digestivo",
+            "niños",
+            "adolescentes",
+            "prevención",
+            "epidemiología",
+            "estadísticas",
+            "registros",
+            "consultas toxicológicas"
+        ],
+        "excluir": [
+            "Consensos SAP",
+            "Ingestión de cáusticos",
+            "Tabla 1",
+            "Tabla 2",
+            "Acta Toxicológica Argentina",
+            "Registro y Estadísticas de Consultas Toxicológicas de Córdoba",
+            "Hospital de la Santísima Trinidad de Córdoba",
+            "REC TOX",
+            "Frassá y Gait",
+            "Gait",
+            "Córdoba",
+            "2001",
+            "2008",
+            "2009",
+            "Argentina",
+            "España",
+            "Francia",
+            "Estados Unidos",
+            "norte de Europa"
+        ]
+    },
+    {
+        "nombre": "Hipotiroidismo SAP 2020.pdf",
+        "archivo": "Hipotiroidismo SAP 2020.pdf",
+        "palabras_clave": [
+            "hipotiroidismo",
+            "enfermedad de Hashimoto",
+            "bocio",
+            "niño",
+            "adolescente",
+            "tiroiditis linfocitaria crónica",
+            "TLC",
+            "disfunción tiroidea",
+            "crecimiento",
+            "desarrollo",
+            "metabolismo",
+            "cardiovascular",
+            "neurológico",
+            "cognitivo",
+            "gastrointestinal",
+            "metabólico"
+        ],
+        "excluir": [
+            "tiroiditis linfocitaria crónica",
+            "TLC"
+        ]
+    },
+    {
+        "nombre": "Hipertiroidismo SAP 2021.pdf",
+        "archivo": "Hipertiroidismo SAP 2021.pdf",
+        "palabras_clave": [
+            "hipertiroidismo",
+            "enfermedad de Graves",
+            "antitiroideos",
+            "niño",
+            "adolescente",
+            "hipotiroidismo",
+            "tiroiditis linfocitaria crónica",
+            "TLC",
+            "eutiroidismo",
+            "hipotiroidismo",
+            "eutiroidismo"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Epistaxis SAP 2021.pdf",
+        "archivo": "Epistaxis SAP 2021.pdf",
+        "palabras_clave": [
+            "epistaxis",
+            "niño",
+            "recurrencia",
+            "cauterización",
+            "epistaxis en pediatría",
+            "causas",
+            "clínica",
+            "tratamiento"
+        ],
+        "excluir": []
     }
 ]
