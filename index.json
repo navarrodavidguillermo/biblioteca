@@ -8364,5 +8364,137 @@
             "tratamiento"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Recomendaciones sobre el uso de palivizumab SAP 2023.pdf",
+        "archivo": "Recomendaciones sobre el uso de palivizumab SAP 2023.pdf",
+        "palabras_clave": [
+            "virus sincicial respiratorio",
+            "palivizumab",
+            "anticuerpos monoclonales",
+            "prevención de enfermedades",
+            "mortalidad",
+            "infecciones respiratorias agudas bajas",
+            "hospitalizaciones",
+            "riesgo de hospitalización",
+            "grupos de pacientes",
+            "lactantes",
+            "niños pequeños",
+            "enfermedades crónicas complejas",
+            "cardiopatías congénitas",
+            "displasia broncopulmonar"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Ingestión de cuerpo extraño SAP 2026.pdf",
+        "archivo": "Ingestión de cuerpo extraño SAP 2026.pdf",
+        "palabras_clave": [
+            "ingestión de cuerpo extraño",
+            "emergencia pediátrica",
+            "cuerpos extraños",
+            "esófago",
+            "tubo digestivo",
+            "complicaciones",
+            "intervención",
+            "procedimientos quirúrgicos",
+            "revisión bibliográfica",
+            "guías de diagnóstico y tratamiento",
+            "epidemiología",
+            "centro de control de intoxicaciones",
+            "EE. UU.",
+            "niños",
+            "patologías previas",
+            "retención de objetos",
+            "alteraciones en el reflejo de deglución",
+            "estenosis",
+            "anillos",
+            "dismotilidad",
+            "acalasia",
+            "esofagitis",
+            "cirugía de reflujo tipo Nissen estrecho",
+            "atresias de esófago",
+            "tipos de cuerpos extraños",
+            "monedas",
+            "imanes",
+            "pilas",
+            "juguetes",
+            "joyas/bijouterie",
+            "botones",
+            "huesos",
+            "bolos de alimento",
+            "características de los cuerpos extraños",
+            "romos",
+            "punzantes",
+            "cortantes",
+            "complejos",
+            "tamaño y forma",
+            "evaluación del mejor manejo"
+        ],
+        "excluir": [
+            "Pubmed",
+            "Biblioteca Cochrane",
+            "Endoscopy Department",
+            "Hôpital Saint Antoine",
+            "Sorbonne Université",
+            "Paris",
+            "década pasada",
+            "reportes",
+            "domicilio",
+            "patologías previas",
+            "alteraciones en el reflejo de deglución",
+            "estenosis",
+            "anillos",
+            "dismotilidad",
+            "acalasia",
+            "esofagitis",
+            "cirugía de reflujo tipo Nissen estrecho",
+            "atresias de esófago"
+        ]
+    },
+    {
+        "nombre": "Obesidad SAP 2024.pdf",
+        "archivo": "Obesidad SAP 2024.pdf",
+        "palabras_clave": [
+            "obesidad",
+            "síndrome metabólico",
+            "cirugía bariátrica",
+            "prevención",
+            "diagnóstico",
+            "tratamiento",
+            "estilo de vida saludable",
+            "farmacológico",
+            "quirúrgico",
+            "enfermedad crónica",
+            "equipo interdisciplinario"
+        ],
+        "excluir": [
+            "apnea de sueño",
+            "elevación de alanina transaminasa",
+            "glucemia",
+            "síndrome metabólico",
+            "cirugía bariátrica",
+            "Novonordisk",
+            "Manual de Obesidad pediátrica"
+        ]
+    },
+    {
+        "nombre": "Rinitis alérgica SAP 2023.pdf",
+        "archivo": "Rinitis alérgica SAP 2023.pdf",
+        "palabras_clave": [
+            "rinitis alérgica",
+            "sinusitis",
+            "pediatría",
+            "inflamación",
+            "comorbilidad"
+        ],
+        "excluir": [
+            "asma bronquial",
+            "otitis media",
+            "conjuntivitis",
+            "rinosinusitis",
+            "poliposis nasal",
+            "infecciones del tracto respiratorio"
+        ]
     }
 ]
