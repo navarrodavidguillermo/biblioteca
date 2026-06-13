@@ -7995,5 +7995,78 @@
             "Circulation",
             "Resuscitation"
         ]
+    },
+    {
+        "nombre": "Alergia a la proteína de la leche de vaca SAP 2024.pdf",
+        "archivo": "Alergia a la proteína de la leche de vaca SAP 2024.pdf",
+        "palabras_clave": [
+            "alergia a las proteínas de la leche de vaca",
+            "dieta",
+            "hidrolizados de proteína",
+            "aminoácidos",
+            "tolerancia"
+        ],
+        "excluir": [
+            "Nutricia",
+            "Nestlé",
+            "Mead Johnson",
+            "Danone",
+            "Sanofi",
+            "Ethical Nutrition",
+            "Biogaia"
+        ]
+    },
+    {
+        "nombre": "Accidente cerebrovascular en niños SAP 2026.pdf",
+        "archivo": "Accidente cerebrovascular en niños SAP 2026.pdf",
+        "palabras_clave": [
+            "accidente cerebrovascular",
+            "diagnóstico precoz",
+            "terapia trombolítica",
+            "trombectomía",
+            "neuroimagen",
+            "stroke",
+            "diagnóstico temprano",
+            "terapia trombolítica",
+            "trombectomía",
+            "neuroimagen"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Asma SAP 2021.pdf",
+        "archivo": "Asma SAP 2021.pdf",
+        "palabras_clave": [
+            "asma",
+            "bronquial",
+            "niños",
+            "diagnóstico",
+            "tratamiento",
+            "guía",
+            "pediatría",
+            "actualización",
+            "2021"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Criptorquidia SAP 2024.pdf",
+        "archivo": "Criptorquidia SAP 2024.pdf",
+        "palabras_clave": [
+            "criptorquidismo",
+            "testículo",
+            "anomalías congénitas",
+            "orquidopexia",
+            "criptorquidia",
+            "diagnóstico",
+            "tratamiento",
+            "fertilidad",
+            "riesgo de malignidad",
+            "anorchia",
+            "síndromes genéticos"
+        ],
+        "excluir": [
+            "alteraciones/diferencias en el desarrollo sexual"
+        ]
     }
 ]
