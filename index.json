@@ -8157,5 +8157,84 @@
             "pediatría"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Hemorragia digestiva SAP 2026.pdf",
+        "archivo": "Hemorragia digestiva SAP 2026.pdf",
+        "palabras_clave": [
+            "hemorragia digestiva",
+            "pérdida de sangre",
+            "tubo digestivo",
+            "pediatría",
+            "enfermedad sistémica",
+            "lesiones focales",
+            "esófago",
+            "estómago",
+            "duodeno",
+            "intestino delgado",
+            "colon",
+            "recto",
+            "ano",
+            "evaluación inicial",
+            "sangrado",
+            "intensidad",
+            "gravedad",
+            "estabilidad hemodinámica",
+            "signos vitales",
+            "frecuencia cardíaca",
+            "tensión arterial",
+            "llenado capilar",
+            "pulsos",
+            "PALS",
+            "soporte avanzado vital pediátrico",
+            "guías",
+            "localización del sitio del sangrado",
+            "diagnóstico",
+            "evaluación",
+            "tratamiento",
+            "médico",
+            "endoscópico",
+            "quirúrgico"
+        ],
+        "excluir": [
+            "colorantes",
+            "sangre materna deglutida",
+            "epistaxis",
+            "remolacha",
+            "chocolate",
+            "hierro",
+            "rifampicina"
+        ]
+    },
+    {
+        "nombre": "Fibrosis quística SAP 2020.pdf",
+        "archivo": "Fibrosis quística SAP 2020.pdf",
+        "palabras_clave": [
+            "revisión",
+            "fibrosis quística",
+            "diagnóstico",
+            "tratamiento"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Estreñimiento funcional SAP 2021.pdf",
+        "archivo": "Estreñimiento funcional SAP 2021.pdf",
+        "palabras_clave": [
+            "estreñimiento",
+            "enfermedad colónica funcional",
+            "incontinencia fecal",
+            "niño"
+        ],
+        "excluir": [
+            "dieta",
+            "dificultad en el abandono del pañal",
+            "escolarización",
+            "deposición dolorosa",
+            "conductas retentivas",
+            "absorción colónica de agua",
+            "heces duras",
+            "círculo vicioso"
+        ]
     }
 ]
