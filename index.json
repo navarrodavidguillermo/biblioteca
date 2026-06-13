@@ -7712,5 +7712,135 @@
             "impacto social",
             "deterioro en la calidad de vida"
         ]
+    },
+    {
+        "nombre": "Infeccion de piel y partes blandas Notti 2022.pdf",
+        "archivo": "Infeccion de piel y partes blandas Notti 2022.pdf",
+        "palabras_clave": [
+            "infecciones de piel",
+            "partes blandas",
+            "impétigo",
+            "folliculitis",
+            "erisipela",
+            "etología",
+            "diagnóstico",
+            "tratamiento",
+            "epidemiología",
+            "microbiología",
+            "clínica médica",
+            "utip",
+            "farmacia",
+            "dermatología",
+            "auditoría médica"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Cetoacidosis Diabética 2024 Notti.pdf",
+        "archivo": "Cetoacidosis Diabética 2024 Notti.pdf",
+        "palabras_clave": [
+            "Cetoacidosis Diabética",
+            "Diabetes",
+            "Guía",
+            "Endocrinología",
+            "Metabolismo",
+            "Nutrición",
+            "Enfermería",
+            "Terapia Intensiva Pediátrica",
+            "Internación Pediátrica",
+            "Guardia Pediátrica",
+            "Farmacia",
+            "ISPAD",
+            "International Society for Pediatric and Adolescent Diabetes",
+            "Criterios de Internación",
+            "Valoración inicial",
+            "Tratamiento",
+            "Complicaciones",
+            "Anexo",
+            "Indicación nutricional",
+            "Ejemplos de Indicaciones",
+            "Manejo de hiperglucemia",
+            "Criterio diagnóstico de Diabetes",
+            "Clasificación de cetosis",
+            "Hiperglucemia en Diabetes",
+            "Hiperglucemia inducida por drogas/estrés",
+            "Manejo quirúrgico del paciente con diabetes",
+            "Referencias"
+        ],
+        "excluir": [
+            "tiras reactivas",
+            "cetonuria",
+            "Anión GAP",
+            "SGLT2",
+            "dapaglifozina"
+        ]
+    },
+    {
+        "nombre": "Estatus convulsivo Notti 2024.pdf",
+        "archivo": "Estatus convulsivo Notti 2024.pdf",
+        "palabras_clave": [
+            "estatus convulsivo",
+            "epilepsia",
+            "convulsión",
+            "neurología",
+            "pediatría",
+            "urgencia médico-neurológica",
+            "tratamiento inmediato",
+            "EEG",
+            "neuroimagen de urgencia",
+            "punción lumbar",
+            "analítica",
+            "farmacológico",
+            "escalado de estatus convulsivo"
+        ],
+        "excluir": [
+            "Liga Internacional contra la Epilepsia",
+            "ILAE",
+            "Resol: 563/24",
+            "Vigencia: junio 2024",
+            "Versión: 02"
+        ]
+    },
+    {
+        "nombre": "Iinfeccion urinaria Notti 2023.pdf",
+        "archivo": "Iinfeccion urinaria Notti 2023.pdf",
+        "palabras_clave": [
+            "infección urinaria",
+            "guía hospitalaria",
+            "Notti 2023",
+            "infección",
+            "urinaria",
+            "tratamiento",
+            "epidemiología",
+            "farmacia",
+            "auditoría médica",
+            "infectología",
+            "nefrología",
+            "internación pediátrica",
+            "microbiología",
+            "epidemiología",
+            "farmacia",
+            "auditoría médica"
+        ],
+        "excluir": [
+            "VER",
+            "Vigencia",
+            "Resol",
+            "Indice",
+            "Glosario",
+            "INTRODUCCIÓN",
+            "DEFINICIONES",
+            "FISIOPATOLOGÍA",
+            "ETIOLOGÍA DE IU",
+            "MANIFESTACIONES CLÍNICAS",
+            "EXÁMENES COMPLEMENTARIOS",
+            "ALGORITMO DE ESTUDIOS POR IMÁGENES",
+            "CRITERIOS DE INTERNACIÓN",
+            "Tener en cuenta",
+            "Tratamiento empírico",
+            "Dosis e intervalos de distintas opciones de tratamiento antibiótico",
+            "Tiempo de tratamiento",
+            "QUIMIOPROFILAXIS"
+        ]
     }
 ]
