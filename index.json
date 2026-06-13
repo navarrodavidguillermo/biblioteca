@@ -8068,5 +8068,94 @@
         "excluir": [
             "alteraciones/diferencias en el desarrollo sexual"
         ]
+    },
+    {
+        "nombre": "Dietas vegetarianas en la infancia SAP 2020.pdf",
+        "archivo": "Dietas vegetarianas en la infancia SAP 2020.pdf",
+        "palabras_clave": [
+            "dieta vegetariana",
+            "niño",
+            "dieta restrictiva",
+            "riesgo",
+            "alimentación saludable",
+            "suficiencia",
+            "equilibrio",
+            "variedad",
+            "adaptación",
+            "omnívora",
+            "restricciones",
+            "ético-filosóficas",
+            "ecológicas",
+            "económicas",
+            "fisiológicas",
+            "relacionadas con problemas de salud"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Dengue SAP 2023.pdf",
+        "archivo": "Dengue SAP 2023.pdf",
+        "palabras_clave": [
+            "dengue",
+            "infección viral",
+            "transmisión por mosquitos",
+            "epidemia",
+            "salud pública",
+            "Argentina",
+            "Américas",
+            "Asia",
+            "Pacífico",
+            "virus del dengue",
+            "serotipos",
+            "DENV-1",
+            "DENV-2",
+            "DENV-3",
+            "DENV-4",
+            "casos",
+            "infecciones",
+            "riesgo",
+            "prevención",
+            "tratamiento"
+        ],
+        "excluir": [
+            "Figura 1",
+            "Figura 2",
+            "Figura 3",
+            "Figura 4",
+            "Tabla 1",
+            "Boletín Epidemiológico Nacional N° 679",
+            "SNVS 2.0",
+            "MSAL",
+            "Dirección de Epidemiología",
+            "PLISA",
+            "ECDC",
+            "Europa"
+        ]
+    },
+    {
+        "nombre": "detección temprana de las cardiopatías congenitas SAP 2024.pdf",
+        "archivo": "detección temprana de las cardiopatías congenitas SAP 2024.pdf",
+        "palabras_clave": [
+            "cardiopatías congénitas",
+            "diagnóstico prenatal",
+            "ultrasonografía fetal",
+            "ecocardiografía",
+            "congenital heart disease",
+            "prenatal diagnosis",
+            "fetal ultrasonography",
+            "echocardiography"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Enfermedad celíaca SAP 2024.pdf",
+        "archivo": "Enfermedad celíaca SAP 2024.pdf",
+        "palabras_clave": [
+            "enfermedad celíaca",
+            "clasificación",
+            "diagnóstico",
+            "pediatría"
+        ],
+        "excluir": []
     }
 ]
