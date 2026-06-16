@@ -202,3 +202,5 @@ Tuberculosis SAP 2024.pdf
 Ficha COVID.pdf
 Ficha enfermedad febril exantemática.pdf
 Ficha ESAVI.pdf
+Ficha meningoencefalitis.pdf
+Ficha Oseltamivir solicitud.pdf
