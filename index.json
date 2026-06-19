@@ -9592,5 +9592,81 @@
             "si o no",
             "momento de la pérdida"
         ]
+    },
+    {
+        "nombre": "Planilla para imprimir Balance de ingresos y egresos.pdf",
+        "archivo": "Planilla para imprimir Balance de ingresos y egresos.pdf",
+        "palabras_clave": [
+            "balance",
+            "ingresos",
+            "egresos",
+            "paciente",
+            "vnc",
+            "sct",
+            "peso",
+            "hora",
+            "fecha",
+            "orina",
+            "liquido"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Tablas para pacientes con Síndrome Down controles y ley.pdf",
+        "archivo": "Tablas para pacientes con Síndrome Down controles y ley.pdf",
+        "palabras_clave": [
+            "Síndrome Down",
+            "licencia",
+            "maternidad",
+            "trabajadoras",
+            "discapacidad",
+            "ley",
+            "Argentina"
+        ],
+        "excluir": [
+            "http://www.fameargentina.com.ar/leyes.php"
+        ]
+    },
+    {
+        "nombre": "Recomendaciones para reflujo gastroeofágico en niños mayores.pdf",
+        "archivo": "Recomendaciones para reflujo gastroeofágico en niños mayores.pdf",
+        "palabras_clave": [
+            "reflujo gastroesofágico",
+            "niños mayores",
+            "medidas higiénico dietarias",
+            "consejos higiénicos",
+            "comidas pequeñas",
+            "evitar acostarse después de comer",
+            "presión intraabdominal",
+            "cama inclinada",
+            "alimentos a evitar",
+            "grasas",
+            "chocolate",
+            "mentas",
+            "bebidas alcohólicas",
+            "bebidas con gas",
+            "té",
+            "café",
+            "mate",
+            "mariscos",
+            "pescados azules",
+            "tomate",
+            "salsas",
+            "pepino",
+            "melón",
+            "especias",
+            "ajos",
+            "cebollas",
+            "naranja",
+            "limón",
+            "banana"
+        ],
+        "excluir": [
+            "pantalones ceñidos",
+            "faldas ceñidas",
+            "fajas",
+            "corsés",
+            "cinturones"
+        ]
     }
 ]
