@@ -10042,5 +10042,53 @@
             "gammagrafía renal con DMSA",
             "VCUG"
         ]
+    },
+    {
+        "nombre": "Tubulopatías Nefrología AEP 2022.pdf",
+        "archivo": "Tubulopatías Nefrología AEP 2022.pdf",
+        "palabras_clave": [
+            "tubulopatías",
+            "nefrología",
+            "pediatría",
+            "protocolos",
+            "actualizados",
+            "2022",
+            "función",
+            "tubular",
+            "renal",
+            "anomalías",
+            "hereditarias",
+            "adquiridas",
+            "trastornos",
+            "iónicos",
+            "prognóstico",
+            "variable",
+            "tratamiento",
+            "reposición",
+            "hidroelectrolítica",
+            "individualizado"
+        ],
+        "excluir": [
+            "síndrome",
+            "Fanconi",
+            "Bartter",
+            "Gitelman",
+            "Liddle",
+            "diabetes",
+            "insípida",
+            "nephrogenic",
+            "acidosis",
+            "tubular",
+            "proximal",
+            "distal",
+            "colector",
+            "glucosuria",
+            "aminoacidurias",
+            "fosfaturias",
+            "hipouricemia",
+            "trastornos",
+            "del",
+            "magnesio"
+        ]
     }
 ]
