@@ -11899,5 +11899,122 @@
             "escedosporidiasis",
             "feohifomicosis"
         ]
+    },
+    {
+        "nombre": "Artritis séptica, osteomielitis y espondilodiscitis AEP 2023.pdf",
+        "archivo": "Artritis séptica, osteomielitis y espondilodiscitis AEP 2023.pdf",
+        "palabras_clave": [
+            "artritis séptica",
+            "osteomielitis",
+            "espondilodiscitis",
+            "infecciones osteoarticulares",
+            "pediatría",
+            "reumatología",
+            "enfermedades infecciosas",
+            "bacteriemia",
+            "Staphylococcus aureus",
+            "Kingella kingae",
+            "Streptococcus pyogenes",
+            "ecografía",
+            "resonancia magnética",
+            "gammagrafía ósea",
+            "artrocentesis",
+            "artrotomía",
+            "artroscopia",
+            "bioquímica",
+            "cultivo",
+            "reacción en cadena de polimerasa",
+            "PCR bacteriana"
+        ],
+        "excluir": [
+            "protocolos",
+            "actualizados",
+            "año 2022",
+            "condiciones de uso",
+            "posibles nuevas actualizaciones",
+            "ISSN 2171-8172",
+            "BONE AND JOINT INFECTIONS",
+            "SEPTIC ARTHRITIS",
+            "OSTEOMYELITIS",
+            "DISCITIS",
+            "ABSTRACT",
+            "Osteoarticular infections",
+            "hematogenic pathway",
+            "orofaringe",
+            "colonizada",
+            "traslocación",
+            "bacteraemia",
+            "translocación",
+            "orofaringe",
+            "colonizada",
+            "CA-MRSA",
+            "community-associated methicillin-resistant S. aureus"
+        ]
+    },
+    {
+        "nombre": "Infección urinaria AEP 2023.pdf",
+        "archivo": "Infección urinaria AEP 2023.pdf",
+        "palabras_clave": [
+            "infección urinaria",
+            "pielonefritis aguda",
+            "diagnóstico",
+            "tratamiento antibiótico",
+            "reflujo vesicoureteral",
+            "niños"
+        ],
+        "excluir": [
+            "bacteriuria asintomática"
+        ]
+    },
+    {
+        "nombre": "Parasitosis intestinales y extraintestinales AEP 2023.pdf",
+        "archivo": "Parasitosis intestinales y extraintestinales AEP 2023.pdf",
+        "palabras_clave": [
+            "parasitosis",
+            "protozoos",
+            "helmintos",
+            "salud pública",
+            "infecciones parasitarias",
+            "giardiasis",
+            "oxiuriasis",
+            "ascariosis",
+            "leishmaniasis",
+            "esquistosomiasis",
+            "amebiasis",
+            "trianosomiasis"
+        ],
+        "excluir": [
+            "Protocolos",
+            "ISSN",
+            "Asociación Española de Pediatría",
+            "www.aeped.es/protocolos/",
+            "Hernanz Lobo A",
+            "Ramírez Cuentas JH",
+            "Gerig Rodríguez NE",
+            "Protoc diagn ter pediatr",
+            "INTRODUCCIÓN",
+            "DEFINICIÓN Y CLASIFICACIÓN",
+            "ABSTRACT"
+        ]
+    },
+    {
+        "nombre": "Celulitis - Infecciones de piel y partes blandas AEP 2023.pdf",
+        "archivo": "Celulitis - Infecciones de piel y partes blandas AEP 2023.pdf",
+        "palabras_clave": [
+            "impétigo",
+            "ectima",
+            "erisipela",
+            "celulitis",
+            "abscesos subcutáneos",
+            "fascitis necrotizante",
+            "piomiositis",
+            "infecciones de piel",
+            "infecciones de partes blandas",
+            "S. aureus",
+            "S. pyogenes",
+            "infecciones bacterianas",
+            "infecciones tras mordedura"
+        ],
+        "excluir": []
     }
 ]
