@@ -11822,5 +11822,82 @@
             "migraña abdominal",
             "no especificado"
         ]
+    },
+    {
+        "nombre": "Miocarditis, endocarditis y pericarditis AEP 2023.pdf",
+        "archivo": "Miocarditis, endocarditis y pericarditis AEP 2023.pdf",
+        "palabras_clave": [
+            "endocarditis",
+            "pericarditis",
+            "miocarditis",
+            "pediatría",
+            "protocolos",
+            "infecciosa"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Meningitis, Absceso cerebral, Encefalitis aguda AEP 2023.pdf",
+        "archivo": "Meningitis, Absceso cerebral, Encefalitis aguda AEP 2023.pdf",
+        "palabras_clave": [
+            "meningitis aguda",
+            "Neisseria meningitidis",
+            "absceso cerebral",
+            "encefalitis de causa infecciosa",
+            "meningitis vírica",
+            "meningitis bacteriana",
+            "encefalitis aguda",
+            "infección del sistema nervioso central",
+            "SNC",
+            "inflamación de las meninges",
+            "tejido neural subyacente",
+            "etiología viral",
+            "etiología bacteriana",
+            "infecciones víricas",
+            "infecciones bacterianas",
+            "fúngicas",
+            "micobacterias",
+            "causas no infecciosas"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Síndrome febril prolongado y fiebre de origen desconocido AEP 2023.pdf",
+        "archivo": "Síndrome febril prolongado y fiebre de origen desconocido AEP 2023.pdf",
+        "palabras_clave": [
+            "fiebre de origen desconocido",
+            "infecciones",
+            "enfermedades autoinmunes",
+            "neoplasias",
+            "tuberculosis",
+            "VEB",
+            "citomegalovirus",
+            "leishmaniasis visceral"
+        ],
+        "excluir": [
+            "antibioterapia empírica",
+            "terapia antiinflamatoria",
+            "pruebas de segundo nivel",
+            "pruebas microbiológicas ampliadas",
+            "estudios anatomopatológicos e inmunológicos"
+        ]
+    },
+    {
+        "nombre": "Infección fúngica invasiva AEP 2023.pdf",
+        "archivo": "Infección fúngica invasiva AEP 2023.pdf",
+        "palabras_clave": [
+            "infección fúngica invasiva",
+            "Candida spp.",
+            "Aspergillus spp.",
+            "antifúngicos",
+            "monitoreo de concentraciones plasmáticas"
+        ],
+        "excluir": [
+            "Pneumocystis jirovecii",
+            "mucormicosis",
+            "fusariosis",
+            "escedosporidiasis",
+            "feohifomicosis"
+        ]
     }
 ]
