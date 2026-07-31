@@ -11700,5 +11700,127 @@
             "Universidad de Sevilla",
             "Emérito de Pediatría"
         ]
+    },
+    {
+        "nombre": "Trastornos funcionales gastrointestinales - regurgitación rumiación vómitos cíclicos cólico diarrea funcional disquecia estreñimiento AEP 2023.pdf",
+        "archivo": "Trastornos funcionales gastrointestinales - regurgitación rumiación vómitos cíclicos cólico diarrea funcional disquecia estreñimiento AEP 2023.pdf",
+        "palabras_clave": [
+            "trastornos funcionales gastrointestinales",
+            "regurgitación",
+            "rumiación",
+            "vómitos cíclicos",
+            "cólico",
+            "diarrea funcional",
+            "disquecia",
+            "estreñimiento",
+            "AEP 2023",
+            "pediatría",
+            "gastroenterología",
+            "niño",
+            "menor de cuatro años",
+            "desarrollo neuromadurativo",
+            "ponderoestural",
+            "criterios de Roma IV",
+            "valoración",
+            "exploración física",
+            "tratamiento",
+            "calidad de vida",
+            "signos de alarma",
+            "causa orgánica"
+        ],
+        "excluir": [
+            "alteraciones bioquímicas",
+            "alteraciones estructurales",
+            "pruebas innecesarias",
+            "exploraciones complementarias",
+            "intervenciones terapéuticas innecesarias"
+        ]
+    },
+    {
+        "nombre": "Reacciones adversas y alegias alimentarias AEP 2023.pdf",
+        "archivo": "Reacciones adversas y alegias alimentarias AEP 2023.pdf",
+        "palabras_clave": [
+            "reacciones adversas a alimentos",
+            "alergias alimentarias",
+            "intolerancias alimentarias",
+            "tóxicos",
+            "no tóxicos",
+            "metabólicas",
+            "enzimáticas",
+            "farmacológicas",
+            "inmunológicas",
+            "IgE",
+            "exclusión de alimentos",
+            "prueba de provocación",
+            "exámenes complementarios",
+            "inmunoterapia",
+            "tolerancia",
+            "alergia a la leche de vaca",
+            "fórmulas alternativas",
+            "alergenicidad reducida"
+        ],
+        "excluir": [
+            "protocolos",
+            "actualizaciones",
+            "condiciones de uso",
+            "ISSN",
+            "Asociación Española de Pediatría",
+            "Hospital Universitario Infantil Niño Jesús",
+            "Hospital Universitario de Cruces",
+            "Hospital Universitario Infantil Virgen del Rocío",
+            "Domínguez Ortega G",
+            "Tutau Gómez C",
+            "Espín Jaime B"
+        ]
+    },
+    {
+        "nombre": "Parasitosis intestinales AEP 2023.pdf",
+        "archivo": "Parasitosis intestinales AEP 2023.pdf",
+        "palabras_clave": [
+            "parasitosis intestinales",
+            "AEP 2023",
+            "pediatría",
+            "protozoos",
+            "helmintos",
+            "nematodos",
+            "trematodos",
+            "cestodos",
+            "Giardia lamblia",
+            "Enterobius vermicularis",
+            "microbiota intestinal",
+            "diagnóstico",
+            "identificación microscópica",
+            "serología",
+            "biología molecular",
+            "reacción en cadena de la polimerasa",
+            "PCR"
+        ],
+        "excluir": [
+            "ISSN 2171-8172",
+            "www.aeped.es/protocolos/",
+            "Hospital Universitario Clínico San Cecilio",
+            "Hospital Universitario Fuenlabrada",
+            "Hospital Universitario Virgen de las Nieves",
+            "Protocolos • Parasitosis intestinales"
+        ]
+    },
+    {
+        "nombre": "Trastornos funcionales gastrointestinales 2 - dispepsia síndrome intestino irritable regurgitación rumiación vómitos cíclicos estreñimiento AEP 2023.pdf",
+        "archivo": "Trastornos funcionales gastrointestinales 2 - dispepsia síndrome intestino irritable regurgitación rumiación vómitos cíclicos estreñimiento AEP 2023.pdf",
+        "palabras_clave": [
+            "trastornos funcionales gastrointestinales",
+            "dispepsia",
+            "síndrome de intestino irritable",
+            "regurgitación",
+            "rumiación",
+            "vómitos cíclicos",
+            "estreñimiento",
+            "AEP 2023"
+        ],
+        "excluir": [
+            "trastornos de la defecación",
+            "migraña abdominal",
+            "no especificado"
+        ]
     }
 ]
