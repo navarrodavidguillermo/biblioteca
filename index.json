@@ -12016,5 +12016,97 @@
             "infecciones tras mordedura"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Neumonía adquirida en la comunidad AEP 2023.pdf",
+        "archivo": "Neumonía adquirida en la comunidad AEP 2023.pdf",
+        "palabras_clave": [
+            "neumonía adquirida en la comunidad",
+            "neumonía bacteriana típica",
+            "neumonía viral",
+            "neumonía bacteriana atípica",
+            "COVID-19"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Diarrea infecciosa AEP 2023.pdf",
+        "archivo": "Diarrea infecciosa AEP 2023.pdf",
+        "palabras_clave": [
+            "gastroenteritis aguda",
+            "diarrea enteroinvasiva",
+            "diarrea del viajero",
+            "C. difficile en niños",
+            "infecciones por Clostridioides difficile",
+            "deshidratación",
+            "rehidratación oral",
+            "tratamiento antibiótico",
+            "pruebas complementarias",
+            "diagnóstico etiológico"
+        ],
+        "excluir": [
+            "vacuna frente a rotavirus",
+            "norovirus",
+            "Campylobacter jejuni",
+            "Salmonella spp.",
+            "enfermedades crónicas",
+            "malnutrición",
+            "inmunodeprimidos",
+            "patologías previas",
+            "viaje a países en desarrollo",
+            "brotes epidemiológicos"
+        ]
+    },
+    {
+        "nombre": "Coqueluche AEP 2023.pdf",
+        "archivo": "Coqueluche AEP 2023.pdf",
+        "palabras_clave": [
+            "tosferina",
+            "síndrome pertusoide",
+            "profilaxis",
+            "tratamiento"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Infecciones respiratorias virales AEP 2023.pdf",
+        "archivo": "Infecciones respiratorias virales AEP 2023.pdf",
+        "palabras_clave": [
+            "infección respiratoria",
+            "virus respiratorios",
+            "bronquiolitis",
+            "neumonía",
+            "infecciones respiratorias agudas",
+            "etiología viral",
+            "tratamiento sintomático",
+            "antibióticos",
+            "diagnóstico virológico",
+            "reacción en cadena de polimerasa",
+            "PCR",
+            "cultivo viral",
+            "serología",
+            "infecciones nosocomiales",
+            "asma",
+            "menores de un año",
+            "Atención Primaria",
+            "urgencias hospitalarias",
+            "etiología bacteriana",
+            "neumonías",
+            "mortalidad",
+            "países en vías de desarrollo"
+        ],
+        "excluir": [
+            "protocolos",
+            "actualizaciones",
+            "condiciones de uso",
+            "ISSN",
+            "Asociación Española de Pediatría",
+            "Centro de Salud Gregorio Marañón",
+            "Hospital Universitario La Paz",
+            "Madrid",
+            "Alcorcón",
+            "Protocolos actualizados al año 2022",
+            "www.aeped.es/protocolos/"
+        ]
     }
 ]
