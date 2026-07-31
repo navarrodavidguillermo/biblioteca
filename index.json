@@ -10233,5 +10233,135 @@
             "varones",
             "escolar"
         ]
+    },
+    {
+        "nombre": "Disfagia orofaríngea AEP 2023.pdf",
+        "archivo": "Disfagia orofaríngea AEP 2023.pdf",
+        "palabras_clave": [
+            "disfagia orofaríngea",
+            "edad pediátrica",
+            "deglución",
+            "neurológica",
+            "anatómica",
+            "morbimortalidad",
+            "gasto sanitario",
+            "intervención multidisciplinar",
+            "evaluación",
+            "historia clínica",
+            "exploración oromotora",
+            "valoración nutricional",
+            "videofluoroscopia",
+            "videoendoscopia",
+            "soporte nutricional",
+            "tratamiento etiológico",
+            "adaptación del entorno",
+            "utensilios para la alimentación",
+            "control postural",
+            "rehabilitación",
+            "maniobras específicas"
+        ],
+        "excluir": [
+            "protocolos",
+            "actualizados",
+            "año 2022",
+            "condiciones de uso",
+            "nuevas actualizaciones",
+            "ISSN 2171-8172",
+            "Asociación Española de Pediatría",
+            "Quironsalud Barcelona",
+            "Hospital Sant Joan de Déu",
+            "Barcelona"
+        ]
+    },
+    {
+        "nombre": "Enfermedad celíaca intolerancia al gluten AEP 2023.pdf",
+        "archivo": "Enfermedad celíaca intolerancia al gluten AEP 2023.pdf",
+        "palabras_clave": [
+            "enfermedad celíaca",
+            "intolerancia al gluten",
+            "alergia al trigo",
+            "sensibilidad al gluten no celíaca",
+            "trastornos asociados al gluten",
+            "protocolos pediátricos",
+            "AEP 2023"
+        ],
+        "excluir": [
+            "HLA DQ2",
+            "HLA DQ8",
+            "ESP GHAN",
+            "anticuerpos anti-transglutamina tisular",
+            "anticuerpos antiendomiso",
+            "mucosa intestinal",
+            "infecciones víricas",
+            "lactancia materna"
+        ]
+    },
+    {
+        "nombre": "Dislipemias AEP 2023.pdf",
+        "archivo": "Dislipemias AEP 2023.pdf",
+        "palabras_clave": [
+            "dislipemias",
+            "arteriosclerosis",
+            "pediatría",
+            "prevención",
+            "tratamiento",
+            "lipoproteínas",
+            "colesterol",
+            "triglicéridos",
+            "apoproteínas",
+            "genética",
+            "alimentación",
+            "ejercicio físico",
+            "tabaquismo",
+            "obesidad",
+            "diabetes mellitus",
+            "hipertensión",
+            "morbilidad",
+            "mortalidad",
+            "coste-beneficio"
+        ],
+        "excluir": [
+            "ISSN 2171-8172",
+            "www.aeped.es/protocolos/",
+            "Protocolos actualizados al año 2022",
+            "Consulte condiciones de uso y posibles nuevas actualizaciones en www.aeped.es/protocolos/",
+            "Hospital Universitario Materno-Infantil. Las Palmas",
+            "Hospital Universitario Infantil La Fe. Valencia",
+            "Peña Quintana L, Vitoria Miñana I, Correcher Medina P .  Dislipemias. "
+        ]
+    },
+    {
+        "nombre": "Diarrea crónica AEP 2023.pdf",
+        "archivo": "Diarrea crónica AEP 2023.pdf",
+        "palabras_clave": [
+            "diarrea crónica",
+            "pediatría",
+            "orientación diagnóstica",
+            "protocolos",
+            "fisiopatología",
+            "digestión",
+            "absorción",
+            "transporte",
+            "nutrientes",
+            "equilibrio",
+            "alteración",
+            "malabsorción",
+            "mala digestión",
+            "hidratos de carbono",
+            "deposiciones líquidas"
+        ],
+        "excluir": [
+            "ISSN 2171-8172",
+            "www.aeped.es/protocolos/",
+            "Hospital Universitario de Fuenlabrada",
+            "Hospital Universitario San Agustín",
+            "Hospital General Universitario de Elche",
+            "Josefa Barrio Torres",
+            "David Pérez Solís",
+            "Rosmari Vázquez Gomis",
+            "Protoc diagn ter pediatr",
+            "2022",
+            "2023"
+        ]
     }
 ]
