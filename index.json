@@ -13351,5 +13351,147 @@
             "tics suprimidos",
             "tics volitarios"
         ]
+    },
+    {
+        "nombre": "Trastornos del aprendizaje AEP 2022.pdf",
+        "archivo": "Trastornos del aprendizaje AEP 2022.pdf",
+        "palabras_clave": [
+            "trastornos del aprendizaje",
+            "DSM-5",
+            "dislexia",
+            "disgrafía",
+            "discalculia",
+            "neurodesarrollo",
+            "trastorno por déficit de atención con hiperactividad (TDAH)",
+            "rendimiento académico",
+            "salud mental",
+            "bullying",
+            "abandono escolar",
+            "desempleo/subempleo"
+        ],
+        "excluir": [
+            "ISSN 2171-8172",
+            "www.aeped.es/protocolos/",
+            "Hospital Álvaro Cunqueiro",
+            "Hospital San Juan de Dios",
+            "Hospital Parc Taulí",
+            "Hospital San Juan de Déu",
+            "Hospital San Pedro",
+            "Hospital Universitario Virgen Macarena",
+            "Hospital Son Llátzer"
+        ]
+    },
+    {
+        "nombre": "Trastornos del aprendizaje PART 2 AEP 2022.pdf",
+        "archivo": "Trastornos del aprendizaje PART 2 AEP 2022.pdf",
+        "palabras_clave": [
+            "trastornos del aprendizaje",
+            "abordaje e intervención",
+            "pediatría",
+            "prevención",
+            "detección",
+            "neurodesarrollo",
+            "desarrollo motor",
+            "cognitivo",
+            "lenguaje",
+            "conducta",
+            "problemas de sueño",
+            "acoso escolar",
+            "problemas psicológicos",
+            "emocionales",
+            "autoestima",
+            "inseguridad",
+            "ansiedad",
+            "conducta",
+            "quejas somáticas",
+            "anamnesis",
+            "valoración",
+            "prevención",
+            "experiencias adversas",
+            "negligencia",
+            "estimulación para el aprendizaje",
+            "maltrato familiar",
+            "recursos educativos",
+            "sociales",
+            "diagnóstico",
+            "TA",
+            "trastorno del aprendizaje"
+        ],
+        "excluir": [
+            "ISSN 2171-8172",
+            "www.aeped.es/protocolos/",
+            "Protocolos actualizados al año 2022",
+            "Consulte condiciones de uso y posibles nuevas actualizaciones en www.aeped.es/protocolos/",
+            "Hospital Álvaro Cunqueiro. Vigo",
+            "Hospital San Juan de Dios. Sevilla",
+            "Hospital Parc Taulí. Sabadell",
+            "Hospital San Juan de Déu. Barcelona",
+            "Hospital San Pedro. Logroño",
+            "Hospital Universitario Virgen Macarena. Sevilla",
+            "Hospital Son Llátzer. Palma de Mallorca",
+            "Amado Puentes A, Fernández del Olmo A, Roche Martínez A, Joga Elvira L, Pías Peleteiro L, Poch Olivé ML, et al."
+        ]
+    },
+    {
+        "nombre": "Trastornos de la marcha AEP 2022.pdf",
+        "archivo": "Trastornos de la marcha AEP 2022.pdf",
+        "palabras_clave": [
+            "trastornos de la marcha",
+            "neuropediatría",
+            "pediatría",
+            "marcha",
+            "movimiento",
+            "sistema motor",
+            "sistema nervioso",
+            "corteza cerebral",
+            "médula espinal",
+            "lesión",
+            "espasticidad",
+            "debilidad",
+            "disminución del control motor fino",
+            "déficit sensitivo",
+            "movimientos involuntarios",
+            "crisis epilépticas"
+        ],
+        "excluir": [
+            "ISSN 2171-8172",
+            "www.aeped.es/protocolos/",
+            "Asociación Española de Pediatría",
+            "Prohibida la reproducción de los contenidos sin la autorización correspondiente",
+            "Protocolos actualizados al año 2022",
+            "Consulte condiciones de uso y posibles nuevas actualizaciones en www.aeped.es/protocolos/",
+            "Unidad de Neuropediatría. Servicio de Pediatría. Hospital Universitario de Donostia. Donostia-San Sebastián",
+            "Unidad de Neuropediatría. Servicio de Pediatría. Complejo Hospitalario de Navarra. Pamplona",
+            "Martí Carrera I, García Uzquiano R, Gorría Redondo N, Aguilera Albesa S. Trastornos de la marcha. Protoc diagn ter pediatr. 2022;1:281-293."
+        ]
+    },
+    {
+        "nombre": "Trastornos de sueño en niños AEP 2022.pdf",
+        "archivo": "Trastornos de sueño en niños AEP 2022.pdf",
+        "palabras_clave": [
+            "trastornos del sueño",
+            "niños",
+            "edad pediátrica",
+            "sueño en niños",
+            "protocolos de atención",
+            "pediatría",
+            "sueño activo",
+            "sueño tranquilo",
+            "fases del sueño",
+            "sueño REM",
+            "sueño NREM",
+            "maduración del sueño",
+            "ritmo circadiano",
+            "melatonina",
+            "hipotálamo",
+            "núcleo supraquiasmático"
+        ],
+        "excluir": [
+            "autismo",
+            "síndrome de Smith-Magenis",
+            "neurodesarrollo",
+            "problemas de sueño",
+            "trastornos del neurodesarrollo"
+        ]
     }
 ]
