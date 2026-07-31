@@ -12108,5 +12108,154 @@
             "Protocolos actualizados al año 2022",
             "www.aeped.es/protocolos/"
         ]
+    },
+    {
+        "nombre": "Faringoamigdalitis AEP 2023.pdf",
+        "archivo": "Faringoamigdalitis AEP 2023.pdf",
+        "palabras_clave": [
+            "faringoamigdalitis",
+            "niños",
+            "estreptococo",
+            "Streptococcus pyogenes",
+            "tratamiento",
+            "antibióticos"
+        ],
+        "excluir": [
+            "protocolos",
+            "actualizados",
+            "año 2022",
+            "condiciones de uso",
+            "posibles nuevas actualizaciones",
+            "ISSN 2171-8172",
+            "Servicio de Pediatría",
+            "Complejo Hospitalario Universitario de Pontevedra",
+            "Pontevedra",
+            "Servicio de Pediatra",
+            "Centro de Salud Virxe Peregrina",
+            "Pontevedra",
+            "Servicio de Pediatría",
+            "Hospital Universitario General de Villalba",
+            "Madrid",
+            "Otero Pérez L",
+            "Ares Álvarez J",
+            "Piñeiro Pérez R",
+            "Protoc diagn ter pediatr",
+            "2023",
+            "2",
+            "51-79",
+            "RESUMEN",
+            "La faringoamigdalitis aguda es un proceso agudo febril",
+            "de origen generalmente infeccioso",
+            "que cursa con inflamación de la mucosa del área faringoamigdalar",
+            "con presencia de eritema",
+            "edema",
+            "exudados",
+            "úlceras o vesículas",
+            "Es una de las enfermedades más frecuentes en la infancia y adolescencia",
+            "y la tercera causa de consulta en la práctica pediátrica",
+            "La etiología más frecuente es vírica",
+            "Entre las causas bacterianas",
+            "Streptococcus pyogenes es el más frecuente",
+            "siendo responsable de un 5-40% de todos los casos en función de la edad",
+            "El interés principal del diagnóstico es identificar aquellas faringoamigdalitis causadas por el estreptococo β-hemolítico del grupo A",
+            "por el riesgo de complicaciones supurativas y no supurativas",
+            "y para optimizar el uso de antibióticos",
+            "Las escalas clínicas de predicción son insuficientes para realizar un diagnóstico diferencial entre causas víricas y bacterianas",
+            "El diagnóstico se debe sustentar en el test de detección rápida de antígeno estreptocócico",
+            "que se realizará en pacientes con sospecha clínica de infección estreptocócica y en ausencia de signos y síntomas de infección vírica",
+            "La fenoximetilpenicilina oral dos veces al día es el tratamiento de elección",
+            "La principal alternativa terapéutica es amoxicilina",
+            "una o dos veces al día",
+            "En pacientes sin factores de riesgo",
+            "en países con bajo riesgo de fiebre reumática aguda y cuando la erradicación bacteriológica no sea prioritaria",
+            "se aceptan pautas cortas de siete días",
+            "Las cefalosporinas de primera generación son el tratamiento de elección en niños con reacción retardada no grave a penicilina o amoxicilina",
+            "En reacciones alérgicas inmediatas",
+            "deben usarse antibióticos no betalactámicos",
+            "entre los cuales josamicina y diacetilmidecamicina son las mejores opciones",
+            "Palabras clave: faringoamigdalitis; niños; estreptococo; Streptococcus pyogenes; tratamiento; antibióticos",
+            "Protocolos • Faringoamigdalitis aguda y sus complicaciones"
+        ]
+    },
+    {
+        "nombre": "Otitis media aguda, otitis externa y mastoiditis AEP 2023.pdf",
+        "archivo": "Otitis media aguda, otitis externa y mastoiditis AEP 2023.pdf",
+        "palabras_clave": [
+            "otitis media aguda",
+            "otitis externa",
+            "mastoiditis",
+            "otalgia",
+            "infecciones en la infancia",
+            "vacunas conjugadas",
+            "antibioterapia",
+            "amoxicilina",
+            "mastoiditis aguda",
+            "complicaciones intratemporales e intracraneales"
+        ],
+        "excluir": [
+            "Protocolos actualizados al año 2022",
+            "ISSN 2171-8172",
+            "www.aeped.es/protocolos/",
+            "Servicio de Pediatría. Hospital de Montilla. Córdoba.",
+            "Servicio de Pediatría. Hospital Costa del Sol. Marbella, Málaga.",
+            "Cruz Cañete M, López Martín D. Otitis media aguda y otitis externa. Matoiditis. Protoc diagn ter pediatr. 2023;2:97-110.",
+            "RESUMEN",
+            "ABSTRACT",
+            "Acute otitis media (AOM) is defined as the acute onset of symptoms and effusion in the middle ear."
+        ]
+    },
+    {
+        "nombre": "Parotiditis AEP 2023.pdf",
+        "archivo": "Parotiditis AEP 2023.pdf",
+        "palabras_clave": [
+            "parotiditis",
+            "sialoadenitis",
+            "paramyxovirus",
+            "glándulas salivares",
+            "parotiditis recurrente juvenil",
+            "parotiditis viral aguda",
+            "parotiditis crónica",
+            "tuberculosis",
+            "VIH",
+            "neumoparotiditis",
+            "sialolitiasis",
+            "quistes",
+            "tumores",
+            "enfermedades autoinmunes"
+        ],
+        "excluir": [
+            "protocolos",
+            "diagnóstico",
+            "tratamiento",
+            "revisión",
+            "actualización",
+            "condiciones de uso",
+            "posibles nuevas actualizaciones"
+        ]
+    },
+    {
+        "nombre": "Adenitis cervical AEP 2023.pdf",
+        "archivo": "Adenitis cervical AEP 2023.pdf",
+        "palabras_clave": [
+            "adenopatía",
+            "adenitis",
+            "linfadenopatía",
+            "linfadenitis",
+            "absceso retrofaríngeo",
+            "micobacterias no tuberculosas"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Sinusitis y Celulitis preseptal y orbitaria AEP 2023.pdf",
+        "archivo": "Sinusitis y Celulitis preseptal y orbitaria AEP 2023.pdf",
+        "palabras_clave": [
+            "sinusitis",
+            "rinosinusitis",
+            "catarro común",
+            "celulitis preseptal",
+            "celulitis orbitaria"
+        ],
+        "excluir": []
     }
 ]
