@@ -14224,5 +14224,84 @@
             "cribado familiar de hematuria"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Manejo de las anomalías renales y del tracto urinario prenatal AEP 2022.pdf",
+        "archivo": "Manejo de las anomalías renales y del tracto urinario prenatal AEP 2022.pdf",
+        "palabras_clave": [
+            "malformación renal",
+            "dilatación congénita de vía urinaria",
+            "CAKUT",
+            "ecografía renal"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Poliuria y polidipsia AEP 2022.pdf",
+        "archivo": "Poliuria y polidipsia AEP 2022.pdf",
+        "palabras_clave": [
+            "poliuria",
+            "polidipsia",
+            "enfermedad renal",
+            "enfermedad extrarrenal",
+            "diabetes insípida",
+            "nephrogenic",
+            "neurogenic",
+            "ADH",
+            "hormona antidiurética",
+            "riñón",
+            "túbulo renal",
+            "asa de Henle",
+            "acuaporina-1",
+            "AQP-1",
+            "permeabilidad al agua",
+            "osmolalidad",
+            "concentración de partículas osmóticamente activas"
+        ],
+        "excluir": [
+            "protocolos",
+            "actualizaciones",
+            "condiciones de uso",
+            "posibles nuevas actualizaciones",
+            "ISSN 2171-8172",
+            "Asociación Española de Pediatría",
+            "Unidad de Nefrología Pediátrica",
+            "Hospital Universitario Son Espases",
+            "Grupo de Investigación Multidisciplinar en Pediatría",
+            "IdISBa",
+            "Palma de Mallorca",
+            "Sevilla",
+            "Lumbreras Fernández J",
+            "Amil Pérez B"
+        ]
+    },
+    {
+        "nombre": "Proteinuria AEP 2022.pdf",
+        "archivo": "Proteinuria AEP 2022.pdf",
+        "palabras_clave": [
+            "proteinuria",
+            "pediatría",
+            "nefrología",
+            "enfermedad renal",
+            "orina",
+            "proteínas",
+            "tira reactiva",
+            "índice Prot/Cr",
+            "diagnóstico diferencial",
+            "tratamiento temprano",
+            "complicaciones renales",
+            "cardiovasculares"
+        ],
+        "excluir": [
+            "infecciones",
+            "enfermedades reumatológicas",
+            "enfermedades inmunológicas",
+            "enfermedades glomerulares",
+            "enfermedades intersticiales",
+            "falsos positivos",
+            "proteinuria funcional",
+            "proteinuria transitoria",
+            "proteinuria persistente"
+        ]
     }
 ]
