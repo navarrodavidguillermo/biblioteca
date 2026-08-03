@@ -14303,5 +14303,120 @@
             "proteinuria transitoria",
             "proteinuria persistente"
         ]
+    },
+    {
+        "nombre": "Reflujo vesicoureteral AEP 2022.pdf",
+        "archivo": "Reflujo vesicoureteral AEP 2022.pdf",
+        "palabras_clave": [
+            "reflujo vesicoureteral",
+            "disfunción vesicointestinal",
+            "infección urinaria",
+            "profilaxis antibiótica",
+            "vesicoureteral reflux",
+            "daño renal",
+            "insuficiencia renal crónica",
+            "malformaciones renales"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Trastornos miccionales y enuresis AEP 2022.pdf",
+        "archivo": "Trastornos miccionales y enuresis AEP 2022.pdf",
+        "palabras_clave": [
+            "trastornos miccionales",
+            "enuresis",
+            "infancia",
+            "pediatría",
+            "nefrología",
+            "urología",
+            "diagnóstico",
+            "tratamiento",
+            "pronóstico"
+        ],
+        "excluir": [
+            "neurológico",
+            "monosintomática",
+            "no monosintomática",
+            "comorbilidades",
+            "síntomas miccionales diurnos"
+        ]
+    },
+    {
+        "nombre": "Síndrome nefrótico AEP 2022.pdf",
+        "archivo": "Síndrome nefrótico AEP 2022.pdf",
+        "palabras_clave": [
+            "síndrome nefrótico idiopático",
+            "enfermedad de cambios mínimos",
+            "inmunosupresores",
+            "Pediatría",
+            "tratamiento"
+        ],
+        "excluir": [
+            "glomerulonefritis",
+            "enfermedades sistémicas",
+            "hereditarias",
+            "víricas",
+            "parasitarias",
+            "neoplasias",
+            "fármacos"
+        ]
+    },
+    {
+        "nombre": "Litiasis renal e hipercalciuria idiopática AEP 2022.pdf",
+        "archivo": "Litiasis renal e hipercalciuria idiopática AEP 2022.pdf",
+        "palabras_clave": [
+            "litiasis renal",
+            "hipercalciuria",
+            "idiopática",
+            "pediatría",
+            "protocolo",
+            "AEP 2022",
+            "urolitiasis",
+            "pediátrico",
+            "formación de cálculos",
+            "excreción de calcio",
+            "creatinina",
+            "UCa/UCr",
+            "micción",
+            "ayuno",
+            "recurrencia",
+            "diagnóstico",
+            "tratamiento",
+            "prevalencia",
+            "pediátrico",
+            "enfermedad",
+            "cristalización",
+            "diuresis",
+            "ingesta de agua"
+        ],
+        "excluir": [
+            "inmovilización",
+            "fármacos",
+            "hipercalcemia",
+            "infecciones urinarias",
+            "hematuria",
+            "dolor abdominal",
+            "enuresis",
+            "incontinencia"
+        ]
+    },
+    {
+        "nombre": "Sindrome nefritico Glomerulonefritis AEP 2022.pdf",
+        "archivo": "Sindrome nefritico Glomerulonefritis AEP 2022.pdf",
+        "palabras_clave": [
+            "glomerulonefritis aguda",
+            "glomerulonefritis posinfecciosa",
+            "glomerulonefritis posestreptocócica",
+            "síndrome nefrítico",
+            "niños"
+        ],
+        "excluir": [
+            "protocolos",
+            "diagnóstico",
+            "tratamiento",
+            "pronóstico",
+            "evolución",
+            "enfermedad renal crónica"
+        ]
     }
 ]
