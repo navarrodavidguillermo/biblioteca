@@ -14807,5 +14807,120 @@
             "Alsina Manrique de Lara L",
             "Santos-Díez Vázquez L"
         ]
+    },
+    {
+        "nombre": "Puebas complementarias en alergias AEP 2019.pdf",
+        "archivo": "Puebas complementarias en alergias AEP 2019.pdf",
+        "palabras_clave": [
+            "alergia",
+            "pediátrica",
+            "pruebas diagnósticas",
+            "in vivo",
+            "in vitro",
+            "exposición controlada",
+            "historia clínica",
+            "exploración física",
+            "diagnóstico alergológico",
+            "antihistamínicos",
+            "corticoides tópicos",
+            "diagnóstico por componentes",
+            "asma",
+            "espirometría",
+            "broncodilatación",
+            "test de esfuerzo",
+            "alergología pediátrica"
+        ],
+        "excluir": [
+            "ISSN 2171-8172",
+            "www.aeped.es/protocolos/",
+            "Asociación Española de Pediatría",
+            "Universidad Rey Juan Carlos",
+            "Hospital Universitario de Móstoles",
+            "Facultad de Medicina",
+            "Universidad de Córdoba",
+            "Hospital Universitario Reina Sofía",
+            "Hospital General Universitario de Elche",
+            "Alicante",
+            "Madrid",
+            "Córdoba"
+        ]
+    },
+    {
+        "nombre": "Reacciones adversas e hipersensibilidad a venenos de insectos, artrópodos y otros invertebrados AEP 2019.pdf",
+        "archivo": "Reacciones adversas e hipersensibilidad a venenos de insectos, artrópodos y otros invertebrados AEP 2019.pdf",
+        "palabras_clave": [
+            "artrópodos",
+            "insectos",
+            "himenópteros",
+            "reacción local",
+            "anafilaxia"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Urticaria y angioedema AEP 2019.pdf",
+        "archivo": "Urticaria y angioedema AEP 2019.pdf",
+        "palabras_clave": [
+            "urticaria aguda",
+            "urticaria aguda recidivante",
+            "urticaria crónica",
+            "angioedema",
+            "habón",
+            "prurito",
+            "urticaria crónica espontánea",
+            "urticaria crónica inducible",
+            "antihistamínico",
+            "omalizumab",
+            "angioedema hereditario",
+            "angioedema adquirido",
+            "déficit del C1 inhibidor"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Reacciones adversas a medicamentos AEP 2019.pdf",
+        "archivo": "Reacciones adversas a medicamentos AEP 2019.pdf",
+        "palabras_clave": [
+            "alergia a medicamentos",
+            "reacciones adversas",
+            "fisiopatología",
+            "tipos de reacciones",
+            "mecanismos de reacciones",
+            "epidemiología",
+            "pediatría",
+            "medicina",
+            "farmacología"
+        ],
+        "excluir": [
+            "protocolos",
+            "actualizaciones",
+            "condiciones de uso",
+            "posibles nuevas actualizaciones",
+            "ISSN",
+            "copyright",
+            "referencias bibliográficas"
+        ]
+    },
+    {
+        "nombre": "Reacciones adversas a medicamentos alergia a antibióticos, AINE AEP 2019.pdf",
+        "archivo": "Reacciones adversas a medicamentos alergia a antibióticos, AINE AEP 2019.pdf",
+        "palabras_clave": [
+            "alergia a fármaco",
+            "hipersensibilidad a fármaco",
+            "antibiótico betalactámico",
+            "antibiótico no-betalactámico",
+            "antiinflamatorio no esteroideo",
+            "niño",
+            "tratamiento"
+        ],
+        "excluir": [
+            "reacciones de hipersensibilidad",
+            "reacciones adversas no previsibles",
+            "reacciones alérgicas",
+            "mecanismo inmunológico",
+            "reacciones cutáneas leves",
+            "reacciones sistémicas graves",
+            "desensibilización con el fármaco"
+        ]
     }
 ]
