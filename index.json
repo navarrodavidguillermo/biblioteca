@@ -13952,5 +13952,65 @@
             "Ejercer la Pediatría de manera racional y efectiva",
             "Sistema GRADE para la clasificación de los niveles de evidencia y grados de recomendación"
         ]
+    },
+    {
+        "nombre": "Hipertensión arterial SEPIH.pdf",
+        "archivo": "Hipertensión arterial SEPIH.pdf",
+        "palabras_clave": [
+            "hipertensión",
+            "arterial",
+            "presión",
+            "sanguínea",
+            "SEPIH",
+            "medicina",
+            "cardiología",
+            "enfermedades",
+            "crónicas"
+        ],
+        "excluir": [
+            "no aplicable",
+            "no relevante"
+        ]
+    },
+    {
+        "nombre": "Epilepsia SEPIH.pdf",
+        "archivo": "Epilepsia SEPIH.pdf",
+        "palabras_clave": [
+            "epilepsia",
+            "convulsiones",
+            "tratamiento",
+            "medicamentos"
+        ],
+        "excluir": [
+            "diagnóstico",
+            "tratamiento",
+            "cirugía"
+        ]
+    },
+    {
+        "nombre": "BRUE ALTE SEPIH.pdf",
+        "archivo": "BRUE ALTE SEPIH.pdf",
+        "palabras_clave": [
+            "BRUE",
+            "ALTE",
+            "SEPIH",
+            "criterios de inclusión",
+            "criterios de exclusión",
+            "episodio",
+            "tabla"
+        ],
+        "excluir": [
+            "lista de términos a excluir"
+        ]
+    },
+    {
+        "nombre": "Bronquiolitis SEPIH.pdf",
+        "archivo": "Bronquiolitis SEPIH.pdf",
+        "palabras_clave": [
+            "Bronquiolitis",
+            "SEPIH",
+            "documentos médicos"
+        ],
+        "excluir": []
     }
 ]
