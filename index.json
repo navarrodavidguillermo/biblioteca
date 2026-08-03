@@ -13846,5 +13846,111 @@
             "Servicio de Cirugía",
             "Sistema GRADE Working Group"
         ]
+    },
+    {
+        "nombre": "Uso de Gammaglobulina Garrahan 2021.pdf",
+        "archivo": "Uso de Gammaglobulina Garrahan 2021.pdf",
+        "palabras_clave": [
+            "Gammaglobulina",
+            "Pediatría",
+            "Inmunodeficiencias",
+            "Neurología",
+            "Hematología",
+            "Reumatología",
+            "Dermatología",
+            "Infectología",
+            "Sepsis",
+            "SHOCK SÉPTICO",
+            "PIMS ASOCIADO A SARS-COV-2"
+        ],
+        "excluir": [
+            "Síndrome de Guillain-Barré",
+            "Polineuropatía desmielinizante inflamatoria crónica (CIDP)",
+            "Neuropatía motora multifocal",
+            "Encefalitis inmuno mediadas",
+            "Miaestenia gravis",
+            "Opsoclonus-mioclonus",
+            "Púrpura trombocitopénica idiopática",
+            "Anemia hemolítica neonatal",
+            "Trasplante de órgano sólido y TMO",
+            "Enfermedad de Kawasaki",
+            "Necrólisis epidérmica tóxica y SME de Stevens-Johnson",
+            "Dermatomiositis y polimiositis",
+            "Otras enfermedades reumáticas"
+        ]
+    },
+    {
+        "nombre": "Osteogénesis Imperfecta  Garrahan 2016.pdf",
+        "archivo": "Osteogénesis Imperfecta  Garrahan 2016.pdf",
+        "palabras_clave": [
+            "Osteogénesis Imperfecta",
+            "GAP 2016",
+            "Manejo de la Osteogénesis Imperfecta",
+            "Guías de Atención Pediátrica",
+            "Hospital de Pediatría Juan P. Garrahan",
+            "Metodología estandarizada",
+            "Sistema GRADE",
+            "Evidencia científica",
+            "Recomendaciones flexibles",
+            "Atención pediátrica",
+            "Cuidados paliativos",
+            "Genética",
+            "Kinesiología",
+            "Ortopedia",
+            "Servicio Patología Espinal",
+            "Adolescencia",
+            "Ginecología",
+            "Nefrología"
+        ],
+        "excluir": [
+            "variable confiabilidad",
+            "riesgosas",
+            "costosas",
+            "recursos sanitarios limitados",
+            "Sistema GRADE",
+            "Evidencia científica",
+            "Recomendaciones flexibles",
+            "Atención pediátrica",
+            "Cuidados paliativos",
+            "Genética",
+            "Kinesiología",
+            "Ortopedia",
+            "Servicio Patología Espinal",
+            "Adolescencia",
+            "Ginecología",
+            "Nefrología"
+        ]
+    },
+    {
+        "nombre": "Síndrome de Realimentación Garrahan 2024.pdf",
+        "archivo": "Síndrome de Realimentación Garrahan 2024.pdf",
+        "palabras_clave": [
+            "Síndrome de Realimentación",
+            "Guías de Atención Pediátrica",
+            "Hospital de Pediatría Juan P. Garrahan",
+            "Evidencia científica",
+            "Recomendaciones prácticas",
+            "Atención pediátrica",
+            "Formación continua",
+            "Uso racional de recursos",
+            "Calidad de vida",
+            "Sistema GRADE",
+            "Clasificación de evidencia",
+            "Grados de recomendación"
+        ],
+        "excluir": [
+            "GAP 2018",
+            "Manejo del Síndrome de Realimentación",
+            "Fecha de última revisión",
+            "AUTORES",
+            "REVISORES",
+            "Dirección Médica Ejecutiva",
+            "Coordinación de Unidad de Evaluación de Tecnología Sanitaria",
+            "Guías de Atención Pediátrica (GAP)",
+            "Comité Editorial",
+            "PROLOGO",
+            "Ejercer la Pediatría de manera racional y efectiva",
+            "Sistema GRADE para la clasificación de los niveles de evidencia y grados de recomendación"
+        ]
     }
 ]
