@@ -14132,5 +14132,97 @@
             "diuresis"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Hipertensión arterial AEP 2022.pdf",
+        "archivo": "Hipertensión arterial AEP 2022.pdf",
+        "palabras_clave": [
+            "Hipertensión arterial",
+            "Pediatría",
+            "AEP 2022",
+            "Protocolos",
+            "Diagnóstico",
+            "Tratamiento",
+            "Evaluación",
+            "Causas",
+            "Efectos secundarios",
+            "Medidas no farmacológicas",
+            "Farmacológicas",
+            "Monoterapia",
+            "Combinada",
+            "Presión arterial",
+            "Sistólica",
+            "Diastólica",
+            "Talla",
+            "Sexo",
+            "Edad",
+            "Sobrepeso",
+            "Ingesta de sal",
+            "Alcohol",
+            "Sedentarismo",
+            "Riesgo",
+            "Lesión orgánica",
+            "Atención Primaria"
+        ],
+        "excluir": [
+            "ISSN 2171-8172",
+            "www.aeped.es/protocolos/",
+            "Francisco de la Cerda Ojeda",
+            "Carlos Herrero Hernando",
+            "Unidad de Nefrología Pediátrica",
+            "Hospital Infantil Virgen del Rocío",
+            "Sevilla",
+            "Servicio de Pediatría y Neonatología",
+            "Hospital de Barcelona - SCIAS"
+        ]
+    },
+    {
+        "nombre": "Infección urinaria AEP 2022.pdf",
+        "archivo": "Infección urinaria AEP 2022.pdf",
+        "palabras_clave": [
+            "infección urinaria",
+            "pielonefritis aguda",
+            "cistitis",
+            "leucocituria",
+            "cicatrices renales",
+            "diagnóstico",
+            "tratamiento",
+            "niños"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Glomerulonefritis crónicas AEP 2022.pdf",
+        "archivo": "Glomerulonefritis crónicas AEP 2022.pdf",
+        "palabras_clave": [
+            "glomerulonefritis crónicas",
+            "biopsia renal",
+            "nefropatía IgA",
+            "púrpura de Shönlein-Henoch",
+            "glomeruloesclerosis segmentaria y focal",
+            "nefropatía membranosa",
+            "glomerulonefritis membranoproliferativa",
+            "nefropatía C3",
+            "glomerulonefritis rápidamente progresiva"
+        ],
+        "excluir": [
+            "sindrome nefrotico corticosensible",
+            "glomerulonefritis aguda posinfecciosa de evolución típica"
+        ]
+    },
+    {
+        "nombre": "Hematuria AEP 2022.pdf",
+        "archivo": "Hematuria AEP 2022.pdf",
+        "palabras_clave": [
+            "hematuria macroscópica",
+            "hematuria microscópica",
+            "proteinuria",
+            "manejo práctico",
+            "nefropatía IgA",
+            "infecciones urinarias",
+            "hipercalciuria",
+            "cribado familiar de hematuria"
+        ],
+        "excluir": []
     }
 ]
