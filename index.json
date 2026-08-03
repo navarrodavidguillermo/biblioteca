@@ -14579,5 +14579,101 @@
             "anafilaxia"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Alergia IgE mediada a proteínas de leche de vaca AEP 2019.pdf",
+        "archivo": "Alergia IgE mediada a proteínas de leche de vaca AEP 2019.pdf",
+        "palabras_clave": [
+            "alergia a alimentos",
+            "alergia a proteína de leche de vaca IgE",
+            "fórmulas de sustitución",
+            "inmunoterapia oral a alimentos"
+        ],
+        "excluir": [
+            "intolerancia a la lactosa"
+        ]
+    },
+    {
+        "nombre": "Alergia alimentaria no mediada por IgE AEP 2019.pdf",
+        "archivo": "Alergia alimentaria no mediada por IgE AEP 2019.pdf",
+        "palabras_clave": [
+            "alergia a leche APLV",
+            "proctocolitis alérgica",
+            "enterocolitis inducida por proteínas",
+            "alergia alimentaria no mediada por IgE",
+            "reacciones alérgicas a alimentos",
+            "intolerancia alimentaria",
+            "reacciones adversas a alimentos"
+        ],
+        "excluir": [
+            "IgE",
+            "inmunología",
+            "ingestión",
+            "alimento",
+            "aditivo",
+            "reacciones inmunes",
+            "proteínas",
+            "enteropatía",
+            "enterocolitis",
+            "sintomatología",
+            "diagnóstico clínico",
+            "pediatra",
+            "pediatra alergólogo",
+            "complicaciones"
+        ]
+    },
+    {
+        "nombre": "Anafilaxia AEP 2019.pdf",
+        "archivo": "Anafilaxia AEP 2019.pdf",
+        "palabras_clave": [
+            "anafilaxia",
+            "adrenalina",
+            "alergia",
+            "Pediatría",
+            "reacción sistémica",
+            "síntomas cutáneos",
+            "respiratorios",
+            "gastrointestinales",
+            "cardiovasculares",
+            "neurológicos",
+            "triptasa sérica",
+            "oxigenoterapia",
+            "sueroterapia",
+            "broncodilatadores",
+            "corticoterapia"
+        ],
+        "excluir": [
+            "protocolos",
+            "actualizados",
+            "año 2019",
+            "condiciones de uso",
+            "nuevas actualizaciones",
+            "ISSN 2171-8172",
+            "Academia Europea de Alergia e Inmunología Clínica",
+            "EAACI",
+            "criterios clínicos",
+            "Tabla 1",
+            "Tabla 2",
+            "población general",
+            "ingresos hospitalarios",
+            "niños menores de 3-4 años",
+            "adolescentes",
+            "adultos jóvenes"
+        ]
+    },
+    {
+        "nombre": "Dermatitis atópica AEP 2019.pdf",
+        "archivo": "Dermatitis atópica AEP 2019.pdf",
+        "palabras_clave": [
+            "dermatitis atópica",
+            "corticoides tópicos",
+            "inmunomoduladores tópicos",
+            "emolientes",
+            "atopic dermatitis",
+            "topical corticosteroids",
+            "topical immunomodulators",
+            "emollients"
+        ],
+        "excluir": []
     }
 ]
