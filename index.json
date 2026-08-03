@@ -14922,5 +14922,74 @@
             "reacciones sistémicas graves",
             "desensibilización con el fármaco"
         ]
+    },
+    {
+        "nombre": "Escabiosis y otras parasitosis cutáneas Pediatría integral 2026.pdf",
+        "archivo": "Escabiosis y otras parasitosis cutáneas Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "Escabiosis",
+            "Pediculosis",
+            "Larva migrans cutánea",
+            "Leishmaniasis",
+            "Tungiasis"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Alteraciones más frecuentes del pelo y las uñas Pediatría integral 2026.pdf",
+        "archivo": "Alteraciones más frecuentes del pelo y las uñas Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "Enfermedades del pelo",
+            "Alopecia",
+            "Enfermedades de las uñas",
+            "Tinea capitis",
+            "Paroniquia",
+            "Hair diseases",
+            "Nail diseases"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Dermatitis atópica y otras erupciones eccematosas Pediatría integral 2026.pdf",
+        "archivo": "Dermatitis atópica y otras erupciones eccematosas Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "Eccema",
+            "Dermatitis",
+            "Atopia",
+            "Dermatitis atópica",
+            "Eczematous dermatoses",
+            "Contact dermatitis",
+            "Allergic contact dermatitis",
+            "Irritant contact dermatitis",
+            "Erythema",
+            "Edema",
+            "Vesicles",
+            "Scaling",
+            "Hyperkeratosis",
+            "Fissuring",
+            "Excoriation",
+            "Lichenification",
+            "Spongiosis",
+            "Epidermis",
+            "Corticosteroids",
+            "Calcineurin inhibitors",
+            "Pediatría",
+            "Atención Primaria",
+            "Calidad de vida"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Protección solar y trastornos de la pigmentación Pediatría integral 2026.pdf",
+        "archivo": "Protección solar y trastornos de la pigmentación Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "Vitíligo pediátrico",
+            "Fotoprotección",
+            "Máculas acrómicas",
+            "Dermatosis hipopigmentadas",
+            "Trastornos de la pigmentación",
+            "Enfermedades autoinmunes"
+        ],
+        "excluir": []
     }
 ]
