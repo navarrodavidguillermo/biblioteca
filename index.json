@@ -14675,5 +14675,137 @@
             "emollients"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Diagnóstico y manejo de las enfermedades autoinflamatorias AEP 2019.pdf",
+        "archivo": "Diagnóstico y manejo de las enfermedades autoinflamatorias AEP 2019.pdf",
+        "palabras_clave": [
+            "inmunodeficiencia primaria",
+            "inflamación",
+            "enfermedades autoinflamatorias",
+            "fiebre periódica",
+            "enfermedades autoinflamatorias hereditarias",
+            "inmunología clínica",
+            "alergia pediátrica",
+            "pediatría",
+            "genética",
+            "biología",
+            "medicina",
+            "salud",
+            "enfermedades raras"
+        ],
+        "excluir": [
+            "ISSN",
+            "ISBN",
+            "DOI",
+            "copyright",
+            "referencias",
+            "autores",
+            "editoriales",
+            "instituciones",
+            "fechas",
+            "números de página"
+        ]
+    },
+    {
+        "nombre": "Diagnóstico y manejo de las inmunodeficiencias primarias AEP 2019.pdf",
+        "archivo": "Diagnóstico y manejo de las inmunodeficiencias primarias AEP 2019.pdf",
+        "palabras_clave": [
+            "inmunodeficiencia primarias",
+            "diagnóstico de inmunodeficiencia",
+            "tratamiento inmunodeficiencias",
+            "infecciones recurrentes",
+            "tratamiento con inmunoglobulina",
+            "profilaxis"
+        ],
+        "excluir": [
+            "sistema inmune",
+            "antígenos",
+            "inmunosupresores",
+            "síndrome nefrótico",
+            "malnutrición"
+        ]
+    },
+    {
+        "nombre": "Inmunoterapia específica con alérgenos alimentarios AEP 2019.pdf",
+        "archivo": "Inmunoterapia específica con alérgenos alimentarios AEP 2019.pdf",
+        "palabras_clave": [
+            "inmunoterapia",
+            "alérgenos",
+            "alimentarios",
+            "AEP",
+            "2019",
+            "protocolos",
+            "pediatría",
+            "alergia",
+            "alimentaria",
+            "dieta",
+            "evitación",
+            "tratamiento",
+            "reacciones",
+            "adversas",
+            "tolerancia",
+            "desensibilización",
+            "oral",
+            "sublingual",
+            "subcutánea",
+            "epicutánea",
+            "OIT",
+            "alergia",
+            "alimentaria",
+            "nutricionales",
+            "reacciones",
+            "anafilácticas",
+            "grave",
+            "vital"
+        ],
+        "excluir": [
+            "reproducción",
+            "contenido",
+            "autorización",
+            "condiciones",
+            "uso",
+            "actualizaciones",
+            "ISSN",
+            "copyright"
+        ]
+    },
+    {
+        "nombre": "Manejo de las inmunodeficiencias secundarias AEP 2019.pdf",
+        "archivo": "Manejo de las inmunodeficiencias secundarias AEP 2019.pdf",
+        "palabras_clave": [
+            "inmunodeficiencia secundaria",
+            "quimioterapia",
+            "inmunosupresor",
+            "corticoides",
+            "monoclonal",
+            "inmunodeprimido",
+            "inmunodeficiencia primaria",
+            "infecciones",
+            "enfermedades crónicas",
+            "uso de fármacos",
+            "sistema inmunitario",
+            "inmunidad",
+            "inmunodeficiencia humana",
+            "VIH",
+            "terapia antirretroviral",
+            "transmisión vertical",
+            "infección",
+            "inmunodeficiencia",
+            "inmunosupresión",
+            "inmunodepresión"
+        ],
+        "excluir": [
+            "ISSN 2171-8172",
+            "Protocolos actualizados al año 2019",
+            "Consulte condiciones de uso y posibles nuevas actualizaciones en www.aeped.es/protocolos/",
+            "Hospital Sant Joan de Déu",
+            "Universidad de Barcelona",
+            "Hospital Universitario Cruces",
+            "Barakaldo",
+            "Bizkaia",
+            "Alsina Manrique de Lara L",
+            "Santos-Díez Vázquez L"
+        ]
     }
 ]
