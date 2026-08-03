@@ -14492,5 +14492,92 @@
             "órganos",
             "sentidos"
         ]
+    },
+    {
+        "nombre": "Alergia a alimentos mediada por IgE  AEP 2019.pdf",
+        "archivo": "Alergia a alimentos mediada por IgE  AEP 2019.pdf",
+        "palabras_clave": [
+            "alergia a alimentos",
+            "alergia IgE mediada",
+            "atopia",
+            "manejo de alergia a alimentos IgE mediada"
+        ],
+        "excluir": [
+            "dieta de evitación",
+            "pruebas in vitro",
+            "pruebas in vivo",
+            "prueba de provocación o tolerancia oral",
+            "tratamiento de inmunoterapia con alimento",
+            "reacciones cruzadas entre distintos alimentos",
+            "panalérgenos"
+        ]
+    },
+    {
+        "nombre": "Alergia a látex y Anisakis AEP 2019.pdf",
+        "archivo": "Alergia a látex y Anisakis AEP 2019.pdf",
+        "palabras_clave": [
+            "látex",
+            "alergia",
+            "sensibilización",
+            "niños multioperados",
+            "evitación",
+            "prevención",
+            "Anisakis",
+            "parásito",
+            "pescado",
+            "antígeno"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Alergia al huevo AEP 2019.pdf",
+        "archivo": "Alergia al huevo AEP 2019.pdf",
+        "palabras_clave": [
+            "alergia a huevo",
+            "dermatitis atópica",
+            "alergia alimentaria",
+            "dietas de exclusión",
+            "desensibilización",
+            "inmunoterapia oral a huevo",
+            "inducción a tolerancia oral",
+            "omalizumab",
+            "vacunación antigripal",
+            "fiebre amarilla"
+        ],
+        "excluir": [
+            "huevo de gallina",
+            "proteínas del huevo",
+            "ovoalbúmina",
+            "ovomucoide",
+            "IgE",
+            "inmunología",
+            "alergia alimentaria",
+            "dietas de exclusión",
+            "desensibilización",
+            "inmunoterapia oral",
+            "inducción a tolerancia oral",
+            "omalizumab",
+            "vacunación antigripal",
+            "fiebre amarilla"
+        ]
+    },
+    {
+        "nombre": "Alergia a frutos secos. Alergia a legumbres y frutas. Alergia a pescados y mariscos AEP 2019.pdf",
+        "archivo": "Alergia a frutos secos. Alergia a legumbres y frutas. Alergia a pescados y mariscos AEP 2019.pdf",
+        "palabras_clave": [
+            "alergia alimentaria",
+            "pediatría",
+            "frutos secos",
+            "cacahuete",
+            "frutos de cascara",
+            "semillas",
+            "legumbres",
+            "frutas",
+            "melocotón",
+            "pescados",
+            "mariscos",
+            "anafilaxia"
+        ],
+        "excluir": []
     }
 ]
