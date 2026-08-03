@@ -14012,5 +14012,19 @@
             "documentos médicos"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Hipoglucemia cetósica y no cetósica SEPIH.pdf",
+        "archivo": "Hipoglucemia cetósica y no cetósica SEPIH.pdf",
+        "palabras_clave": [
+            "hipoglucemia",
+            "cetósica",
+            "no cetósica",
+            "SEPIH",
+            "diabetes",
+            "glucosa",
+            "metabolismo"
+        ],
+        "excluir": []
     }
 ]
