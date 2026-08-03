@@ -14026,5 +14026,111 @@
             "metabolismo"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Bacteriuria asintomática AEP 2022.pdf",
+        "archivo": "Bacteriuria asintomática AEP 2022.pdf",
+        "palabras_clave": [
+            "bacteriuria asintomática",
+            "infección del tracto urinario",
+            "ITU",
+            "bacteriuria",
+            "asimptomatica",
+            "pediatria",
+            "nefrología",
+            "urinario",
+            "infección",
+            "urinaria",
+            "colonización",
+            "orina",
+            "germen",
+            "colonias",
+            "síntomas",
+            "urinarios",
+            "generales",
+            "covert bacteriuria",
+            "bacteriuria encubierta",
+            "urgencia miccional",
+            "incontinencia",
+            "motivo de consulta",
+            "historia clínica"
+        ],
+        "excluir": [
+            "protocolos",
+            "actualizados",
+            "año 2022",
+            "condiciones de uso",
+            "nuevas actualizaciones",
+            "www.aeped.es/protocolos/",
+            "ISSN 2171-8172",
+            "Asociación Española de Pediatría",
+            "prohibida la reproducción",
+            "autorización correspondiente"
+        ]
+    },
+    {
+        "nombre": "Enfermedades quísticas renales AEP 2022.pdf",
+        "archivo": "Enfermedades quísticas renales AEP 2022.pdf",
+        "palabras_clave": [
+            "enfermedades quísticas renales",
+            "ciliopatías",
+            "genética",
+            "diagnóstico",
+            "ecografía",
+            "riñón",
+            "hígado",
+            "malformaciones",
+            "insuficiencia renal",
+            "clasificación",
+            "Riccabona",
+            "secuenciación de nueva generación",
+            "NGS",
+            "proteínas",
+            "cilios primarios",
+            "retinopatía",
+            "ataxia cerebelosa",
+            "fibrosis hepática"
+        ],
+        "excluir": [
+            "protocolos",
+            "actualizaciones",
+            "condiciones de uso",
+            "www.aeped.es/protocolos/",
+            "ISSN 2171-8172",
+            "Asociación Española de Pediatría",
+            "prohibida la reproducción",
+            "autorización correspondiente"
+        ]
+    },
+    {
+        "nombre": "Enfermedad renal crónica AEP 2022.pdf",
+        "archivo": "Enfermedad renal crónica AEP 2022.pdf",
+        "palabras_clave": [
+            "enfermedad renal crónica",
+            "infancia",
+            "epidemiología",
+            "anemia",
+            "acidosis",
+            "enfermedad mineral ósea asociada a ERC",
+            "malnutrición",
+            "retraso de crecimiento"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Daño renal agudo AEP 2022.pdf",
+        "archivo": "Daño renal agudo AEP 2022.pdf",
+        "palabras_clave": [
+            "daño renal agudo",
+            "sobrecarga de volumen",
+            "tratamiento sustitutivo",
+            "terapias lentas continuas",
+            "Acute kidney injury",
+            "KDIGO",
+            "ERBP",
+            "creatinina clearance",
+            "diuresis"
+        ],
+        "excluir": []
     }
 ]
