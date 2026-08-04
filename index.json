@@ -14991,5 +14991,66 @@
             "Enfermedades autoinmunes"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Infecciones víricas de la piel y mucosas Pediatría integral 2026.pdf",
+        "archivo": "Infecciones víricas de la piel y mucosas Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "infección cutánea vírica",
+            "Virus del herpes simple",
+            "Virus varicela-zóster",
+            "Verrugas",
+            "Molusco contagioso"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Manifestaciones cutáneas que orientan a enfermedades sistémicas Pediatría integral 2026.pdf",
+        "archivo": "Manifestaciones cutáneas que orientan a enfermedades sistémicas Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "Manifestaciones cutáneas",
+            "Enfermedad sistémica",
+            "Niño",
+            "Vasculitis",
+            "Dermatosis"
+        ],
+        "excluir": [
+            "Lesiones cutáneas benignas",
+            "Lesiones cutáneas autolimitadas",
+            "Vasculitis",
+            "Enfermedades reumatológicas",
+            "Mastocitosis",
+            "Neoplasias sistémicas"
+        ]
+    },
+    {
+        "nombre": "Impétigo y otras infecciones bacterianas de la piel Pediatría integral 2026.pdf",
+        "archivo": "Impétigo y otras infecciones bacterianas de la piel Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "Enfermedades bacterianas de la piel",
+            "Infecciones de tejidos blandos",
+            "Impétigo",
+            "Bacterial Skin Diseases",
+            "Soft Tissue Infections",
+            "Impetigo"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Diagnóstico y tratamiento de las anomalías vasculares Pediatría integral 2026.pdf",
+        "archivo": "Diagnóstico y tratamiento de las anomalías vasculares Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "anomalías vasculares",
+            "hemangiomas infantiles",
+            "malformaciones vasculares",
+            "propranolol",
+            "rapamicina",
+            "vascular anomalies",
+            "infantile hemangioma",
+            "vascular malformations",
+            "propranolol",
+            "rapamycin"
+        ],
+        "excluir": []
     }
 ]
