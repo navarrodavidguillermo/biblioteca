@@ -15225,5 +15225,67 @@
             "craniosinostosis"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Crisis convulsiva febril Pediatría integral 2025.pdf",
+        "archivo": "Crisis convulsiva febril Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Crisis febril",
+            "Niños",
+            "Manejo",
+            "Recomendaciones para cuidadores",
+            "Febrile seizure",
+            "Children",
+            "Management",
+            "Recommendations for caregivers"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Patología medular Pediatría integral 2025.pdf",
+        "archivo": "Patología medular Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Médula",
+            "Gammaglobulinas",
+            "Corticoides",
+            "Anticuerpos",
+            "Neuroimagen",
+            "Espina",
+            "Glucocorticoids",
+            "Antibodies",
+            "Neuroimage"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Cefaleas Pediatría integral 2025.pdf",
+        "archivo": "Cefaleas Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Cefalea",
+            "Migraña",
+            "Niño",
+            "Adolescente",
+            "Tratamiento"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Epilepsias Pediatría integral 2025.pdf",
+        "archivo": "Epilepsias Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Epilepsia infantil",
+            "Crisis epilépticas",
+            "Estatus epiléptico",
+            "Síndromes epilépticos",
+            "Fármacos anticrisis",
+            "Terapias no farmacológicas",
+            "Epilepsia en la infancia",
+            "Crises epilépticas",
+            "Estatus epiléptico",
+            "Síndromes epilépticos",
+            "Medicamentos anticrisis",
+            "Terapias no farmacológicas"
+        ],
+        "excluir": []
     }
 ]
