@@ -15353,5 +15353,88 @@
             "Atrofia muscular espinal"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Retraso puberal Pediatría integral 2025.pdf",
+        "archivo": "Retraso puberal Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "pubertad retrasada",
+            "hipogonadismo",
+            "retraso constitucional del crecimiento y pubertad",
+            "pubertad",
+            "retraso puberal",
+            "pediatría",
+            "endocrinología",
+            "infancia",
+            "adolescencia",
+            "crecimiento",
+            "desarrollo",
+            "maduración",
+            "caracteres sexuales secundarios",
+            "talla adulta",
+            "repercusiones psicológicas",
+            "complicaciones metabólicas",
+            "trastornos de la conducta alimentaria",
+            "deportistas de élite",
+            "anosmia"
+        ],
+        "excluir": [
+            "normalidad",
+            "criterios estadísticos",
+            "edad ósea",
+            "analítica sanguínea básica",
+            "patología crónica de base",
+            "estrógenos transdérmicos",
+            "testosterona intramuscular",
+            "seguimiento estrecho",
+            "grupos de riesgo"
+        ]
+    },
+    {
+        "nombre": "Diabetes mellitus tipo 1 Pediatría integral 2025.pdf",
+        "archivo": "Diabetes mellitus tipo 1 Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Diabetes tipo 1",
+            "Sistemas de infusión automatizada de insulina",
+            "Monitorización continua de glucosa",
+            "Plumas conectadas",
+            "Diagnóstico precoz de la diabetes tipo 1",
+            "Preservación de la célula beta"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Pubertad precoz Pediatría integral 2025.pdf",
+        "archivo": "Pubertad precoz Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Pubertad normal",
+            "Pubertad precoz",
+            "Pubertad adelantada",
+            "Análogos GnRH",
+            "Precocious puberty",
+            "Early puberty",
+            "GnRH agonists"
+        ],
+        "excluir": [
+            "variación extrema de la normalidad",
+            "simple variación extrema de la normalidad",
+            "reflejo de alguna de las múltiples patologías que pueden influir o condicionar el momento de su aparición",
+            "verdadera PP",
+            "variantes normales de la pubertad (VNP)",
+            "potenciales consecuencias de ambas para el paciente y su familia"
+        ]
+    },
+    {
+        "nombre": "Obesidad y diabetes mellitus tipo 2 Pediatría integral 2025.pdf",
+        "archivo": "Obesidad y diabetes mellitus tipo 2 Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "obesidad infantil",
+            "obesidades",
+            "obesidad genética",
+            "obesidad sindrómica",
+            "diabetes mellitus tipo 2",
+            "tratamiento farmacológico"
+        ],
+        "excluir": []
     }
 ]
