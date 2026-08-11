@@ -15507,5 +15507,104 @@
             "Growh hormone"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Hepatitis autoinmunes, metabólicas y otras hepatitis no infecciosas Pediatría integral 2025.pdf",
+        "archivo": "Hepatitis autoinmunes, metabólicas y otras hepatitis no infecciosas Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Hepatitis autoinmune",
+            "Hepatitis tóxica",
+            "Enfermedad de Wilson",
+            "Hepatitis no infecciosa",
+            "Pediatría integral"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Hepatitis infecciosas Pediatría integral 2025.pdf",
+        "archivo": "Hepatitis infecciosas Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Hepatitis infecciosas",
+            "Virus",
+            "Niños",
+            "Infecciones víricas",
+            "Hepatitis A",
+            "Hepatitis B",
+            "Hepatitis C",
+            "Hepatitis D",
+            "Hepatitis E",
+            "Cirrosis",
+            "Hepatocarcinoma",
+            "Vacunas",
+            "Tratamiento",
+            "Prevención",
+            "Pediatría",
+            "Gastroenterología",
+            "Hepatología",
+            "Nutrición pediátrica"
+        ],
+        "excluir": [
+            "Virus de Epstein Barr",
+            "Citomegalovirus",
+            "Virus de la hepatitis A",
+            "Virus de la hepatitis B",
+            "Virus de la hepatitis C",
+            "Virus de la hepatitis D",
+            "Virus de la hepatitis E"
+        ]
+    },
+    {
+        "nombre": "Dietas vegetarianas y otras dietas alternativas Pediatría integral 2025.pdf",
+        "archivo": "Dietas vegetarianas y otras dietas alternativas Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "alimentación",
+            "niños",
+            "adolescentes",
+            "vegetariana",
+            "vegana",
+            "nutrición",
+            "pediatría",
+            "suplementos",
+            "vitamina D",
+            "vitamina B12"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Patología de la vía biliar Pediatría integral 2025.pdf",
+        "archivo": "Patología de la vía biliar Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Atresia biliar",
+            "Síndrome de Alagille",
+            "Enfermedades hepáticas fibroquísticas",
+            "Cálculos biliares",
+            "Pediatría"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Alimentación en el niño hasta los dos años de edad Pediatría integral 2025.pdf",
+        "archivo": "Alimentación en el niño hasta los dos años de edad Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Nutrición infantil",
+            "Alimentación complementaria",
+            "Recomendaciones nutricionales",
+            "Alimentación dirigida por el bebé",
+            "Infant nutrition",
+            "Complementary feeding",
+            "Nutritional recommendations",
+            "Baby led weaning"
+        ],
+        "excluir": [
+            "Sobrepeso",
+            "Obesidad",
+            "Enfermedades crónicas",
+            "Malnutrición",
+            "Enfermedades cardiovasculares",
+            "Diabetes",
+            "Cáncer",
+            "Azúcares libres",
+            "Alimentos ultraprocesados"
+        ]
     }
 ]
