@@ -15124,5 +15124,106 @@
             "soporte respiratorio",
             "trasplante pulmonar"
         ]
+    },
+    {
+        "nombre": "Trastornos paroxísticos no epilépticos en la edad pediátrica Pediatría integral 2025.pdf",
+        "archivo": "Trastornos paroxísticos no epilépticos en la edad pediátrica Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Trastornos paroxísticos",
+            "Epilepsia",
+            "Diagnóstico diferencial",
+            "Crisis psicógenas",
+            "Electroencefalografía"
+        ],
+        "excluir": [
+            "Epilepsia"
+        ]
+    },
+    {
+        "nombre": "Neumonía. Neumonía recurrente Pediatría integral 2026.pdf",
+        "archivo": "Neumonía. Neumonía recurrente Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "neumonía",
+            "neumonía atípica",
+            "neumonía recurrente",
+            "pediatría",
+            "bronquitis",
+            "neumonía adquirida en la comunidad",
+            "NAC",
+            "Streptococcus pneumoniae",
+            "Mycoplasma pneumoniae",
+            "Chlamydia pneumoniae",
+            "fiebre",
+            "dificultad respiratoria",
+            "tos",
+            "radiología simple de tórax",
+            "ecografía pulmonar",
+            "monoterapia con amoxicilina",
+            "macrólido",
+            "hospitalización",
+            "comorbilidades",
+            "vacunación",
+            "estilos de vida saludable"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Bronquiolitis aguda y bronquitis en pediatría Pediatría integral 2026.pdf",
+        "archivo": "Bronquiolitis aguda y bronquitis en pediatría Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "bronquiolitis aguda",
+            "bronquitis",
+            "pediatría",
+            "virus respiratorio sincitial",
+            "VRS",
+            "rhinovirus",
+            "RV",
+            "infección viral",
+            "infección bacteriana",
+            "bronquitis bacteriana prolongada",
+            "BBP",
+            "tos",
+            "dificultad respiratoria",
+            "taquipnea",
+            "sibilancias",
+            "crepitantes",
+            "hidratación",
+            "oxigenación",
+            "broncodilatadores",
+            "corticoides",
+            "antibióticos",
+            "inmunización",
+            "nirsevimab",
+            "ingresos hospitalarios",
+            "bronquitis en edad pediátrica",
+            "bronquitis aguda",
+            "bronquitis bacteriana persistente",
+            "diagnóstico clínico",
+            "manejo sintomático",
+            "medidas de soporte",
+            "bronquiectasias"
+        ],
+        "excluir": [
+            "bronquiolitis crónica",
+            "bronquitis crónica",
+            "asma",
+            "bronquitis obstructiva crónica",
+            "BPOC"
+        ]
+    },
+    {
+        "nombre": "Alteraciones del perímetro y forma craneal Pediatría integral 2025.pdf",
+        "archivo": "Alteraciones del perímetro y forma craneal Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "macrocefalia",
+            "microcefalia",
+            "plagiocefalia",
+            "craniosinostosis",
+            "macrocefalia",
+            "microcefalia",
+            "plagiocefalia",
+            "craniosinostosis"
+        ],
+        "excluir": []
     }
 ]
