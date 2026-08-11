@@ -15436,5 +15436,76 @@
             "tratamiento farmacológico"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Talla alta Pediatría integral 2025.pdf",
+        "archivo": "Talla alta Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Talla alta",
+            "Hipercrecimiento",
+            "Síndromes",
+            "Cromosomopatías",
+            "Esteroides sexuales",
+            "Epifisiodesis quirúrgica",
+            "Homocistinuria",
+            "Trombosis",
+            "Marfan",
+            "Sotos",
+            "Klinefelter"
+        ],
+        "excluir": [
+            "Tratado de Pediatría",
+            "CIBER de fisiopatología de la obesidad y nutrición",
+            "Instituto de Salud Carlos III",
+            "Instituto IMDEA",
+            "Universidad Autónoma de Madrid",
+            "Hospital Infantil Universitario Niño Jesús",
+            "The Ohio State University",
+            "Nationwide Children's Hospital",
+            "Columbus",
+            "EE.UU.",
+            "Madrid",
+            "España"
+        ]
+    },
+    {
+        "nombre": "Dislipemias Pediatría integral 2025.pdf",
+        "archivo": "Dislipemias Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Dislipemia",
+            "Hipercolesterolemia",
+            "Cribado",
+            "Estatinas",
+            "Dyslipidemia",
+            "Hypercholesterolemia",
+            "Screening",
+            "Statins"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Prevención y tratamiento de la alergia gastrointestinal no mediada por IgE Pediatría integral 2025.pdf",
+        "archivo": "Prevención y tratamiento de la alergia gastrointestinal no mediada por IgE Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Alergia no IgE mediada",
+            "Alimentos",
+            "Pediatría",
+            "Prevención",
+            "Tratamiento"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Talla baja Pediatría integral 2025.pdf",
+        "archivo": "Talla baja Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Talla baja",
+            "Retraso de crecimiento",
+            "Hormona de crecimiento",
+            "Short stature",
+            "Growth failure",
+            "Growh hormone"
+        ],
+        "excluir": []
     }
 ]
