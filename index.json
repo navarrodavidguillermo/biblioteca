@@ -15052,5 +15052,77 @@
             "rapamycin"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Tos crónica y bronquitis bacteriana persistente Pediatría integral 2026.pdf",
+        "archivo": "Tos crónica y bronquitis bacteriana persistente Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "tos crónica",
+            "tos húmeda",
+            "bronquitis bacteriana persistente",
+            "bronquiectasias"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Micosis de la piel Pediatría integral 2026.pdf",
+        "archivo": "Micosis de la piel Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "Dermatofitos",
+            "Tiña",
+            "Candidiasis",
+            "Pitiriasis versicolor",
+            "Antifúngicos",
+            "Dermatofitos",
+            "Ringworm",
+            "Candidiasis",
+            "Pityriasis versicolor",
+            "Antifungals"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Malformaciones congénitas pulmonares y de la vía aérea Pediatría integral 2026.pdf",
+        "archivo": "Malformaciones congénitas pulmonares y de la vía aérea Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "Malformación congénita de la vía aérea pulmonar",
+            "Secuestro pulmonar",
+            "Enfisema lobar congénito",
+            "Hipoplasia pulmonar",
+            "Congenital malformation of the pulmonary airway",
+            "Pulmonary sequestration",
+            "Congenital lobar emphysema",
+            "Pulmonary hypoplasia"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Neumopatía crónica Pediatría integral 2026.pdf",
+        "archivo": "Neumopatía crónica Pediatría integral 2026.pdf",
+        "palabras_clave": [
+            "Síndrome aspirativo crónico",
+            "Bronquiectasias",
+            "Neumopatías intersticiales",
+            "Displasia broncopulmonar",
+            "Neumopatía crónica infantil",
+            "Aspiración síndrome",
+            "Bronquiectasis",
+            "Enfermedades pulmonares intersticiales",
+            "Displasia broncopulmonar",
+            "Enfermedad pulmonar crónica infantil"
+        ],
+        "excluir": [
+            "disfagia",
+            "parálisis cerebral infantil",
+            "neurológicos",
+            "patologías predisponentes",
+            "apnea",
+            "bradicardia",
+            "estridor",
+            "accesos tusígenos",
+            "episodio aparentemente letal",
+            "soporte respiratorio",
+            "trasplante pulmonar"
+        ]
     }
 ]
