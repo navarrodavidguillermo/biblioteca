@@ -15287,5 +15287,71 @@
             "Terapias no farmacológicas"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Hiperandrogenismo e hiperplasia suprarrenal congénita Pediatría integral 2025.pdf",
+        "archivo": "Hiperandrogenismo e hiperplasia suprarrenal congénita Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Hiperandrogenismo",
+            "Hiperplasia suprarrenal congénita",
+            "Pérdida salina",
+            "Hirsutismo",
+            "Síndrome de ovario poliquístico",
+            "Hyperandrogenism",
+            "Congenital adrenal hyperplasia",
+            "Salt wasting",
+            "Polycystic ovary syndrome"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Patología tiroidea Pediatría integral 2025.pdf",
+        "archivo": "Patología tiroidea Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Hipotiroidismo",
+            "Hipertiroidismo",
+            "Nódulo tiroideo",
+            "Tiroiditis",
+            "Carcinoma tiroideo",
+            "Hormonas tiroideas",
+            "Hipotiroidismo congénito",
+            "Hipotiroidismo autoinmune",
+            "Enfermedad de Graves-Basedow",
+            "Diagnóstico temprano",
+            "Manejo adecuado",
+            "Pronóstico",
+            "Alteraciones tiroideas",
+            "Fisiopatología",
+            "Manifestaciones clínicas",
+            "Diagnóstico",
+            "Tratamiento",
+            "Seguimiento"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Trastornos de la marcha Pediatría integral 2025.pdf",
+        "archivo": "Trastornos de la marcha Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Alteración de la marcha",
+            "Ataxia",
+            "Debilidad muscular",
+            "Gait disorders",
+            "Ataxia",
+            "Muscle weakness"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Lactante hipotónico Pediatría integral 2025.pdf",
+        "archivo": "Lactante hipotónico Pediatría integral 2025.pdf",
+        "palabras_clave": [
+            "Hipotonía",
+            "Exploración física",
+            "Enzimas musculares",
+            "Genética",
+            "Atrofia muscular espinal"
+        ],
+        "excluir": []
     }
 ]
