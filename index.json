@@ -15804,5 +15804,71 @@
             "tratamiento"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Dolor de espalda y otras patologías del raquis Pediatría integral 2024.pdf",
+        "archivo": "Dolor de espalda y otras patologías del raquis Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Dolor de espalda",
+            "Niños y adolescentes",
+            "Diagnóstico diferencial",
+            "Dolor vertebral",
+            "Espondilolisis-espondilolistesis",
+            "Escoliosis",
+            "Spondilodiscitis"
+        ],
+        "excluir": [
+            "Mecánica",
+            "Mal llamada",
+            "Patología inespecífica"
+        ]
+    },
+    {
+        "nombre": "Patología de la cadera y otras causas de cojera Pediatría integral 2024.pdf",
+        "archivo": "Patología de la cadera y otras causas de cojera Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Cojera",
+            "Cojera dolorosa",
+            "Sinovitis transitoria",
+            "Enfermedad de Perthes",
+            "Artritis séptica",
+            "Epifisiolisis femoral proximal",
+            "Limping",
+            "Painful limping",
+            "Transient synovitis",
+            "Perthes disease",
+            "Septic arthritis",
+            "Proximal femoral epiphysiolysis"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Tumoraciones óseas Pediatría integral 2024.pdf",
+        "archivo": "Tumoraciones óseas Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Tumor",
+            "Óseo",
+            "Maligno",
+            "Benigno",
+            "Agresividad"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Pie plano y otras alteraciones del pie Pediatría integral 2024.pdf",
+        "archivo": "Pie plano y otras alteraciones del pie Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Pie plano",
+            "Flexible",
+            "Pediátrico",
+            "Valgo",
+            "Tratamiento conservador",
+            "Flatfoot",
+            "Flexible",
+            "Pediatric",
+            "Planovalgus",
+            "Non-surgical treatment"
+        ],
+        "excluir": []
     }
 ]
