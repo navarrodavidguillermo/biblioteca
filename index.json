@@ -15742,5 +15742,67 @@
             "Trastornos de la defecación",
             "Trastornos de dolor abdominal"
         ]
+    },
+    {
+        "nombre": "Malformaciones y defectos de la pared abdominal Pediatría integral 2024.pdf",
+        "archivo": "Malformaciones y defectos de la pared abdominal Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "onfalocele",
+            "gastrosquisis",
+            "hernia umbilical",
+            "síndrome de Prune Belly",
+            "embriología",
+            "anatomía",
+            "hernias de la pared abdominal",
+            "malformaciones de la pared abdominal",
+            "pediatría integral"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Criptorquidia y patología escrotal Pediatría integral 2024.pdf",
+        "archivo": "Criptorquidia y patología escrotal Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Maldescenso testicular",
+            "Escroto agudo",
+            "Escrotal",
+            "Torsión testicular",
+            "Pediátrico",
+            "Undescended testis",
+            "Acute scrotum",
+            "Scrotal",
+            "Testicular torsion",
+            "Pediatric"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Patologías genitourinarias más frecuentes Pediatría integral 2024.pdf",
+        "archivo": "Patologías genitourinarias más frecuentes Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Sinequia vulvar",
+            "Hipospadias",
+            "Fimosis",
+            "Parafimosis",
+            "Balanitis",
+            "Labial adhesion",
+            "Hypospadias",
+            "Phimosis",
+            "Paraphimosis",
+            "Balanitis"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Orientación sugerente de enfermedad genética Pediatría integral 2024.pdf",
+        "archivo": "Orientación sugerente de enfermedad genética Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "malformación",
+            "dismorfología",
+            "secuenciación masiva",
+            "diagnóstico",
+            "tratamiento"
+        ],
+        "excluir": []
     }
 ]
