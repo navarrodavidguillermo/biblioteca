@@ -15932,5 +15932,94 @@
             "Staphylococcus aureus"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "quemaduras, lesiones por inmersión, hipotermia y enfermedad por calor Pediatría integral 2024.pdf",
+        "archivo": "quemaduras, lesiones por inmersión, hipotermia y enfermedad por calor Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Urgencias medioambientales",
+            "Quemaduras",
+            "Lesiones por inmersión",
+            "Hipotermia",
+            "Golpe de calor",
+            "Enfermedad por calor",
+            "Lesiones no intencionadas",
+            "Agentes medioambientales",
+            "Físicos",
+            "Químicos",
+            "Biológicos",
+            "Sociales"
+        ],
+        "excluir": [
+            "LNI",
+            "Llamas",
+            "Inhalación de humo",
+            "Sustancias tóxicas de la combustión",
+            "Cianuro",
+            "Rayos ultravioleta",
+            "Radiaciones ionizantes",
+            "Álcalis",
+            "Cáusticos",
+            "Enfermedad por calor",
+            "Golpe de calor"
+        ]
+    },
+    {
+        "nombre": "Urgencias neurológicas Pediatría integral 2024.pdf",
+        "archivo": "Urgencias neurológicas Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "síncope",
+            "estatus",
+            "hemiparesia",
+            "ataxia",
+            "hipotonía",
+            "urgencias neurológicas",
+            "pediatría",
+            "neuropediatría",
+            "sospecha etiológica",
+            "pruebas complementarias",
+            "abordaje terapéutico",
+            "diagnóstico",
+            "tratamiento",
+            "neurología",
+            "pediatría integral"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Sedación y analgesia de procedimientos Pediatría integral 2024.pdf",
+        "archivo": "Sedación y analgesia de procedimientos Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Sedación",
+            "Analgesia",
+            "Dolor",
+            "Procedimiento",
+            "Niños",
+            "Evento adverso"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Dolor torácico Pediatría integral 2023.pdf",
+        "archivo": "Dolor torácico Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "dolor torácico",
+            "síncope",
+            "palpitaciones",
+            "cardiopatía",
+            "pediatría",
+            "atención primaria",
+            "subespecialidades",
+            "urgencias",
+            "diagnóstico diferencial",
+            "etiología cardiaca",
+            "musculoesqueléticas",
+            "gastrointestinales",
+            "respiratorias",
+            "psicógenas"
+        ],
+        "excluir": [
+            "idiopático"
+        ]
     }
 ]
