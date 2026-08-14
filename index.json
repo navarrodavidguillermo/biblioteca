@@ -16085,5 +16085,100 @@
             "Intestinal invagination"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Ojo rojo Pediatría integral 2023.pdf",
+        "archivo": "Ojo rojo Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "Conjuntivitis",
+            "Hiperemia",
+            "Pediatría",
+            "Oftalmología",
+            "Ojo rojo"
+        ],
+        "excluir": [
+            "Traumatismos oculares",
+            "Entrada de un cuerpo extraño",
+            "Patologías sistémicas"
+        ]
+    },
+    {
+        "nombre": "Urgencias oftalmológicas Pediatría integral 2023.pdf",
+        "archivo": "Urgencias oftalmológicas Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "Traumatismo",
+            "Causticación",
+            "Zarandeo",
+            "Retinoblastoma",
+            "Rabdomiosarcoma",
+            "Trauma",
+            "Caustication",
+            "Shaken",
+            "Retinoblastoma",
+            "Rhabdomyosarcoma"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Trastornos de refracción Pediatría integral 2023.pdf",
+        "archivo": "Trastornos de refracción Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "Defecto de refracción",
+            "Agudeza visual",
+            "Ambliopía",
+            "Anisometropía",
+            "Diagnóstico precoz",
+            "Defectos de refacción",
+            "Visión borrosa",
+            "Desarrollo visual",
+            "Oftalmología infantil"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Ambliopía y estrabismo Pediatría integral 2023.pdf",
+        "archivo": "Ambliopía y estrabismo Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "ambliopía",
+            "estrabismo",
+            "endotropia",
+            "exotropia",
+            "ambliopía funcional",
+            "estrabismo infantil",
+            "visión binocular",
+            "fusión binocular",
+            "corteza estriada",
+            "núcleo geniculado lateral",
+            "retina",
+            "cerebro",
+            "visión",
+            "pediatría",
+            "atención primaria",
+            "oftalmología",
+            "estrabismo infantil",
+            "ambliopía infantil"
+        ],
+        "excluir": [
+            "enfermedad orgánica",
+            "visión pobre",
+            "inmadurez cerebral",
+            "visión al nacer",
+            "desarrollo visual",
+            "agudeza visual",
+            "test de Hirschberg",
+            "cover test",
+            "movimientos oculares",
+            "reflejo rojo",
+            "visión binocular",
+            "fusión binocular",
+            "corteza estriada",
+            "núcleo geniculado lateral",
+            "retina",
+            "cerebro",
+            "visión",
+            "pediatría",
+            "atención primaria",
+            "oftalmología"
+        ]
     }
 ]
