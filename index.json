@@ -15606,5 +15606,69 @@
             "Azúcares libres",
             "Alimentos ultraprocesados"
         ]
+    },
+    {
+        "nombre": "Enfermedad inflamatoria intestinal Pediatría integral 2024.pdf",
+        "archivo": "Enfermedad inflamatoria intestinal Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Enfermedad inflamatoria intestinal",
+            "Pediatría",
+            "Enfermedad de Crohn",
+            "Colitis ulcerosa",
+            "Inflammatory bowel disease",
+            "Pediatrics",
+            "Crohn's disease",
+            "Ulcerative colitis"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Diarrea crónica Pediatría integral 2024.pdf",
+        "archivo": "Diarrea crónica Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Diarrea crónica",
+            "Diarrea funcional",
+            "Diarrea orgánica",
+            "Malabsorción",
+            "Maldigestión",
+            "Exploraciones complementarias",
+            "Tratamiento"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Evaluación del dolor abdominal crónico Pediatría integral 2024.pdf",
+        "archivo": "Evaluación del dolor abdominal crónico Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "dolor abdominal",
+            "dolor crónico",
+            "diagnóstico diferencial",
+            "niño",
+            "adolescente",
+            "dolor abdominal crónico en pediatría"
+        ],
+        "excluir": [
+            "pruebas complementarias",
+            "batería de pruebas",
+            "pruebas innecesarias"
+        ]
+    },
+    {
+        "nombre": "Enfermedad celiaca Pediatría integral 2024.pdf",
+        "archivo": "Enfermedad celiaca Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Enfermedad celiaca",
+            "Enteropatía inducida por gluten",
+            "Esprúe no tropical",
+            "Criterios diagnósticos",
+            "Niños"
+        ],
+        "excluir": [
+            "malabsorción",
+            "sintomatología extradigestiva",
+            "dieta sin gluten",
+            "pruebas complementarias",
+            "ensayos clínicos"
+        ]
     }
 ]
