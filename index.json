@@ -16021,5 +16021,69 @@
         "excluir": [
             "idiopático"
         ]
+    },
+    {
+        "nombre": "Traumatismo craneoencefálico Pediatría integral 2023.pdf",
+        "archivo": "Traumatismo craneoencefálico Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "Traumatismo craneoencefálico",
+            "Pediátrico",
+            "Cuidados prehospitalarios",
+            "Lesiones intracerebrales",
+            "Escala de Glasgow",
+            "Tomografía craneal",
+            "Hipoxia",
+            "Hipercapnia",
+            "Hipotensión arterial",
+            "Hipertensión intracraneal"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "índromes mononucleósicos Pediatría integral 2023.pdf",
+        "archivo": "índromes mononucleósicos Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "mononucleosis infecciosa",
+            "virus de Epstein-Barr",
+            "linfocitos atípicos",
+            "anticuerpos heterófilos",
+            "mononucleosis",
+            "virus Epstein-Barr",
+            "linfocitos",
+            "anticuerpos"
+        ],
+        "excluir": [
+            "ampicilina",
+            "enfermedades autoinmunes",
+            "neoplasias",
+            "obstrucción de la vía aérea superior",
+            "rotura esplénica"
+        ]
+    },
+    {
+        "nombre": "Parasomnias. Trastornos del movimiento Pediatría integral 2023.pdf",
+        "archivo": "Parasomnias. Trastornos del movimiento Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "Parasomnia",
+            "Síndrome de piernas inquietas",
+            "Crisis epilépticas",
+            "Terrores nocturnos",
+            "Pesadillas",
+            "Sueño inquieto infantil"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Abdomen agudo Pediatría integral 2023.pdf",
+        "archivo": "Abdomen agudo Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "Abdomen agudo",
+            "Apendicitis",
+            "Invaginación Intestinal",
+            "Acute abdomen",
+            "Appendicitis",
+            "Intestinal invagination"
+        ],
+        "excluir": []
     }
 ]
