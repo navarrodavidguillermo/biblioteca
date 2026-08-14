@@ -15870,5 +15870,67 @@
             "Non-surgical treatment"
         ],
         "excluir": []
+    },
+    {
+        "nombre": "Fiebre en el neonato Pediatría integral 2024.pdf",
+        "archivo": "Fiebre en el neonato Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Fiebre",
+            "Neonato",
+            "Infección bacteriana invasiva",
+            "Punción lumbar",
+            "Antibióticos"
+        ],
+        "excluir": [
+            "Otitis media aguda",
+            "Onfalitis",
+            "Celulitis cutánea/absceso",
+            "Artritis/osteomielitis"
+        ]
+    },
+    {
+        "nombre": "Infecciones congénitas del recién nacido Pediatría integral 2024.pdf",
+        "archivo": "Infecciones congénitas del recién nacido Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Infecciones congénitas",
+            "Transmisión vertical",
+            "Neonato",
+            "TORCH",
+            "Diagnóstico prenatal"
+        ],
+        "excluir": [
+            "VIH",
+            "VHB",
+            "VHC",
+            "VHE",
+            "Trypanosoma cruzi",
+            "Listeria",
+            "Parvovirus B19",
+            "Malaria",
+            "Tuberculosis"
+        ]
+    },
+    {
+        "nombre": "Patologías prevalentes en la prematuridad Pediatría integral 2024.pdf",
+        "archivo": "Patologías prevalentes en la prematuridad Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Distrés respiratorio",
+            "Neurodesarrollo",
+            "Displasia broncopulmonar",
+            "Ductus arterioso persistente",
+            "Enterocolitis necrotizante"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Infecciones osteoarticulares Pediatría integral 2024.pdf",
+        "archivo": "Infecciones osteoarticulares Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Osteomielitis",
+            "Artritis",
+            "Kingella kingae",
+            "Staphylococcus aureus"
+        ],
+        "excluir": []
     }
 ]
