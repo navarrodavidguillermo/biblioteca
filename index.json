@@ -15670,5 +15670,77 @@
             "pruebas complementarias",
             "ensayos clínicos"
         ]
+    },
+    {
+        "nombre": "Hemorragia digestiva alta y baja Pediatría integral 2024.pdf",
+        "archivo": "Hemorragia digestiva alta y baja Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Hemorragia gastrointestinal",
+            "Hematemesis",
+            "Melena",
+            "Hematoquecia",
+            "Gastrointestinal hemorrhage",
+            "Hematemesis",
+            "Melena",
+            "Hematochezia"
+        ],
+        "excluir": [
+            "falsa hemorragia digestiva",
+            "epistaxis",
+            "hemoptisis"
+        ]
+    },
+    {
+        "nombre": "Patología esofágica Pediatría integral 2024.pdf",
+        "archivo": "Patología esofágica Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Trastornos de motilidad esofágica",
+            "Esofagitis",
+            "Esofagitis eosinofílica",
+            "Reflujo gastroesofágico",
+            "Ingestión de cáusticos",
+            "Esofagitis",
+            "Eosinophilic esophagitis",
+            "Gastroesophageal reflux",
+            "Caustic ingestion"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Odontopediatria basica y patologica Pediatría integral 2024.pdf",
+        "archivo": "Odontopediatria basica y patologica Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "caries dental",
+            "traumatismos dentales",
+            "maloclusiones",
+            "patología de la mucosa oral"
+        ],
+        "excluir": [
+            "exantemáticas",
+            "gingivitis",
+            "estomatitis aftosa recidivante",
+            "lesiones herpéticas",
+            "candidiasis orales",
+            "alteraciones linguales",
+            "patología de los frenillos"
+        ]
+    },
+    {
+        "nombre": "Trastornos funcionales digestivos Pediatría integral 2024.pdf",
+        "archivo": "Trastornos funcionales digestivos Pediatría integral 2024.pdf",
+        "palabras_clave": [
+            "Trastornos funcionales gastrointestinales",
+            "Trastornos eje cerebro-intestino",
+            "Lactante regurgitador e irritable",
+            "Estreñimiento funcional",
+            "Dolor abdominal funcional"
+        ],
+        "excluir": [
+            "Regurgitaciones",
+            "Estreñimiento",
+            "Cólicos del lactante",
+            "Trastornos de la defecación",
+            "Trastornos de dolor abdominal"
+        ]
     }
 ]
