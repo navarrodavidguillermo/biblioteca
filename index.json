@@ -16180,5 +16180,33 @@
             "atención primaria",
             "oftalmología"
         ]
+    },
+    {
+        "nombre": "Patología de las glándulas salivales Pediatría integral 2023.pdf",
+        "archivo": "Patología de las glándulas salivales Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "Glándulas salivales",
+            "Parotiditis",
+            "Paperas",
+            "Pediatría",
+            "Epidemiología"
+        ],
+        "excluir": []
+    },
+    {
+        "nombre": "Disfunciones miccionales y enuresis Pediatría integral 2023.pdf",
+        "archivo": "Disfunciones miccionales y enuresis Pediatría integral 2023.pdf",
+        "palabras_clave": [
+            "incontinencia urinaria",
+            "enuresis",
+            "disfunciones miccionales",
+            "pediatría integral",
+            "fisiología miccional",
+            "control de esfínteres",
+            "hábitos vesicales",
+            "micciones frecuentes",
+            "micciones completas"
+        ],
+        "excluir": []
     }
 ]
